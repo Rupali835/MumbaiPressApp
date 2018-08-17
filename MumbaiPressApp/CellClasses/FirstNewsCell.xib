@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Raleway-Regular.ttf">
+            <string>Raleway-Regular</string>
+        </array>
+        <array key="Raleway-SemiBold.ttf">
+            <string>Raleway-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FirstNewsCell" rowHeight="156" id="KGk-i7-Jjw" customClass="FirstNewsCell" customModule="MumbaiPressApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mNZ-bi-eW8">
+                        <rect key="frame" x="5" y="5" width="310" height="229.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" image="backimg" translatesAutoresizingMaskIntoConstraints="NO" id="xzb-tS-9gR">
+                                <rect key="frame" x="5" y="0.0" width="300" height="164.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="od1-KO-b3o">
+                                <rect key="frame" x="5" y="174.5" width="300" height="20"/>
+                                <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oti-IO-A7i">
+                                <rect key="frame" x="5" y="199.5" width="300" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="xd9-QS-5vJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTW-NM-OYr">
+                                <rect key="frame" x="135" y="62" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="60D-94-8lb"/>
+                                    <constraint firstAttribute="height" constant="40" id="CYx-5l-cGL"/>
+                                </constraints>
+                                <state key="normal" image="youtube"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xzb-tS-9gR" secondAttribute="trailing" constant="5" id="0IE-Za-udI"/>
+                            <constraint firstItem="wTW-NM-OYr" firstAttribute="centerX" secondItem="xzb-tS-9gR" secondAttribute="centerX" id="7Ii-GX-mnt"/>
+                            <constraint firstItem="xzb-tS-9gR" firstAttribute="leading" secondItem="mNZ-bi-eW8" secondAttribute="leading" constant="5" id="ADC-d2-khw"/>
+                            <constraint firstItem="od1-KO-b3o" firstAttribute="leading" secondItem="mNZ-bi-eW8" secondAttribute="leading" constant="5" id="Egu-m5-NcJ"/>
+                            <constraint firstAttribute="bottom" secondItem="Oti-IO-A7i" secondAttribute="bottom" constant="10" id="FqP-py-ZhD"/>
+                            <constraint firstItem="xzb-tS-9gR" firstAttribute="top" secondItem="mNZ-bi-eW8" secondAttribute="top" id="OFm-1V-e5a"/>
+                            <constraint firstAttribute="trailing" secondItem="Oti-IO-A7i" secondAttribute="trailing" constant="5" id="UqZ-ed-yWm"/>
+                            <constraint firstItem="Oti-IO-A7i" firstAttribute="top" secondItem="od1-KO-b3o" secondAttribute="bottom" constant="5" id="Vo5-W2-TZ0"/>
+                            <constraint firstItem="od1-KO-b3o" firstAttribute="top" secondItem="xzb-tS-9gR" secondAttribute="bottom" constant="10" id="apb-Zn-ztu"/>
+                            <constraint firstItem="wTW-NM-OYr" firstAttribute="centerY" secondItem="xzb-tS-9gR" secondAttribute="centerY" id="g8i-7e-XAC"/>
+                            <constraint firstAttribute="trailing" secondItem="od1-KO-b3o" secondAttribute="trailing" constant="5" id="pTV-3e-RLO"/>
+                            <constraint firstItem="Oti-IO-A7i" firstAttribute="leading" secondItem="mNZ-bi-eW8" secondAttribute="leading" constant="5" id="wA2-Yz-Dp6"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mNZ-bi-eW8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="2DZ-fy-PyR"/>
+                    <constraint firstAttribute="bottom" secondItem="mNZ-bi-eW8" secondAttribute="bottom" constant="5" id="Kap-d0-SL1"/>
+                    <constraint firstItem="mNZ-bi-eW8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Qt2-uW-qSd"/>
+                    <constraint firstAttribute="trailing" secondItem="mNZ-bi-eW8" secondAttribute="trailing" constant="5" id="lrd-9G-8f8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="backView" destination="mNZ-bi-eW8" id="NRg-Oz-KjG"/>
+                <outlet property="btnYoutube" destination="wTW-NM-OYr" id="qOv-UE-gAQ"/>
+                <outlet property="imgNews" destination="xzb-tS-9gR" id="VZp-Kk-gb7"/>
+                <outlet property="lblDate" destination="Oti-IO-A7i" id="FER-zZ-scU"/>
+                <outlet property="lblTitle" destination="od1-KO-b3o" id="ELq-bO-2y0"/>
+            </connections>
+            <point key="canvasLocation" x="42" y="110"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="backimg" width="85" height="85"/>
+        <image name="youtube" width="42" height="42"/>
+    </resources>
+</document>

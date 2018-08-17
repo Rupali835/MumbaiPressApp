@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Raleway-Medium.ttf">
+            <string>Raleway-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuCell" rowHeight="62" id="IXq-cg-Vbx" customClass="MenuCell" customModule="MumbaiPressApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IXq-cg-Vbx" id="9fL-hE-hHD">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="64.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqH-by-sPM" userLabel="cellView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="64.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     ass" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQi-7y-rk6">
+                                <rect key="frame" x="15" y="5" width="300" height="54.5"/>
+                                <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="left" contentHorizontalAlignment="right" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYb-La-1bR">
+                                <rect key="frame" x="230" y="19.5" width="90" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="SQH-NX-j6z"/>
+                                    <constraint firstAttribute="width" constant="90" id="jXe-hH-XEm"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="DownArrow"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UYb-La-1bR" secondAttribute="trailing" id="O4W-8P-WcS"/>
+                            <constraint firstAttribute="bottom" secondItem="TQi-7y-rk6" secondAttribute="bottom" constant="5" id="WDS-5z-WLp"/>
+                            <constraint firstItem="TQi-7y-rk6" firstAttribute="leading" secondItem="cqH-by-sPM" secondAttribute="leading" constant="15" id="ap9-1y-ShL"/>
+                            <constraint firstItem="TQi-7y-rk6" firstAttribute="top" secondItem="cqH-by-sPM" secondAttribute="top" constant="5" id="dd9-2l-ZO8"/>
+                            <constraint firstItem="UYb-La-1bR" firstAttribute="centerY" secondItem="cqH-by-sPM" secondAttribute="centerY" id="qn6-iM-XEq"/>
+                            <constraint firstAttribute="trailing" secondItem="TQi-7y-rk6" secondAttribute="trailing" constant="5" id="yTr-bb-8Ur"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mmd-6Z-eyS" userLabel="SepratorView">
+                        <rect key="frame" x="0.0" y="58.5" width="320" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="oxt-gk-0Xn"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="cqH-by-sPM" secondAttribute="trailing" id="kwr-Cp-UNf"/>
+                    <constraint firstItem="cqH-by-sPM" firstAttribute="leading" secondItem="9fL-hE-hHD" secondAttribute="leading" id="lLR-M6-4Pd"/>
+                    <constraint firstAttribute="bottom" secondItem="Mmd-6Z-eyS" secondAttribute="bottom" constant="5" id="mma-pQ-5bh"/>
+                    <constraint firstAttribute="trailing" secondItem="Mmd-6Z-eyS" secondAttribute="trailing" id="o4z-8d-uOj"/>
+                    <constraint firstItem="Mmd-6Z-eyS" firstAttribute="leading" secondItem="9fL-hE-hHD" secondAttribute="leading" id="u6L-5Q-X3Q"/>
+                    <constraint firstAttribute="bottom" secondItem="cqH-by-sPM" secondAttribute="bottom" id="vRl-Y7-cMN"/>
+                    <constraint firstItem="cqH-by-sPM" firstAttribute="top" secondItem="9fL-hE-hHD" secondAttribute="top" id="yRH-KA-d9s"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnExpandCollapse" destination="UYb-La-1bR" id="zdf-vG-gSU"/>
+                <outlet property="lblMenuList" destination="TQi-7y-rk6" id="ios-PK-9Iq"/>
+            </connections>
+            <point key="canvasLocation" x="16" y="31.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="DownArrow" width="10" height="10"/>
+    </resources>
+</document>

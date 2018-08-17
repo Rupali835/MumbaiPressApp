@@ -1,0 +1,31 @@
+PODS:
+  - Alamofire (4.7.1)
+  - AlamofireImage (3.3.1):
+    - Alamofire (~> 4.5)
+  - Kingfisher (4.7.0)
+  - MBPhotoPicker (0.2.3)
+  - SHSnackBarView (1.0.0)
+  - SwiftyJSON (4.0.0)
+  - youtube-ios-player-helper (0.1.6)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage
+  - Kingfisher (~> 4.0)
+  - MBPhotoPicker
+  - SHSnackBarView
+  - SwiftyJSON
+  - youtube-ios-player-helper (~> 0.1)
+
+SPEC CHECKSUMS:
+  Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
+  AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
+  Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
+  MBPhotoPicker: e5b28084d0ab684c7a8ec35a20be23794acec118
+  SHSnackBarView: fb4afda2c2c66a688ea15ff74a7b4872a6ce1d4a
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
+
+PODFILE CHECKSUM: 3980d5d5baa9ffe2533020cbc7d13ce8dec63eda
+
+COCOAPODS: 1.4.0

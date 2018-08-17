@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Raleway-Regular.ttf">
+            <string>Raleway-Regular</string>
+        </array>
+        <array key="Raleway-SemiBold.ttf">
+            <string>Raleway-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SecondNewsCell" rowHeight="112" id="KGk-i7-Jjw" customClass="SecondNewsCell" customModule="MumbaiPressApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="119.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sNo-th-DNG">
+                        <rect key="frame" x="5" y="5" width="310" height="110"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backimg" translatesAutoresizingMaskIntoConstraints="NO" id="1c5-JV-pgm">
+                                <rect key="frame" x="5" y="3" width="117" height="97"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="117" id="Jej-ZD-iac"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bS-k0-nA7">
+                                <rect key="frame" x="135" y="10" width="155" height="20"/>
+                                <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4SQ-lJ-Lx0">
+                                <rect key="frame" x="135" y="36" width="165" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="FQh-QW-tDi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IjC-gt-bHq">
+                                <rect key="frame" x="0.0" y="107" width="310" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="BZ4-L1-Jhb"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9MQ-lh-NLH">
+                                <rect key="frame" x="45.5" y="33.5" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="EvX-PI-Cld"/>
+                                    <constraint firstAttribute="width" constant="35" id="fgb-Fj-Cra"/>
+                                </constraints>
+                                <state key="normal" image="youtube"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IjC-gt-bHq" firstAttribute="leading" secondItem="sNo-th-DNG" secondAttribute="leading" id="586-HO-5BR"/>
+                            <constraint firstItem="5bS-k0-nA7" firstAttribute="leading" secondItem="1c5-JV-pgm" secondAttribute="trailing" constant="13" id="7Pf-6b-iiu"/>
+                            <constraint firstAttribute="trailing" secondItem="4SQ-lJ-Lx0" secondAttribute="trailing" constant="10" id="K2D-fU-1HX"/>
+                            <constraint firstAttribute="bottom" secondItem="1c5-JV-pgm" secondAttribute="bottom" constant="10" id="Kuj-j8-m6U"/>
+                            <constraint firstItem="1c5-JV-pgm" firstAttribute="leading" secondItem="sNo-th-DNG" secondAttribute="leading" constant="5" id="Lgq-sQ-3dM"/>
+                            <constraint firstItem="4SQ-lJ-Lx0" firstAttribute="leading" secondItem="1c5-JV-pgm" secondAttribute="trailing" constant="13" id="OMO-86-qZI"/>
+                            <constraint firstItem="1c5-JV-pgm" firstAttribute="top" secondItem="sNo-th-DNG" secondAttribute="top" constant="3" id="Sua-JW-N8C"/>
+                            <constraint firstAttribute="trailing" secondItem="5bS-k0-nA7" secondAttribute="trailing" constant="20" id="Tqq-aZ-1Fj"/>
+                            <constraint firstItem="5bS-k0-nA7" firstAttribute="top" secondItem="sNo-th-DNG" secondAttribute="top" constant="10" id="YP4-so-qFi"/>
+                            <constraint firstAttribute="bottom" secondItem="IjC-gt-bHq" secondAttribute="bottom" constant="2" id="eEt-Rq-I9v"/>
+                            <constraint firstItem="9MQ-lh-NLH" firstAttribute="centerY" secondItem="1c5-JV-pgm" secondAttribute="centerY" id="jl9-cz-YXi"/>
+                            <constraint firstItem="4SQ-lJ-Lx0" firstAttribute="top" secondItem="5bS-k0-nA7" secondAttribute="bottom" constant="6" id="nb7-as-w9R"/>
+                            <constraint firstAttribute="trailing" secondItem="IjC-gt-bHq" secondAttribute="trailing" id="tKw-VU-yZq"/>
+                            <constraint firstItem="9MQ-lh-NLH" firstAttribute="centerX" secondItem="1c5-JV-pgm" secondAttribute="centerX" id="znh-wy-JMS"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="sNo-th-DNG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="LhK-jS-biU"/>
+                    <constraint firstAttribute="bottom" secondItem="sNo-th-DNG" secondAttribute="bottom" constant="5" id="NTT-l7-1zp"/>
+                    <constraint firstItem="sNo-th-DNG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="YaV-wc-LlX"/>
+                    <constraint firstAttribute="trailing" secondItem="sNo-th-DNG" secondAttribute="trailing" constant="5" id="jgs-lY-d31"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="backview" destination="sNo-th-DNG" id="Xgj-06-5bS"/>
+                <outlet property="btnyoutb" destination="9MQ-lh-NLH" id="WJU-3O-HDU"/>
+                <outlet property="imgNewS" destination="1c5-JV-pgm" id="XSS-H2-Tgl"/>
+                <outlet property="lblDATE" destination="4SQ-lJ-Lx0" id="jYm-b5-M0K"/>
+                <outlet property="lbltitle" destination="5bS-k0-nA7" id="Vdp-Ib-vJ2"/>
+            </connections>
+            <point key="canvasLocation" x="35" y="88"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="backimg" width="85" height="85"/>
+        <image name="youtube" width="42" height="42"/>
+    </resources>
+</document>

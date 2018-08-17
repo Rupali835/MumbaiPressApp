@@ -1,0 +1,6 @@
+framework module Pods_MumbaiPressApp {
+  umbrella header "Pods-MumbaiPressApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

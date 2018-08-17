@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  MumbaiPressApp
+
+  Created by user on 02/07/18.
+  Copyright © 2018 user. All rights reserved.
+*/
+"Home" = "Home";
+"Video" = "Video";
+"Reporter" = "Become a Reporter";
+"About" = "About Us";
+"Term" = "Terms";
+"Disclaimer" = "Disclaimer";
+"Contact" = "Contact Us";
+"Upload" = "Upload News";
+"TodaysNews" = "News Paper";
+"ImportantLinks" = "Important Links";
+"Login" = "Login";
+"ReportSection" = "Report Section";
+"UpdateNews" = "Updates";

@@ -1,0 +1,6 @@
+framework module SHSnackBarView {
+  umbrella header "SHSnackBarView-umbrella.h"
+
+  export *
+  module * { export * }
+}

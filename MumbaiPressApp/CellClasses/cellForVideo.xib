@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellForVideo" rowHeight="60" id="KGk-i7-Jjw" customClass="cellForVideo" customModule="MumbaiPressApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="63"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="325" height="63"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qua-lh-9CC">
+                        <rect key="frame" x="5" y="5" width="315" height="52.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AttachFileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Lp2-3Q-ETR">
+                                <rect key="frame" x="15" y="11.5" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.53297358751296997" green="0.034619983285665512" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="7r0-FN-Ldb"/>
+                                    <constraint firstAttribute="height" constant="30" id="iEs-Ss-w1b"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLE-D9-IvN">
+                                <rect key="frame" x="55" y="14" width="223" height="24.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8D-Us-mbW">
+                                <rect key="frame" x="288" y="15" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="i3w-NR-JLO"/>
+                                    <constraint firstAttribute="height" constant="22" id="j8w-6E-4YC"/>
+                                </constraints>
+                                <state key="normal" image="cancel-button-1"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gLE-D9-IvN" firstAttribute="leading" secondItem="Lp2-3Q-ETR" secondAttribute="trailing" constant="10" id="A1M-Xh-N8m"/>
+                            <constraint firstItem="Lp2-3Q-ETR" firstAttribute="centerY" secondItem="Qua-lh-9CC" secondAttribute="centerY" id="X3X-Xr-O8D"/>
+                            <constraint firstAttribute="bottom" secondItem="gLE-D9-IvN" secondAttribute="bottom" constant="14" id="cCC-B1-rG6"/>
+                            <constraint firstItem="o8D-Us-mbW" firstAttribute="centerY" secondItem="Qua-lh-9CC" secondAttribute="centerY" id="h2J-Tf-6cH"/>
+                            <constraint firstAttribute="trailing" secondItem="o8D-Us-mbW" secondAttribute="trailing" constant="5" id="lMF-kd-GDW"/>
+                            <constraint firstItem="o8D-Us-mbW" firstAttribute="leading" secondItem="gLE-D9-IvN" secondAttribute="trailing" constant="10" id="oua-li-hPO"/>
+                            <constraint firstItem="gLE-D9-IvN" firstAttribute="top" secondItem="Qua-lh-9CC" secondAttribute="top" constant="14" id="pDC-sw-eIE"/>
+                            <constraint firstItem="Lp2-3Q-ETR" firstAttribute="leading" secondItem="Qua-lh-9CC" secondAttribute="leading" constant="15" id="vMg-fj-7l9"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Qua-lh-9CC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="0Gt-jv-tzg"/>
+                    <constraint firstAttribute="bottom" secondItem="Qua-lh-9CC" secondAttribute="bottom" constant="5" id="8BJ-Lb-CtF"/>
+                    <constraint firstAttribute="trailing" secondItem="Qua-lh-9CC" secondAttribute="trailing" constant="5" id="PGv-ZT-eBa"/>
+                    <constraint firstItem="Qua-lh-9CC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="TCk-wH-vEW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="backView" destination="Qua-lh-9CC" id="ivg-Cb-eJX"/>
+                <outlet property="btnDeletaDocmnt" destination="o8D-Us-mbW" id="2m9-dO-8PF"/>
+                <outlet property="lblAudioVideo" destination="gLE-D9-IvN" id="Gtj-yn-QmF"/>
+            </connections>
+            <point key="canvasLocation" x="36.5" y="63.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="AttachFileIcon" width="24" height="24"/>
+        <image name="cancel-button-1" width="21" height="21"/>
+    </resources>
+</document>
