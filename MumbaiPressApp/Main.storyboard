@@ -949,7 +949,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                         <rect key="frame" x="0.0" y="28" width="320" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BFS-Ul-n5l" id="Tam-P9-jTG">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="83.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdR-9K-S2U">
@@ -3539,7 +3539,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="recordingCell" id="e16-gS-FCa" customClass="RecordingCollectionViewCell" customModule="MumbaiPressApp" customModuleProvider="target">
-                                <rect key="frame" x="10" y="0.0" width="301" height="71"/>
+                                <rect key="frame" x="9.5" y="0.0" width="301" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="301" height="71"/>
@@ -3649,7 +3649,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                 <rect key="frame" x="0.0" y="28" width="320" height="127"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kDb-0y-2EA" id="kyQ-f2-3CR">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="127"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="126.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ggm-ch-dQy">
@@ -4443,7 +4443,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                 <rect key="frame" x="0.0" y="28" width="320" height="60"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cje-gz-3eC" id="h7Y-U9-LBK">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5xB-YK-ddI">
@@ -4559,7 +4559,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                         <rect key="frame" x="0.0" y="28" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fEh-wH-wpc" id="0kg-s4-HUk">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SMA-R6-Owv">
@@ -4854,7 +4854,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                 <rect key="frame" x="0.0" y="28" width="320" height="170"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y3I-fy-MvP" id="GjM-NX-CVW">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="169.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lnS-fa-s9d">
@@ -5044,7 +5044,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="moF-Ua-WdQ">
+                                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="justified" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="moF-Ua-WdQ">
                                                                             <rect key="frame" x="10" y="325" width="300" height="805"/>
                                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                             <string key="text">Former Prime Minister Nawaz Sharif&amp;#8217;s daughter and Pakistan Muslim League (Nawaz) leader Maryam Nawaz on Saturday said that she and her father will return to the country within 10 days.&lt;/p&gt;\n&lt;p&gt;Maryam Nawaz was speaking to media in London, a day after an accountability court in Pakistan sentenced the three-time Premier to 10 years in prison while she got a seven-year term in the Avenfield corruption reference, related to the Sharif family&amp;#8217;s purchase of upscale London flats.&lt;/p&gt;\n&lt;p&gt;Asked whether the father-daughter duo will return within the 10-day deadline set for appeal, she said that consultation was underway against the decision and the lawyers were looking at the matter from legal angles, Geo News reported.&lt;/p&gt;\n&lt;p&gt;&amp;#8220;Due process will be implied against the court&amp;#8217;s decision,&amp;#8221; said Maryam Nawaz, adding that the institutions in the UK already told the Pakistani institutions that no illegality was carried out&amp;#8221;.&lt;/p&gt;\n&lt;p&gt;The Avenfield reference is one of the several corruption cases filed against Sharif and his children by the anti-corruption body on the Supreme Court&amp;#8217;s directives in the last year&amp;#8217;s Panamagate verdict.&lt;/p&gt;\n&lt;p&gt;Apart from the prison sentence, Sharif was fined him $10 million while while Maryam was fined $2.6 million. Her husband and PML-N lawmaker Captain Mohammad Safdar Awan (retd) was handed a year in jail.</string>

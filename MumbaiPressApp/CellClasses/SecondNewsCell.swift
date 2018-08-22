@@ -10,7 +10,9 @@ import UIKit
 
 protocol SecondNewsCellDelegate : class {
     func didSelected(_ sender: SecondNewsCell)
+    
    }
+
 
 class SecondNewsCell: UITableViewCell
 {

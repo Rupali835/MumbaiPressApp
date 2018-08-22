@@ -41,9 +41,11 @@ class DetaileNews: NSObject
     }
 }
 
-class HomePageVC: UIViewController,TableViewDelegateDataSource
+class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDelegate, FirstNewCellDelegate
 {
-
+   
+    
+    
     @IBOutlet var viewLanguage: UIView!
     @IBOutlet weak var btn_Urdu: UIButton!
     @IBOutlet weak var btn_hindi: UIButton!
@@ -51,6 +53,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource
     @IBOutlet weak var tblNews: UITableView!
     @IBOutlet weak var ViewBar: UIView!
    @IBOutlet weak var menuButton: MKButton!
+    
     
     var popUp : KLCPopup!
      let snackbarView = snackBar()
@@ -109,7 +112,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource
             
             setFirstData()
             let dismissKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
-            
+            self.tblNews.addGestureRecognizer(dismissKeyboardGesture)
             
         }else{
             
@@ -117,16 +120,11 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource
             let snackbarBgColor = UIColor(red:0.96, green:0.26, blue:0.21, alpha:1.0)
             self.snackbarView.showSnackBar(view: self.view, bgColor: snackbarBgColor, text: "No internet connection", textColor: UIColor.white, interval: 2)
         }
-        
-      
     }
-    
-  
     
     func getLatestNews(url : String)
     {
         var latestNew = [AnyObject]()
-    
         let newUrl = url + "wp-json/wp/v2/posts/?per_page=12&fields=title,id,date,link,content,better_featured_image"
         
         self.latestNews.removeAll(keepingCapacity: false)
@@ -164,24 +162,13 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource
             }
             self.tblNews.reloadData()
             self.getCategoryList()
-            
         }
-        
-//        Alamofire.request(newUrl, method: .get, parameters: nil).responseJSON { (resp) in
-//            // print(resp)
-//
-//       //     self.BreakingNewsArr = resp.result.value as! [AnyObject]
-//
-//
-//        }
     }
 
-    
     @objc func hideKeyboard()
     {
         self.view.endEditing(true)
     }
-    
     
     func designView(cView : UIView)
     {
@@ -192,12 +179,12 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource
         cView.backgroundColor = UIColor.white
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool)
+    {
         navigationController?.navigationBar.isHidden = true
         sideMenus()
         customizeNavBar()
-     
-    }
+     }
     
     func setFirstData()
     {
@@ -213,30 +200,23 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource
             
         case 2:
             self.SelectedLanguage(languagePath: "hi-IN")
-            
             let latestHinUrl = "https://www.mumbaipress.com/hindi/"
             self.getLatestNews(url: latestHinUrl)
-            
             break
             
         case 3:
             self.SelectedLanguage(languagePath: "ur-IN")
-            
             let latestUrduUrl = "https://www.mumbaipress.com/urdu/"
             self.getLatestNews(url: latestUrduUrl)
             break
             
         default:
             self.SelectedLanguage(languagePath: "en")
-            
             let latestDeUrl = "https://www.mumbaipress.com/"
             self.getLatestNews(url: latestDeUrl)
             break
         }
-
     }
-    
-    
     
     func sideMenus()
     {
@@ -246,31 +226,21 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource
             self.menuButton.addTarget(revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
             revealViewController().rearViewRevealWidth = 300
             revealViewController().rightViewRevealWidth = 110
-         
-            
-        }
+         }
     }
     
     func customizeNavBar() {
         
         navigationController?.navigationBar.tintColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         navigationController?.navigationBar.barTintColor = UIColor(red: 255/255, green: 87/255, blue: 35/255, alpha: 1)
-        
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
     }
     
-    
-    
     func getCategoryList()
     {
-        
-        
         let CategoryUrl = "https://www.mumbaipress.com/wp-json/wp-api-menus/v2/menus/169"
-        
-        
         let configuration = URLSessionConfiguration.default
         configuration.requestCachePolicy = . reloadIgnoringLocalAndRemoteCacheData
-        
         var req = URLRequest(url: URL(string: CategoryUrl)!)
         req.httpMethod = "GET"
         req.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -367,16 +337,14 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource
         Alamofire.request(req).validate().responseJSON { (response) in
             print(response)
           
-            self.PoliticsNewArr = response.result.value as! [AnyObject]
-            //let lcData = resp.result.value as! [AnyObject]
+        
+        
+            guard let Response = response.result.value else{
+                return
+            }
             
-            if self.PoliticsNewArr.isEmpty == true
-            {
-                
-                let snackbarBgColor = UIColor(red:0.96, green:0.26, blue:0.21, alpha:1.0)
-                self.snackbarView.showSnackBar(view: self.view, bgColor: snackbarBgColor, text: "No Any news in Urdu, Please change the language", textColor: UIColor.white, interval: 2)
-            }else
-            {
+            self.PoliticsNewArr = Response as! [AnyObject]
+        
                 self.tblNews.isHidden = false
                 self.ViewBar.isHidden = false
                 self.MainDataArr.removeAll(keepingCapacity: false)
@@ -397,24 +365,13 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource
                 self.AllDataArr.append(self.MainDataArr as AnyObject)
                 
                 self.SectionTitleArr.append(catName)
-                
-                //self.perform(#selector(HomePageVC.performAction), with: nil, afterDelay: 3.0)
+            
                 self.tblNews.reloadData()
             }
-            
-        }
-        
-        
-//        Alamofire.request(finalUrl, method: .get, parameters: nil).responseJSON { (resp) in
-//
-//        //Alamofire.Manager.sharedInstance.session.configuration.requestCachePolicy = .ReloadIgnoringLocalCacheData
-//
-//        }
     }
     
     @objc func performAction() {
-        //This function will perform after 2 seconds
-      
+ 
          self.tblNews.reloadData()
     }
     
@@ -426,7 +383,6 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
     {
-        // return "Section \(section + 1)"
         return SectionTitleArr[section]
     }
     
@@ -451,10 +407,11 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
          var sourceImg : String = ""
+        
         if indexPath.section == 0
         {
             let cCollectionViewCell = tblNews.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CollectionViewCell
-           
+           cCollectionViewCell.SetData(TopNewsData: latestNews)
             return cCollectionViewCell
             
         }else if indexPath.section == 1
@@ -464,13 +421,12 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "SecondNewsCell", for: indexPath) as! SecondNewsCell
             
-           
             let titleNews = DictData["title"] as! NSDictionary
             let renNews = titleNews["rendered"] as! String
             let cDate = DictData["date"] as! String
            
             let imgDict = DictData["better_featured_image"] as! NSDictionary
-            
+            cell.delegate = self
             if imgDict.count != 0
             {
                  sourceImg = imgDict["source_url"] as! String
@@ -482,33 +438,11 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource
             }
             
             
-//            let encodedString = "The Weeknd <em>&#8216;King Of The Fall&#8217;</em>"
-//            
-//            // encodedString should = a[0]["title"] in your case
-//            
-//            guard let data = encodedString.data(using: .utf8) else {
-//                return nil
-//            }
-//            
-//            let options: [String: Any] = [
-//                NSDocumentTypeDocumentAttribute.rawValue: NSHTMLTextDocumentType,
-//                NSCharacterEncodingDocumentAttribute.rawValue: String.Encoding.utf8.rawValue
-//            ]
-//            
-//            guard let attributedString = try? NSAttributedString(data: data, options: options, documentAttributes: nil) else {
-//                return nil
-//            }
-//            
-//            let decodedString = attributedString.string // The Weeknd ‘King Of The Fall’
-//
-//            
-//            
-            
-            
             let url = URL(string: sourceImg)
             cell.imgNewS.kf.setImage(with: url)
             cell.lblDATE.text = cDate.datesetting()
-            cell.lbltitle.text = changestr(stringTochange: renNews)
+           let lcFormatStr = changestr(stringTochange: renNews)
+             cell.lbltitle.text = lcFormatStr.replacingHTMLEntities!
             cell.btnyoutb.isHidden = true
             
             return cell
@@ -525,7 +459,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource
                     let DictData = lcDataArr[indexPath.row]
                     
                     let cell = tblNews.dequeueReusableCell(withIdentifier: "FirstNewsCell", for: indexPath) as! FirstNewsCell
-                    
+                    cell.delegate = self
                     let titleNews = DictData["title"] as! NSDictionary
                     let renNews = titleNews["rendered"] as! String
                     let cDate = DictData["date"] as! String
@@ -549,7 +483,8 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource
                     let index = DictData["IndexValue"] as! Int
                     cell.imgNews.tag = index
                     cell.lblDate.text = cDate.datesetting()
-                    cell.lblTitle.text = changestr(stringTochange: renNews)
+                    let lcFormatStr = changestr(stringTochange: renNews)
+                    cell.lblTitle.text = lcFormatStr.replacingHTMLEntities!
                     return cell
                 }else
                 {
@@ -563,7 +498,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource
                     let cDate = DictData["date"] as! String
                     
                     let imgDict = DictData["better_featured_image"] as! NSDictionary
-                    
+                    cell.delegate = self
                     if imgDict.count != 0
                     {
                         sourceImg = imgDict["source_url"] as! String
@@ -582,8 +517,8 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource
                     cell.imgNewS.tag = index
                     
                     cell.lblDATE.text = cDate.datesetting()
-                    cell.lbltitle.text = changestr(stringTochange: renNews)
-                    
+                    let lcFormatStr = changestr(stringTochange: renNews)
+                    cell.lbltitle.text = lcFormatStr.replacingHTMLEntities!
                     return cell
                 }
             }else
@@ -591,15 +526,12 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource
                 self.tblNews.isHidden = true
                 let snackbarBgColor = UIColor(red:0.96, green:0.26, blue:0.21, alpha:1.0)
                 self.snackbarView.showSnackBar(view: self.view, bgColor: snackbarBgColor, text: "No Any news in Urdu, Please change the language", textColor: UIColor.white, interval: 2)
-
             }
-          
-           
-        }
+          }
         return UITableViewCell()
      
 }
-    
+
      func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int)
     {
         let header = view as! UITableViewHeaderFooterView
@@ -670,39 +602,6 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource
         }
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-    {
-        self.DetaileNewsArr.removeAll(keepingCapacity: false)
-        
-        self.PassData(lcAllData: self.latestNews)
-        self.PassNewsAllData(lcAllData: self.AllDataArr)
-        
-        let lcNewCnt = self.DetaileNewsArr.count
-       
-        if indexPath.section == 1
-        {
-            selectedIndexPath = indexPath.row
-        }else{
-            if indexPath.row == 0
-            {
-                let cell = tblNews.cellForRow(at: indexPath) as! FirstNewsCell
-                selectedIndexPath = cell.imgNews.tag
-            }else{
-                let cell = tblNews.cellForRow(at: indexPath) as! SecondNewsCell
-                selectedIndexPath = cell.imgNewS.tag
-            }
-        }
-        
-    
-        let newsVc = storyBrd.instantiateViewController(withIdentifier: "DetailNewsScrollVC") as! DetailNewsScrollVC
-        
-        newsVc.setImageToView(newsarr: self.DetaileNewsArr , nSelectedIndex: selectedIndexPath, nTotalNews: lcNewCnt )
-        
-        let appdel = UIApplication.shared.delegate as! AppDelegate
-        
-        let childVc =  appdel.window?.rootViewController?.childViewControllers[0] as! SWRevealViewController
-        childVc.navigationController?.pushViewController(newsVc, animated: true)
-}
     
     
     @IBAction func btnLanguage_click(_ sender: Any)
@@ -826,13 +725,71 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource
     func changestr(stringTochange:String)-> String {
         
         let str = stringTochange.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
-        let str1 = str.replacingOccurrences(of: "[&#1234567890;]", with: "", options: .regularExpression, range: nil)
-        print(str1)
-        return str1
+      //  let str1 = str.replacingOccurrences(of: "[&#1234567890;]", with: "", options: .regularExpression, range: nil)
+       // print(str1)
+        return str
         
     }
     
+    func didSelected(_ sender: SecondNewsCell)
+    {
+        guard let indexPath = tblNews.indexPath(for: sender) else { return }
+        sendDataToNext(indexPath: indexPath)
+    }
+    
+    
+    func didSelectedFirstCell(_ sender: FirstNewsCell)
+    {
+        guard let indexPath = tblNews.indexPath(for: sender) else { return }
+        sendDataToNext(indexPath: indexPath)
+    }
+    
+    func sendDataToNext(indexPath: IndexPath)
+    {
+     
+        self.DetaileNewsArr.removeAll(keepingCapacity: false)
+        self.PassData(lcAllData: self.latestNews)
+        self.PassNewsAllData(lcAllData: self.AllDataArr)
+        
+        let lcNewCnt = self.DetaileNewsArr.count
+        
+        if indexPath.section == 1
+        {
+            selectedIndexPath = indexPath.row
+        }else{
+            if indexPath.row == 0
+            {
+                let cell = tblNews.cellForRow(at: indexPath) as! FirstNewsCell
+                selectedIndexPath = cell.imgNews.tag
+            }else{
+                let cell = tblNews.cellForRow(at: indexPath) as! SecondNewsCell
+                selectedIndexPath = cell.imgNewS.tag
+            }
+        }
+        
+        
+        let newsVc = storyBrd.instantiateViewController(withIdentifier: "DetailNewsScrollVC") as! DetailNewsScrollVC
+        
+        newsVc.setImageToView(newsarr: self.DetaileNewsArr , nSelectedIndex: selectedIndexPath, nTotalNews: lcNewCnt )
+        
+        let appdel = UIApplication.shared.delegate as! AppDelegate
+        
+        let childVc =  appdel.window?.rootViewController?.childViewControllers[0] as! SWRevealViewController
+        childVc.navigationController?.pushViewController(newsVc, animated: true)
+    }
     
 }
 
+extension String {
+    var replacingHTMLEntities: String? {
+        do {
+            return try NSAttributedString(data: Data(utf8), options: [
+                .documentType: NSAttributedString.DocumentType.html,
+                .characterEncoding: String.Encoding.utf8.rawValue
+                ], documentAttributes: nil).string
+        } catch {
+            return nil
+        }
+    }
+}
 

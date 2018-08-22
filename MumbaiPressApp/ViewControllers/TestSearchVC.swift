@@ -75,7 +75,10 @@ class TestSearchVC: UIViewController,  TableViewDelegateDataSource, UISearchBarD
         let cell = tblSearchNews.dequeueReusableCell(withIdentifier: "SecondNewsCell", for: indexPath) as! SecondNewsCell
         cell.delegate = self
         cell.lblDATE.text = date.datesetting()
-        cell.lbltitle.text = changestr(stringTochange: render)
+        
+        let lcFormatStr = changestr(stringTochange: render)
+        cell.lbltitle.text = lcFormatStr.replacingHTMLEntities!
+     //   cell.lbltitle.text = changestr(stringTochange: render)
         
         let url = URL(string: sourceImg)
         cell.imgNewS.kf.setImage(with: url)
@@ -114,18 +117,11 @@ class TestSearchVC: UIViewController,  TableViewDelegateDataSource, UISearchBarD
         
         newsVc.setImageToView(newsarr: self.DetaileNewsArr, nSelectedIndex: indexPath.row, nTotalNews: self.DetaileNewsArr.count)
         
-        let appdel = UIApplication.shared.delegate as! AppDelegate
-        
-        
-        let childVc =  appdel.window?.rootViewController?.childViewControllers[0] as! SWRevealViewController
-        childVc.navigationController?.pushViewController(newsVc, animated: true)
-        
+        self.navigationController?.pushViewController(newsVc, animated: true)
+
     }
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-    {
-        
-    }
+   
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 155.0
@@ -208,9 +204,7 @@ class TestSearchVC: UIViewController,  TableViewDelegateDataSource, UISearchBarD
     func changestr(stringTochange:String)-> String {
         
         let str = stringTochange.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
-        let str1 = str.replacingOccurrences(of: "[&#1234567890;]", with: "", options: .regularExpression, range: nil)
-        print(str1)
-        return str1
+        return str
         
     }
     

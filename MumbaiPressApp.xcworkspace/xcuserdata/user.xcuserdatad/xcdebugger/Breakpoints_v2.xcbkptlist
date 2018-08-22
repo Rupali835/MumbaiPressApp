@@ -26,7 +26,7 @@
                   moduleName = "MBPhotoPicker"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/user/Desktop/KSPL/MumbaiPressApp%202/Pods/MBPhotoPicker/Pod/Classes/MBPhotoPicker.swift"
-                  timestampString = "555794214.859363"
+                  timestampString = "556556863.291777"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "147"
@@ -41,7 +41,7 @@
                   moduleName = "MBPhotoPicker"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/user/Desktop/KSPL/MumbaiPressApp%202/Pods/MBPhotoPicker/Pod/Classes/MBPhotoPicker.swift"
-                  timestampString = "555794214.864327"
+                  timestampString = "556556863.296973"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "149"
@@ -217,54 +217,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MumbaiPressApp/ViewControllers/AllUploadNewsVc.swift"
-            timestampString = "554905434.113965"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "423"
-            endingLineNumber = "423"
-            landmarkName = "UploadNews()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MumbaiPressApp/ViewControllers/AllUploadNewsVc.swift"
-            timestampString = "554905434.114035"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "424"
-            endingLineNumber = "424"
-            landmarkName = "UploadNews()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MumbaiPressApp/ViewControllers/AllUploadNewsVc.swift"
-            timestampString = "554905434.114102"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "428"
-            endingLineNumber = "428"
-            landmarkName = "UploadNews()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "MumbaiPressApp/ViewControllers/NewReporterFormVC.swift"
             timestampString = "554926262.511036"
             startingColumnNumber = "9223372036854775807"
@@ -314,7 +266,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MumbaiPressApp/ViewControllers/CategoriesNewsDataVc.swift"
-            timestampString = "555243585.785637"
+            timestampString = "556556862.435043"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "162"

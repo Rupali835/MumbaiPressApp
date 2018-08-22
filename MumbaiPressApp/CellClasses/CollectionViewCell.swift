@@ -22,91 +22,28 @@ class CollectionViewCell: UITableViewCell,CollectionViewDelegateDataSourceFlowLa
     
     let storyBrd = UIStoryboard(name: "Main", bundle: nil)
     
-    
     override func setSelected(_ selected: Bool, animated: Bool)
     {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
     
-    
+    func SetData(TopNewsData: [AnyObject])
+    {
+        self.Top6LatesNews = TopNewsData
+        self.collView.reloadData()
+    }
     override func awakeFromNib()
     {
         super.awakeFromNib()
-        
         self.selectionStyle = .none
-
-       let nibName = UINib(nibName: "TopScrollableNewsCell", bundle:nil)
-        
+        let nibName = UINib(nibName: "TopScrollableNewsCell", bundle:nil)
         collView.register(nibName, forCellWithReuseIdentifier: "cell")
-        
-        
         self.collView.delegate = self
         self.collView.dataSource = self
-       
-        
-        let setLanguage = UserDefaults.standard.integer(forKey: "ENG")
-        
-        switch setLanguage
-        {
-        case 1:
-            self.getNews(url: "https://www.mumbaipress.com/")
-            break
-            
-        case 2:
-            self.getNews(url: "https://www.mumbaipress.com/hindi/")
-            break
-            
-        case 3:
-             self.getNews(url: "https://www.mumbaipress.com/urdu/")
-            break
-            
-        default:
-             self.getNews(url: "https://www.mumbaipress.com/")
-            break
-        }
- 
         startTimer()
-        
     }
     
-    func getNews(url : String)
-    {
-      //  https://mumbaipress.com/
-        let newUrl = url + "wp-json/wp/v2/posts/?per_page=12&fields=title,id,date,content,better_featured_image,link"
-        
-        let configuration = URLSessionConfiguration.default
-        configuration.requestCachePolicy = . reloadIgnoringLocalAndRemoteCacheData
-        
-        var req = URLRequest(url: URL(string: newUrl)!)
-        req.httpMethod = "GET"
-        req.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        req.setValue("application/json", forHTTPHeaderField: "Accept")
-        req.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
-        
-        Alamofire.request(req).validate().responseJSON { (response) in
-            print(response)
-            
-            if let lcBreakingNews = response.result.value
-            {
-                self.BreakingNewsArr = lcBreakingNews as! [AnyObject]
-            }
-            
-            for (index, value) in self.BreakingNewsArr.enumerated()
-            {
-                if index < 6
-                {
-                    self.Top6LatesNews.append(value)
-                }
-            }
-            
-            self.collView.reloadData()
-        
-        }
-        
-       
-    }
+
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
@@ -122,16 +59,19 @@ class CollectionViewCell: UITableViewCell,CollectionViewDelegateDataSourceFlowLa
         
         let Title = lcDict["title"] as! NSDictionary
         let render = Title["rendered"] as! String
-        let imgDict = lcDict["better_featured_image"] as! NSDictionary
-        let sourceImg = imgDict["source_url"] as! String
         
+       
+        if let imgDict = lcDict["better_featured_image"] as? NSDictionary
+       {
+           let sourceImg = imgDict["source_url"] as! String
+            let url = URL(string: sourceImg)
+            cell.imgView.kf.setImage(with: url)
+        }
+        
+      
         let txt = changestr(stringTochange: render)
         cell.lblTitle.text = "   " + txt
       
-        
-        let url = URL(string: sourceImg)
-        cell.imgView.kf.setImage(with: url)
-
         return cell
     }
     
@@ -142,7 +82,7 @@ class CollectionViewCell: UITableViewCell,CollectionViewDelegateDataSourceFlowLa
         
         self.DetaileNewsArr.removeAll(keepingCapacity: false)
         
-        for (index,lcDict) in self.BreakingNewsArr.enumerated()
+        for (index,lcDict) in self.Top6LatesNews.enumerated()
         {
                 let Link = lcDict["link"] as! String
                 let titleNews = lcDict["title"] as! NSDictionary
@@ -150,8 +90,15 @@ class CollectionViewCell: UITableViewCell,CollectionViewDelegateDataSourceFlowLa
                 let cDate = lcDict["date"] as! String
                 let contentNew = lcDict["content"] as! NSDictionary
                 let renDetailDesc = contentNew["rendered"] as! String
-                let imgDict = lcDict["better_featured_image"] as! NSDictionary
-                let sourceImg = imgDict["source_url"] as! String
+            
+            var sourceImg = ""
+            if let imgDict = lcDict["better_featured_image"] as? NSDictionary
+            {
+                 sourceImg = imgDict["source_url"] as! String
+                
+            }else{
+                sourceImg = ""
+            }
                 
             self.DetaileNewsArr.append(DetaileNews(date: cDate.datesetting(), title: renNews, url: sourceImg, DetailsDesc: renDetailDesc, nIndex: index, link: Link ))
             

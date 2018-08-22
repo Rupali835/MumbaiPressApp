@@ -8,10 +8,15 @@
 
 import UIKit
 
+protocol TopNewCellDelegate : class {
+    func didSelectedFirstCell(_ sender: TopScrollableNewsCell)
+}
+
 class TopScrollableNewsCell: UICollectionViewCell
 {
-  //  @IBOutlet weak var ViewLbl: UIView!
     @IBOutlet weak var imgView: UIImageView!
-    
     @IBOutlet weak var lblTitle: UILabel!
+    
+    weak var delegate : TopNewCellDelegate?
+
 }

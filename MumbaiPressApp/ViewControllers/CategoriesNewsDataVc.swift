@@ -258,9 +258,9 @@ class CategoriesNewsDataVc: UIViewController, TableViewDelegateDataSource {
     func changestr(stringTochange:String)-> String {
         
         let str = stringTochange.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
-        let str1 = str.replacingOccurrences(of: "[&#1234567890;]", with: "", options: .regularExpression, range: nil)
-        print(str1)
-        return str1
+//        let str1 = str.replacingOccurrences(of: "[&#1234567890;]", with: "", options: .regularExpression, range: nil)
+//        print(str1)
+        return str
         
     }
 }

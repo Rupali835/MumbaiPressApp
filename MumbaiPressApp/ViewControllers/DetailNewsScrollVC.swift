@@ -78,27 +78,19 @@ class DetailNewsScrollVC: UIViewController,CollectionViewDelegateDataSourceFlowL
         let render = lcDataArr.DetailsDesc
         let title = lcDataArr.title
         
-        let textHead = changestr(stringTochange: title!)
-        let textNews = changestr(stringTochange: render)
-        
         let sourceImg = lcDataArr.url
         self.LinkUrl = lcDataArr.Link
      
+        cell.lblView.text = title?.replacingHTMLEntities!
+        cell.TextView.text = render.replacingHTMLEntities!
         
-        cell.TextView.text = textNews
-     
-        print(self.Title)
-        cell.lblView.text = textHead
         cell.lblDate.text = lcDataArr.date
         
         let url = URL(string: sourceImg)
         cell.imgView.kf.setImage(with: url)
         
         cell.imgView.dropShadow()
-        
-    
         cell.TextView.sizeToFit()
-        
         
         let calHeight = cell.TextView.frame.size.height
         cell.TextView.frame = CGRect(x: 16, y: 40, width: self.view.frame.size.width - 32, height: calHeight)
@@ -179,24 +171,7 @@ class DetailNewsScrollVC: UIViewController,CollectionViewDelegateDataSourceFlowL
         
         self.present(activityViewController, animated: true, completion: nil)
     }
-    
-    
-    @objc func htmlDecode(text : String)
-    {
-        
-    }
-    
-    func changestr(stringTochange:String)-> String {
-        
-        let str = stringTochange.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
-        let str1 = str.replacingOccurrences(of: "[&#1234567890;]", with: "", options: .regularExpression, range: nil)
-        print(str1)
-        return str1
-        
-    }
-
-    
-    
+   
     
 }
 
