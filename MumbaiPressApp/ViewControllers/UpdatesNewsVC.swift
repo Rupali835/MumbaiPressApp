@@ -19,6 +19,7 @@ class UpdatesNewsVC: UIViewController, TableViewDelegateDataSource
     
     var newsData = [AnyObject]()
     let snackbarView = snackBar()
+    var StrUpdate : String = ""
     
     override func viewDidLoad()
     {
@@ -65,8 +66,8 @@ class UpdatesNewsVC: UIViewController, TableViewDelegateDataSource
     {
         let cell = tblNews.dequeueReusableCell(withIdentifier: "UpdateNewsCell", for: indexPath) as! UpdateNewsCell
         let lcDict = self.newsData[indexPath.row]
-        cell.lblNews.text = (lcDict["u_headline"] as! String)
-        
+        self.StrUpdate = (lcDict["u_headline"] as! String)
+        cell.lblNews.text = self.StrUpdate
         let date = lcDict["u_date_time"] as! String
         cell.lblDateTime.text = date.datesetting()
         cell.backView.backgroundColor = UIColor(red:0.31, green:0.76, blue:0.97, alpha:1.0)

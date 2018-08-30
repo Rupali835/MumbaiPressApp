@@ -40,10 +40,12 @@ class RepoterData: NSObject {
     var document: URL!
 }
 
-class NewReporterFormVC: UIViewController, UITextFieldDelegate, TableViewDelegateDataSource, UITextViewDelegate
+class NewReporterFormVC: UIViewController, UITextFieldDelegate, TableViewDelegateDataSource, UITextViewDelegate, UIScrollViewDelegate, UIGestureRecognizerDelegate
 {
    
    
+    @IBOutlet weak var scrollView: SPKeyBoardAvoiding!
+    @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var btnTermsAgree: CheckboxButton!
     @IBOutlet weak var btnHINDI: CheckboxButton!
     @IBOutlet weak var btnURDU: CheckboxButton!
@@ -132,7 +134,8 @@ class NewReporterFormVC: UIViewController, UITextFieldDelegate, TableViewDelegat
         popUp = KLCPopup()
 
         let dismissKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
-        self.ContentView.addGestureRecognizer(dismissKeyboardGesture)
+        dismissKeyboardGesture.delegate = self
+        self.mainView.addGestureRecognizer(dismissKeyboardGesture)
         self.viewReference.addGestureRecognizer(dismissKeyboardGesture)
         self.btnMale.isMultipleSelectionEnabled = false
         self.btnRef_reporter.isMultipleSelectionEnabled = false
@@ -160,6 +163,8 @@ class NewReporterFormVC: UIViewController, UITextFieldDelegate, TableViewDelegat
         self.txtAboutSelf.layer.borderWidth = 1
         self.txtAboutSelf.layer.borderColor = UIColor(red:0.63, green:0.05, blue:0.10, alpha:1.0).cgColor
         
+         self.scrollView.delegate = self;
+        
     }
 
     
@@ -176,7 +181,17 @@ class NewReporterFormVC: UIViewController, UITextFieldDelegate, TableViewDelegat
         
     }
     
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        if (touch.view?.isDescendant(of: self.mainView))!
+        {
+            self.view.endEditing(true)
+            return false
+        }
+        return true
+    }
  
+    
+    
     //////////////////////    TEXTFIELD - METHODS   /////////////////
     
     func textFieldDidBeginEditing(textField: UITextField)
@@ -247,6 +262,7 @@ class NewReporterFormVC: UIViewController, UITextFieldDelegate, TableViewDelegat
     
     @IBAction func btnEng_OnClick(_ sender: Any)
     {
+        self.view.endEditing(true)
         if btnENGLISH.on
         {
             self.langArr.append("1")
@@ -264,6 +280,8 @@ class NewReporterFormVC: UIViewController, UITextFieldDelegate, TableViewDelegat
     
     @IBAction func btnHindi_OnClick(_ sender: Any)
     {
+        self.view.endEditing(true)
+
         if btnHINDI.on
         {
             self.langArr.append("2")
@@ -283,6 +301,8 @@ class NewReporterFormVC: UIViewController, UITextFieldDelegate, TableViewDelegat
     
     @IBAction func btnUrdu_OnClick(_ sender: Any)
     {
+        self.view.endEditing(true)
+
         if btnURDU.on
         {
             self.langArr.append("3")
@@ -300,11 +320,15 @@ class NewReporterFormVC: UIViewController, UITextFieldDelegate, TableViewDelegat
     
     @IBAction func btnProfile_OnClick(_ sender: Any)
     {
+        self.view.endEditing(true)
+
         self.TakePhoto()
     }
     
     @IBAction func btnMale_OnClick(_ sender: Any)
     {
+        self.view.endEditing(true)
+
        let Gender =  (sender as AnyObject).tag
         
         if Gender == 1
@@ -320,11 +344,14 @@ class NewReporterFormVC: UIViewController, UITextFieldDelegate, TableViewDelegat
    
     @IBAction func btnTermsOk_click(_ sender: Any)
     {
+        self.view.endEditing(true)
+
        popUp.dismiss(true)
     }
     
     @IBAction func btnSubmit_OnClick(_ sender: Any)
     {
+        self.view.endEditing(true)
         self.Validation()
     }
     
@@ -345,12 +372,16 @@ class NewReporterFormVC: UIViewController, UITextFieldDelegate, TableViewDelegat
     
     @IBAction func btnAddAttachment_OnClick(_ sender: Any)
     {
+        self.view.endEditing(true)
+
        self.SelectedRow = 2
         self.TakeDocument()
     }
     
     @IBAction func btnOpenRefView_OnClick(_ sender: Any)
     {
+        self.view.endEditing(true)
+
         txtRef_repname.text = ""
         txtRef_repcontact.text = ""
         viewTerms.isHidden = true
@@ -366,7 +397,8 @@ class NewReporterFormVC: UIViewController, UITextFieldDelegate, TableViewDelegat
     
     @IBAction func btnRef_reporter_onClick(_ sender: Any)
     {
-        
+        self.view.endEditing(true)
+
         self.SelectedRow = 1
         let abc =  (sender as AnyObject).tag
         if abc == 1
@@ -911,7 +943,11 @@ class NewReporterFormVC: UIViewController, UITextFieldDelegate, TableViewDelegat
         
         
     }
+    
 
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+         self.view.endEditing(true)
+    }
 }
 
 //extension String {

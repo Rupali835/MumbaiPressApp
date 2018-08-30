@@ -40,8 +40,8 @@
         <array key="Raleway-SemiBoldItalic.ttf">
             <string>Raleway-SemiBoldItalic</string>
         </array>
-        <array key="SFUIText.ttf">
-            <string>.SFUIText</string>
+        <array key="SFUITextItalic.ttf">
+            <string>.SFUIText-Italic</string>
         </array>
     </customFonts>
     <scenes>
@@ -173,7 +173,7 @@ Adaa Production is an Indian based company having a team of senior journalists w
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="jXr-4a-O8X"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name=".SFUIText" family=".SF UI Text" pointSize="22"/>
+                                <fontDescription key="fontDescription" name=".SFUIText-Italic" family=".SF UI Text" pointSize="22"/>
                                 <color key="textColor" red="0.020850472152233124" green="0.23753061890602112" blue="0.98458880186080933" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -260,7 +260,7 @@ Any communication or material you transmit to the Site by electronic mail or oth
 
 Images of people or places displayed on the Site are either the property of, or used with permission by, mumbaipress.com The use of these images by you, or anyone else authorised by you, is prohibited unless specifically permitted by these Terms and Conditions or specific permission provided elsewhere on the Site. Any unauthorized use of the images may violate copyright laws, trademark laws, the laws of privacy and publicity, and communications, regulations and statutes.
 
-The trademarks, logos, and service marks (collectively the â€œTrademarksâ€) displayed on the Site, are registered and unregistered Trademarks of mumbaipress.com and others. Your misuse of the Trademarks displayed on the Site, or any other content on the Site, except as provided in these Terms and Conditions, is strictly prohibited. You are also advised that Adaa production pvt ltd will aggressively enforce its intellectual property rights to the fullest extent of the law, including the seeking of criminal prosecution.
+The trademarks, logos, and service marks (collectively the Trademarks) displayed on the Site, are registered and unregistered Trademarks of mumbaipress.com and others. Your misuse of the Trademarks displayed on the Site, or any other content on the Site, except as provided in these Terms and Conditions, is strictly prohibited. You are also advised that Adaa production pvt ltd will aggressively enforce its intellectual property rights to the fullest extent of the law, including the seeking of criminal prosecution.
 
 Adaa Production and mumbaipress.com does not endorse in any way the advertisers on the Site to the contents of such advertisements. Please verify the veracity of the all information contained in any advertisement on your own before undertaking any reliance.
 
@@ -495,20 +495,20 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S-557 Heera Complex 3rd floor New Delhi 110092" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evi-tz-rG1">
-                                                        <rect key="frame" x="11" y="133" width="298" height="38"/>
+                                                        <rect key="frame" x="11" y="133" width="298" height="37.5"/>
                                                         <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ADDA" translatesAutoresizingMaskIntoConstraints="NO" id="j41-lh-7LV">
-                                                        <rect key="frame" x="105" y="191" width="110" height="110"/>
+                                                        <rect key="frame" x="105" y="190.5" width="110" height="110"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="110" id="H1y-bn-dbn"/>
                                                             <constraint firstAttribute="height" constant="110" id="Y2a-qi-q57"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email ID " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paf-72-hyO">
-                                                        <rect key="frame" x="11" y="322" width="298" height="25"/>
+                                                        <rect key="frame" x="11" y="321.5" width="298" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="rr0-9I-R0l"/>
                                                         </constraints>
@@ -517,7 +517,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="adaaproduction9@gmail.com, info@mumbaipress.com" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ig-lt-AUa">
-                                                        <rect key="frame" x="11" y="352" width="298" height="38"/>
+                                                        <rect key="frame" x="11" y="351.5" width="298" height="38"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="38" id="9SP-cP-TUb"/>
                                                         </constraints>
@@ -526,7 +526,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ym2-fh-1lj">
-                                                        <rect key="frame" x="15" y="420" width="290" height="60"/>
+                                                        <rect key="frame" x="15" y="419.5" width="290" height="60"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yhO-YL-coH">
                                                                 <rect key="frame" x="10" y="52" width="270" height="1"/>
@@ -557,7 +557,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                         </constraints>
                                                     </view>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4nt-8C-8OT">
-                                                        <rect key="frame" x="15" y="488" width="290" height="60"/>
+                                                        <rect key="frame" x="15" y="487.5" width="290" height="60"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fsD-ns-86h">
                                                                 <rect key="frame" x="10" y="52" width="270" height="1"/>
@@ -588,7 +588,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                         </constraints>
                                                     </view>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHr-WX-XXq">
-                                                        <rect key="frame" x="15" y="556" width="290" height="60"/>
+                                                        <rect key="frame" x="15" y="555.5" width="290" height="60"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BKt-az-RWb">
                                                                 <rect key="frame" x="10" y="52" width="270" height="1"/>
@@ -619,7 +619,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXm-io-bgj">
-                                                        <rect key="frame" x="25" y="630" width="270" height="21"/>
+                                                        <rect key="frame" x="25" y="629.5" width="270" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="xyU-Vh-J3f"/>
                                                         </constraints>
@@ -628,7 +628,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="TAP HERE TO WRITE" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Iso-ky-UiY">
-                                                        <rect key="frame" x="15" y="659" width="290" height="75"/>
+                                                        <rect key="frame" x="15" y="658.5" width="290" height="75"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="75" id="1R9-Qj-b7W"/>
@@ -638,14 +638,14 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="le4-Bs-Jsi">
-                                                        <rect key="frame" x="20" y="742" width="280" height="1"/>
+                                                        <rect key="frame" x="20" y="741.5" width="280" height="1"/>
                                                         <color key="backgroundColor" red="0.59145528078079224" green="0.16446465253829956" blue="0.089196048676967621" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="gcA-5a-9I4"/>
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8w9-5d-5yX">
-                                                        <rect key="frame" x="120" y="774" width="80" height="40"/>
+                                                        <rect key="frame" x="120" y="773.5" width="80" height="40"/>
                                                         <color key="backgroundColor" red="0.59145528078079224" green="0.16446465253829956" blue="0.089196048676967621" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="80" id="aii-xp-OFs"/>
@@ -1092,7 +1092,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AjM-zt-3Y1">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
-                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="X63-9a-WoO">
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="X63-9a-WoO">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="kqc-2q-bJm"/>
@@ -1199,7 +1199,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S8i-SG-3Ax">
-                                <rect key="frame" x="0.0" y="134" width="320" height="434"/>
+                                <rect key="frame" x="0.0" y="124" width="320" height="444"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -1211,7 +1211,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <constraint firstItem="BFM-dS-rAC" firstAttribute="leading" secondItem="yJa-18-Tcf" secondAttribute="leading" id="fZi-Wm-w8h"/>
                             <constraint firstItem="BFM-dS-rAC" firstAttribute="top" secondItem="yJa-18-Tcf" secondAttribute="top" id="fe9-mu-EzI"/>
                             <constraint firstItem="S8i-SG-3Ax" firstAttribute="leading" secondItem="yJa-18-Tcf" secondAttribute="leading" id="zbn-i6-326"/>
-                            <constraint firstItem="S8i-SG-3Ax" firstAttribute="top" secondItem="BFM-dS-rAC" secondAttribute="bottom" constant="10" id="zhO-yb-3Df"/>
+                            <constraint firstItem="S8i-SG-3Ax" firstAttribute="top" secondItem="BFM-dS-rAC" secondAttribute="bottom" id="zhO-yb-3Df"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yJa-18-Tcf"/>
                     </view>
@@ -2929,8 +2929,10 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                         <outlet property="btnTermsAgree" destination="0Dh-ym-fhy" id="tQo-4x-CtO"/>
                         <outlet property="btnURDU" destination="X6f-DZ-elJ" id="Sbf-lz-c6x"/>
                         <outlet property="lblCountWords" destination="EwQ-wu-5aW" id="f2R-9W-idh"/>
+                        <outlet property="mainView" destination="hZh-bR-yMC" id="bTI-wj-kl1"/>
                         <outlet property="menuBtn" destination="rem-lm-J80" id="Wgh-O1-oYN"/>
                         <outlet property="refTblView" destination="5r4-N4-b6f" id="9dn-9u-hJb"/>
+                        <outlet property="scrollView" destination="Xqu-l8-XoG" id="X4J-OT-sMI"/>
                         <outlet property="tblDocument" destination="QWa-w5-CYQ" id="y09-Gq-51o"/>
                         <outlet property="tblReferenceInfo" destination="eQu-CW-zJY" id="m7w-zE-9pB"/>
                         <outlet property="txtAboutSelf" destination="y34-kC-LWl" id="bS0-tw-UDF"/>
@@ -4544,7 +4546,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 </constraints>
                                 <state key="normal" image="menu"/>
                             </button>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ORo-OR-pcN">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="ORo-OR-pcN">
                                 <rect key="frame" x="0.0" y="76" width="320" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="PYO-GD-2YJ"/>
@@ -5029,13 +5031,13 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                                             </constraints>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZS6-gn-UOZ">
-                                                                            <rect key="frame" x="10" y="262" width="300" height="23"/>
+                                                                            <rect key="frame" x="12" y="262" width="296" height="23"/>
                                                                             <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="20"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnc-of-x1h">
-                                                                            <rect key="frame" x="10" y="295" width="300" height="20"/>
+                                                                            <rect key="frame" x="12" y="295" width="296" height="20"/>
                                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="20" id="gGa-ff-25e"/>
@@ -5044,29 +5046,30 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="justified" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="moF-Ua-WdQ">
-                                                                            <rect key="frame" x="10" y="325" width="300" height="805"/>
+                                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="moF-Ua-WdQ">
+                                                                            <rect key="frame" x="15" y="325" width="290" height="805"/>
                                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                             <string key="text">Former Prime Minister Nawaz Sharif&amp;#8217;s daughter and Pakistan Muslim League (Nawaz) leader Maryam Nawaz on Saturday said that she and her father will return to the country within 10 days.&lt;/p&gt;\n&lt;p&gt;Maryam Nawaz was speaking to media in London, a day after an accountability court in Pakistan sentenced the three-time Premier to 10 years in prison while she got a seven-year term in the Avenfield corruption reference, related to the Sharif family&amp;#8217;s purchase of upscale London flats.&lt;/p&gt;\n&lt;p&gt;Asked whether the father-daughter duo will return within the 10-day deadline set for appeal, she said that consultation was underway against the decision and the lawyers were looking at the matter from legal angles, Geo News reported.&lt;/p&gt;\n&lt;p&gt;&amp;#8220;Due process will be implied against the court&amp;#8217;s decision,&amp;#8221; said Maryam Nawaz, adding that the institutions in the UK already told the Pakistani institutions that no illegality was carried out&amp;#8221;.&lt;/p&gt;\n&lt;p&gt;The Avenfield reference is one of the several corruption cases filed against Sharif and his children by the anti-corruption body on the Supreme Court&amp;#8217;s directives in the last year&amp;#8217;s Panamagate verdict.&lt;/p&gt;\n&lt;p&gt;Apart from the prison sentence, Sharif was fined him $10 million while while Maryam was fined $2.6 million. Her husband and PML-N lawmaker Captain Mohammad Safdar Awan (retd) was handed a year in jail.</string>
-                                                                            <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="18"/>
+                                                                            <color key="textColor" white="0.0" alpha="0.91012949486301364" colorSpace="calibratedWhite"/>
+                                                                            <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="18"/>
                                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                                             <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
                                                                         </textView>
                                                                     </subviews>
                                                                     <constraints>
                                                                         <constraint firstItem="qnc-of-x1h" firstAttribute="top" secondItem="ZS6-gn-UOZ" secondAttribute="bottom" constant="10" id="5Ie-sF-510"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="qnc-of-x1h" secondAttribute="trailing" constant="10" id="7AK-Gp-3lk"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="qnc-of-x1h" secondAttribute="trailing" constant="12" id="7AK-Gp-3lk"/>
                                                                         <constraint firstAttribute="height" constant="805" id="BdR-VR-Tl6"/>
                                                                         <constraint firstAttribute="trailing" secondItem="i3g-Xb-yIo" secondAttribute="trailing" constant="10" id="Dh4-hj-Qt9"/>
                                                                         <constraint firstItem="i3g-Xb-yIo" firstAttribute="leading" secondItem="KL7-7d-1cm" secondAttribute="leading" constant="10" id="Dql-ng-FJP"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="ZS6-gn-UOZ" secondAttribute="trailing" constant="10" id="Et7-1B-seF"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="moF-Ua-WdQ" secondAttribute="trailing" constant="10" id="GF6-mB-xgp"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="ZS6-gn-UOZ" secondAttribute="trailing" constant="12" id="Et7-1B-seF"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="moF-Ua-WdQ" secondAttribute="trailing" constant="15" id="GF6-mB-xgp"/>
                                                                         <constraint firstItem="moF-Ua-WdQ" firstAttribute="top" secondItem="qnc-of-x1h" secondAttribute="bottom" constant="10" id="KU6-KF-geD"/>
-                                                                        <constraint firstItem="qnc-of-x1h" firstAttribute="leading" secondItem="KL7-7d-1cm" secondAttribute="leading" constant="10" id="LxH-2v-VHj"/>
+                                                                        <constraint firstItem="qnc-of-x1h" firstAttribute="leading" secondItem="KL7-7d-1cm" secondAttribute="leading" constant="12" id="LxH-2v-VHj"/>
                                                                         <constraint firstItem="i3g-Xb-yIo" firstAttribute="top" secondItem="KL7-7d-1cm" secondAttribute="top" constant="10" id="Np0-WX-2pg"/>
-                                                                        <constraint firstItem="ZS6-gn-UOZ" firstAttribute="leading" secondItem="KL7-7d-1cm" secondAttribute="leading" constant="10" id="PN9-hH-oqy"/>
+                                                                        <constraint firstItem="ZS6-gn-UOZ" firstAttribute="leading" secondItem="KL7-7d-1cm" secondAttribute="leading" constant="12" id="PN9-hH-oqy"/>
                                                                         <constraint firstItem="ZS6-gn-UOZ" firstAttribute="top" secondItem="i3g-Xb-yIo" secondAttribute="bottom" constant="12" id="S2X-VD-49a"/>
-                                                                        <constraint firstItem="moF-Ua-WdQ" firstAttribute="leading" secondItem="KL7-7d-1cm" secondAttribute="leading" constant="10" id="gpf-AW-gwg"/>
+                                                                        <constraint firstItem="moF-Ua-WdQ" firstAttribute="leading" secondItem="KL7-7d-1cm" secondAttribute="leading" constant="15" id="gpf-AW-gwg"/>
                                                                         <constraint firstItem="moF-Ua-WdQ" firstAttribute="height" secondItem="KL7-7d-1cm" secondAttribute="height" id="ou1-EQ-nH7"/>
                                                                     </constraints>
                                                                 </view>

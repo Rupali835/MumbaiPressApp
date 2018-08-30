@@ -44,6 +44,7 @@ class LoginVc: UIViewController {
         
     }
     
+    
     func getAccess()
     {
         let LoginUrl = "https://www.mumbaipress.com/wp-content/themes/mumbai_press/API/login_api.php"
@@ -86,6 +87,7 @@ class LoginVc: UIViewController {
    
     @IBAction func btnLogin_OnClick(_ sender: Any)
     {
+        self.view.endEditing(true)
         self.getAccess()
     }
     

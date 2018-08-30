@@ -155,9 +155,12 @@ class DetailNewsScrollVC: UIViewController,CollectionViewDelegateDataSourceFlowL
         
         let logo = UIImage(named: "mp_new")
         let imageView = UIImageView(image:logo)
+        imageView.frame.size.height = 25
+        imageView.frame.size.width = 160
+        imageView.contentMode = .scaleAspectFit
         self.navigationItem.titleView = imageView
         
-        let button1 = UIBarButtonItem(image: UIImage(named: "upload"), style: .plain, target: self, action: #selector(TapToShare_Click))
+        let button1 = UIBarButtonItem(image: UIImage(named: "share"), style: .plain, target: self, action: #selector(TapToShare_Click))
         self.navigationItem.rightBarButtonItem  = button1
     }
     

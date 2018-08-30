@@ -42,7 +42,7 @@ class VideoListNewsVc: UIViewController, YTPlayerViewDelegate, TableViewDelegate
         getVideo()
         tblVideo.delegate = self
         tblVideo.dataSource = self
-        
+        tblVideo.separatorStyle = .none
         tblVideo.register(UINib(nibName: "FirstNewsCell", bundle: nil), forCellReuseIdentifier: "FirstNewsCell")
         
         tblVideo.register(UINib(nibName: "SecondNewsCell", bundle: nil), forCellReuseIdentifier: "SecondNewsCell")
@@ -79,18 +79,28 @@ class VideoListNewsVc: UIViewController, YTPlayerViewDelegate, TableViewDelegate
        
         let Snipet = lcDict["snippet"] as! NSDictionary
         let title = Snipet["title"] as! String
-         let date = Snipet["publishedAt"] as! String
+         let string = Snipet["publishedAt"] as! String
      
         let thumb = Snipet["thumbnails"] as! NSDictionary
         let imgRes = thumb["high"] as! NSDictionary
         let img = imgRes["url"] as! String
+        
+        let dateFormatter = DateFormatter()
+        let tempLocale = dateFormatter.locale // save locale temporarily
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
+        let dateFo = dateFormatter.date(from: string)!
+        dateFormatter.dateFormat = "MMM d, h:mm a"
+        dateFormatter.locale = tempLocale // reset the locale
+        let dateString = dateFormatter.string(from: dateFo)
         
         
         if indexPath.row == 0
         {
             let cell = tblVideo.dequeueReusableCell(withIdentifier: "FirstNewsCell", for: indexPath) as! FirstNewsCell
             
-            cell.lblDate.text = date
+           
+            cell.lblDate.text = dateString
             cell.lblTitle.text = title as! String
             
             let url = URL(string: img)
@@ -106,7 +116,7 @@ class VideoListNewsVc: UIViewController, YTPlayerViewDelegate, TableViewDelegate
             
             let cell = tblVideo.dequeueReusableCell(withIdentifier: "SecondNewsCell", for: indexPath) as! SecondNewsCell
             
-           cell.lblDATE.text = date
+           cell.lblDATE.text = dateString
             cell.lbltitle.text = title
             
             let url = URL(string: img)
@@ -118,6 +128,23 @@ class VideoListNewsVc: UIViewController, YTPlayerViewDelegate, TableViewDelegate
             return cell
         }
     }
+    
+    func dateformat()
+    {
+        let string = "2017-01-27T18:36:36Z"
+        let dateFormatter = DateFormatter()
+        let tempLocale = dateFormatter.locale // save locale temporarily
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        let date = dateFormatter.date(from: string)!
+        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm:ss"
+        dateFormatter.locale = tempLocale // reset the locale
+        let dateString = dateFormatter.string(from: date)
+        print("EXACT_DATE : \(dateString)")
+        
+    }
+    
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
@@ -183,16 +210,7 @@ class VideoListNewsVc: UIViewController, YTPlayerViewDelegate, TableViewDelegate
     {
         let YoutubeUrl = "https://www.youtube.com/results?search_query="
         
-//        let lcDict = self.ItemArr[indexPath.row]
-//        // let VideoId = lcDict["videoId"] as! String
-//        let Snipet = lcDict["snippet"] as! NSDictionary
-//        let res = Snipet["resourceId"] as! NSDictionary
-//        let VideoId = res["videoId"] as! String
-//
-//        Playerview?.isHidden = false
-//        tblVideo?.reloadData()
-//        Playerview?.load(withVideoId: VideoId)
-//        Playerview.playVideo()
+
     }
    
     func getVideo()

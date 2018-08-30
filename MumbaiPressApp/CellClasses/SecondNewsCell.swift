@@ -29,11 +29,12 @@ class SecondNewsCell: UITableViewCell
     {
         super.awakeFromNib()
         self.selectionStyle = .none
-
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapOnView))
-        tapGesture.numberOfTapsRequired = 1
-        tapGesture.numberOfTouchesRequired = 1
-        self.backview.addGestureRecognizer(tapGesture)
+//
+//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapOnView))
+//        tapGesture.delegate = self
+//        tapGesture.numberOfTapsRequired = 1
+//        tapGesture.numberOfTouchesRequired = 1
+//        self.backview.addGestureRecognizer(tapGesture)
     }
     
     @objc func tapOnView(onView gesture: UITapGestureRecognizer)
@@ -46,5 +47,6 @@ class SecondNewsCell: UITableViewCell
 
         // Configure the view for the selected state
     }
+    
     
 }

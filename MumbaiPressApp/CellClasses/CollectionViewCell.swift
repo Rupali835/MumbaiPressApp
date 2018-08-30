@@ -66,6 +66,9 @@ class CollectionViewCell: UITableViewCell,CollectionViewDelegateDataSourceFlowLa
            let sourceImg = imgDict["source_url"] as! String
             let url = URL(string: sourceImg)
             cell.imgView.kf.setImage(with: url)
+        }else{
+          cell.imgView.image =  UIImage(named: "backimg")
+           
         }
         
       

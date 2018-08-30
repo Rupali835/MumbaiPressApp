@@ -19,4 +19,8 @@ class TopScrollableNewsCell: UICollectionViewCell
     
     weak var delegate : TopNewCellDelegate?
 
+    override func awakeFromNib()
+    {
+        //let lcTapGesture = UITapGestureRecognizer(target: self, action: )
+    }
 }

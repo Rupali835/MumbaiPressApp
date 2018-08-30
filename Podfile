@@ -11,6 +11,9 @@ pod 'AlamofireImage'
 pod 'SwiftyJSON'
  pod ‘youtube-ios-player-helper’, ‘~> 0.1’
  pod 'Kingfisher', '~> 4.0'
+pod 'Firebase/Core'
+pod 'Firebase/Messaging'
+pod 'Firebase/Database'
 
 
   # Pods for MumbaiPressApp
@@ -21,5 +24,8 @@ pod 'AlamofireImage'
 pod 'SwiftyJSON'
  pod ‘youtube-ios-player-helper’, ‘~> 0.1’
  pod 'Kingfisher', '~> 4.0'
+pod 'Firebase/Core'
+pod 'Firebase/Messaging'
+pod 'Firebase/Database'
 
 end

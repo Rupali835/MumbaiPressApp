@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SHSnackBarView
 
-class TestSearchVC: UIViewController,  TableViewDelegateDataSource, UISearchBarDelegate, UISearchDisplayDelegate,SecondNewsCellDelegate
+class TestSearchVC: UIViewController,  TableViewDelegateDataSource, UISearchBarDelegate, UISearchDisplayDelegate, UIGestureRecognizerDelegate
 {
     @IBOutlet weak var tblSearchNews: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -28,7 +28,7 @@ class TestSearchVC: UIViewController,  TableViewDelegateDataSource, UISearchBarD
         super.viewDidLoad()
 
         let dismissKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
-        
+        dismissKeyboardGesture.delegate = self
         tblSearchNews.addGestureRecognizer(dismissKeyboardGesture)
         
         tblSearchNews.register(UINib(nibName: "SecondNewsCell", bundle: nil), forCellReuseIdentifier: "SecondNewsCell")
@@ -46,6 +46,16 @@ class TestSearchVC: UIViewController,  TableViewDelegateDataSource, UISearchBarD
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
       
+    }
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        if (touch.view?.isDescendant(of: self.tblSearchNews))!
+        {
+            self.view.endEditing(true)
+            return false
+        }
+        
+        return true
     }
     
     override func viewWillAppear(_ animated: Bool)
@@ -73,7 +83,7 @@ class TestSearchVC: UIViewController,  TableViewDelegateDataSource, UISearchBarD
         let sourceImg = imgDict["source_url"] as! String
         
         let cell = tblSearchNews.dequeueReusableCell(withIdentifier: "SecondNewsCell", for: indexPath) as! SecondNewsCell
-        cell.delegate = self
+      
         cell.lblDATE.text = date.datesetting()
         
         let lcFormatStr = changestr(stringTochange: render)
@@ -88,9 +98,8 @@ class TestSearchVC: UIViewController,  TableViewDelegateDataSource, UISearchBarD
         
     }
     
-    func didSelected(_ sender: SecondNewsCell)
-    {
-        guard let indexPath = tblSearchNews.indexPath(for: sender) else { return }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Called")
         let newsVc = storyBrd.instantiateViewController(withIdentifier: "DetailNewsScrollVC") as! DetailNewsScrollVC
         
         
@@ -118,10 +127,14 @@ class TestSearchVC: UIViewController,  TableViewDelegateDataSource, UISearchBarD
         newsVc.setImageToView(newsarr: self.DetaileNewsArr, nSelectedIndex: indexPath.row, nTotalNews: self.DetaileNewsArr.count)
         
         self.navigationController?.pushViewController(newsVc, animated: true)
-
     }
-
-   
+    
+//    func didSelected(_ sender: SecondNewsCell)
+//    {
+//        guard let indexPath = tblSearchNews.indexPath(for: sender) else { return
+//    }
+//
+//    }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 155.0
@@ -192,12 +205,14 @@ class TestSearchVC: UIViewController,  TableViewDelegateDataSource, UISearchBarD
         
         let logo = UIImage(named: "mp_new")
         let imageView = UIImageView(image:logo)
+        imageView.frame.size.height = 25
+        imageView.frame.size.width = 160
         self.navigationItem.titleView = imageView
     }
     
     @objc func hideKeyboard()
     {
-        self.view.endEditing(true)
+        
         
     }
     

@@ -37,6 +37,8 @@
 		CE0FD6DB20E8C22200E7FFAC /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0FD6DA20E8C22200E7FFAC /* CollectionViewCell.xib */; };
 		CE0FD6DD20E8C58400E7FFAC /* TopScrollableNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0FD6DC20E8C58400E7FFAC /* TopScrollableNewsCell.xib */; };
 		CE0FD6E120E8C6B200E7FFAC /* TopScrollableNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FD6E020E8C6B200E7FFAC /* TopScrollableNewsCell.swift */; };
+		CE12E98C2137E3740006C341 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE12E98B2137E3740006C341 /* GoogleService-Info.plist */; };
+		CE15A35721354BAB0024AACA /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15A35621354BAB0024AACA /* NotificationService.swift */; };
 		CE2735FB2100A15F00D8F826 /* NewsPopUpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2735FA2100A15F00D8F826 /* NewsPopUpCell.swift */; };
 		CE2735FD2100C4C700D8F826 /* UpdatesNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2735FC2100C4C700D8F826 /* UpdatesNewsVC.swift */; };
 		CE2735FF2100C5F300D8F826 /* UpdateNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2735FE2100C5F300D8F826 /* UpdateNewsCell.swift */; };
@@ -220,6 +222,10 @@
 		CE0FD6DA20E8C22200E7FFAC /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		CE0FD6DC20E8C58400E7FFAC /* TopScrollableNewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopScrollableNewsCell.xib; sourceTree = "<group>"; };
 		CE0FD6E020E8C6B200E7FFAC /* TopScrollableNewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopScrollableNewsCell.swift; sourceTree = "<group>"; };
+		CE12E98B2137E3740006C341 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE15A35421354BAB0024AACA /* NotificationTarget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationTarget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE15A35621354BAB0024AACA /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		CE15A35821354BAB0024AACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE2735FA2100A15F00D8F826 /* NewsPopUpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPopUpCell.swift; sourceTree = "<group>"; };
 		CE2735FC2100C4C700D8F826 /* UpdatesNewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesNewsVC.swift; sourceTree = "<group>"; };
 		CE2735FE2100C5F300D8F826 /* UpdateNewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNewsCell.swift; sourceTree = "<group>"; };
@@ -349,6 +355,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CE15A35121354BAB0024AACA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CED356AB20CFFF5E00F32372 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -479,6 +492,15 @@
 				CE0C335020F38B590052268C /* DBAttachment.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CE15A35521354BAB0024AACA /* NotificationTarget */ = {
+			isa = PBXGroup;
+			children = (
+				CE15A35621354BAB0024AACA /* NotificationService.swift */,
+				CE15A35821354BAB0024AACA /* Info.plist */,
+			);
+			path = NotificationTarget;
 			sourceTree = "<group>";
 		};
 		CE2768ED20FC82820073B5C0 /* TextFieldEffects */ = {
@@ -704,6 +726,7 @@
 			children = (
 				CE3D88B720EA32C00036EBEA /* Localizable.strings */,
 				CED356B020CFFF5E00F32372 /* MumbaiPressApp */,
+				CE15A35521354BAB0024AACA /* NotificationTarget */,
 				CED356AF20CFFF5E00F32372 /* Products */,
 				2C74306C41835CC34A5A76D5 /* Pods */,
 				E249D83FDED57D16CC926DFF /* Frameworks */,
@@ -714,6 +737,7 @@
 			isa = PBXGroup;
 			children = (
 				CED356AE20CFFF5E00F32372 /* MumbaiPressApp.app */,
+				CE15A35421354BAB0024AACA /* NotificationTarget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -735,6 +759,7 @@
 				CE51275D20E6632F009EE823 /* Main.storyboard */,
 				CED356BD20CFFF5E00F32372 /* LaunchScreen.storyboard */,
 				CED356C020CFFF5E00F32372 /* Info.plist */,
+				CE12E98B2137E3740006C341 /* GoogleService-Info.plist */,
 				CED356B820CFFF5E00F32372 /* MumbaiPressApp.xcdatamodeld */,
 				CE09440320D2E2B000CF58E6 /* MumbaiPressApp-Bridging-Header.h */,
 				CE0FD6D220E8933700E7FFAC /* Constant.swift */,
@@ -755,6 +780,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CE15A35321354BAB0024AACA /* NotificationTarget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE15A35E21354BAB0024AACA /* Build configuration list for PBXNativeTarget "NotificationTarget" */;
+			buildPhases = (
+				CE15A35021354BAB0024AACA /* Sources */,
+				CE15A35121354BAB0024AACA /* Frameworks */,
+				CE15A35221354BAB0024AACA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotificationTarget;
+			productName = NotificationTarget;
+			productReference = CE15A35421354BAB0024AACA /* NotificationTarget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		CED356AD20CFFF5E00F32372 /* MumbaiPressApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CED356C320CFFF5E00F32372 /* Build configuration list for PBXNativeTarget "MumbaiPressApp" */;
@@ -785,11 +827,21 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = user;
 				TargetAttributes = {
+					CE15A35321354BAB0024AACA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					CED356AD20CFFF5E00F32372 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 							com.apple.iCloud = {
 								enabled = 0;
 							};
@@ -822,11 +874,19 @@
 			projectRoot = "";
 			targets = (
 				CED356AD20CFFF5E00F32372 /* MumbaiPressApp */,
+				CE15A35321354BAB0024AACA /* NotificationTarget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CE15A35221354BAB0024AACA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CED356AC20CFFF5E00F32372 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -853,6 +913,7 @@
 				CEB8D8DC20D7CECA004EBD22 /* Raleway-SemiBoldItalic.ttf in Resources */,
 				CE392F7D20D25AE600E7ABC3 /* MenuCell.xib in Resources */,
 				CEB8D8DE20D7CECA004EBD22 /* Raleway-ThinItalic.ttf in Resources */,
+				CE12E98C2137E3740006C341 /* GoogleService-Info.plist in Resources */,
 				CEB8D8D520D7CECA004EBD22 /* Raleway-Italic.ttf in Resources */,
 				CEB8D8D120D7CECA004EBD22 /* Raleway-ExtraBold.ttf in Resources */,
 				CE0C335A20F38B590052268C /* DBAssetGroupsViewController.xib in Resources */,
@@ -904,20 +965,28 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MumbaiPressApp/Pods-MumbaiPressApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MBPhotoPicker/MBPhotoPicker.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SHSnackBarView/SHSnackBarView.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 				"${BUILT_PRODUCTS_DIR}/youtube-ios-player-helper/youtube_ios_player_helper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBPhotoPicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SHSnackBarView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/youtube_ios_player_helper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -943,6 +1012,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CE15A35021354BAB0024AACA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE15A35721354BAB0024AACA /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CED356AA20CFFF5E00F32372 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1113,6 +1190,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CE15A35C21354BAB0024AACA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TBC2KVJ5K4;
+				INFOPLIST_FILE = NotificationTarget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mumbaipress.mumbaipress.NotificationTarget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE15A35D21354BAB0024AACA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TBC2KVJ5K4;
+				INFOPLIST_FILE = NotificationTarget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mumbaipress.mumbaipress.NotificationTarget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		CED356C120CFFF5E00F32372 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1228,9 +1335,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MumbaiPressApp/MumbaiPressApp.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 879PB75HQ7;
+				DEVELOPMENT_TEAM = TBC2KVJ5K4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MumbaiPressApp/Third\\ Library/ToastFile",
@@ -1238,10 +1346,10 @@
 				);
 				INFOPLIST_FILE = MumbaiPressApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.kspl;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ksoftpl.mumbaiPressDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "96c4ce84-66ac-4f15-925c-46fd775b0599";
-				PROVISIONING_PROFILE_SPECIFIER = TestAppProfile;
+				PROVISIONING_PROFILE = "d906b3ce-dafd-467c-88cd-b227997367bb";
+				PROVISIONING_PROFILE_SPECIFIER = MumbaiPressDevelopmenyCert;
 				SWIFT_OBJC_BRIDGING_HEADER = "MumbaiPressApp/MumbaiPressApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -1255,9 +1363,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MumbaiPressApp/MumbaiPressApp.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 879PB75HQ7;
+				DEVELOPMENT_TEAM = TBC2KVJ5K4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MumbaiPressApp/Third\\ Library/ToastFile",
@@ -1265,10 +1374,10 @@
 				);
 				INFOPLIST_FILE = MumbaiPressApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.kspl;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ksoftpl.mumbaiPressDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "96c4ce84-66ac-4f15-925c-46fd775b0599";
-				PROVISIONING_PROFILE_SPECIFIER = TestAppProfile;
+				PROVISIONING_PROFILE = "d906b3ce-dafd-467c-88cd-b227997367bb";
+				PROVISIONING_PROFILE_SPECIFIER = MumbaiPressDevelopmenyCert;
 				SWIFT_OBJC_BRIDGING_HEADER = "MumbaiPressApp/MumbaiPressApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1278,6 +1387,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CE15A35E21354BAB0024AACA /* Build configuration list for PBXNativeTarget "NotificationTarget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE15A35C21354BAB0024AACA /* Debug */,
+				CE15A35D21354BAB0024AACA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CED356A920CFFF5E00F32372 /* Build configuration list for PBXProject "MumbaiPressApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

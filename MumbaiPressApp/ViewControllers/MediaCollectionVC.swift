@@ -165,7 +165,7 @@ class MediaCollectionVC: UIViewController, TableViewDelegateDataSource
             
         case 2:
             let url = self.VideoARR[indexPath.row]
-            //VideoHelper.startMediaBrowser(delegate: self, sourceType: .savedPhotosAlbum)
+            
             let player = AVPlayer(url: url)
             let vcPlayer = AVPlayerViewController()
             vcPlayer.player = player

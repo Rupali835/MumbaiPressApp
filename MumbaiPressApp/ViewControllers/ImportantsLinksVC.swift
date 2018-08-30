@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class ImportantsLinksVC: UIViewController, TableViewDelegateDataSource, UISearchBarDelegate
+class ImportantsLinksVC: UIViewController, TableViewDelegateDataSource, UISearchBarDelegate, UIGestureRecognizerDelegate
 {
 
     @IBOutlet weak var searchbar: UISearchBar!
@@ -36,9 +36,26 @@ class ImportantsLinksVC: UIViewController, TableViewDelegateDataSource, UISearch
         
         self.Viewbar.designCell()
         
+        let dismissKeyboard = UITapGestureRecognizer(target: self, action: #selector(hidekeyboard))
+        dismissKeyboard.delegate = self
+        tblView.addGestureRecognizer(dismissKeyboard)
         getLinks()
     }
 
+    @objc func hidekeyboard()
+    {
+        
+    }
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        if (touch.view?.isDescendant(of: self.tblView))!
+        {
+            self.view.endEditing(true)
+            return false
+        }
+        return true
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

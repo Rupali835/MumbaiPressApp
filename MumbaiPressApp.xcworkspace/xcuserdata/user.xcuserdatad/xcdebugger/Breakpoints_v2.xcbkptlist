@@ -26,7 +26,7 @@
                   moduleName = "MBPhotoPicker"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/user/Desktop/KSPL/MumbaiPressApp%202/Pods/MBPhotoPicker/Pod/Classes/MBPhotoPicker.swift"
-                  timestampString = "556556863.291777"
+                  timestampString = "557176323.094326"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "147"
@@ -41,7 +41,7 @@
                   moduleName = "MBPhotoPicker"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/user/Desktop/KSPL/MumbaiPressApp%202/Pods/MBPhotoPicker/Pod/Classes/MBPhotoPicker.swift"
-                  timestampString = "556556863.296973"
+                  timestampString = "557176323.099552"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "149"
@@ -105,38 +105,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MumbaiPressApp/ViewControllers/NewReporterFormVC.swift"
-            timestampString = "554926262.510576"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
-            landmarkName = "textFieldDidBeginEditing(textField:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MumbaiPressApp/ViewControllers/Upload&amp;LogoutVc.swift"
-            timestampString = "554905434.113291"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "341"
-            endingLineNumber = "341"
-            landmarkName = "play(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "MumbaiPressApp/AudioRecordingFile/RecorderViewController.swift"
             timestampString = "554674612.131266"
             startingColumnNumber = "9223372036854775807"
@@ -170,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MumbaiPressApp/ViewControllers/NewReporterFormVC.swift"
-            timestampString = "554926262.510715"
+            timestampString = "556886677.921234"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "809"
-            endingLineNumber = "809"
+            startingLineNumber = "841"
+            endingLineNumber = "841"
             landmarkName = "sendData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -186,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MumbaiPressApp/ViewControllers/NewReporterFormVC.swift"
-            timestampString = "554926262.51078"
+            timestampString = "556886677.9214129"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "765"
-            endingLineNumber = "765"
+            startingLineNumber = "797"
+            endingLineNumber = "797"
             landmarkName = "NewReporterFormVC"
             landmarkType = "3">
          </BreakpointContent>
@@ -202,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MumbaiPressApp/ViewControllers/NewReporterFormVC.swift"
-            timestampString = "554926262.510842"
+            timestampString = "556886677.921505"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "775"
-            endingLineNumber = "775"
+            startingLineNumber = "807"
+            endingLineNumber = "807"
             landmarkName = "sendData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -218,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MumbaiPressApp/ViewControllers/NewReporterFormVC.swift"
-            timestampString = "554926262.511036"
+            timestampString = "556886677.921626"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "791"
-            endingLineNumber = "791"
+            startingLineNumber = "823"
+            endingLineNumber = "823"
             landmarkName = "sendData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -234,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MumbaiPressApp/ViewControllers/NewReporterFormVC.swift"
-            timestampString = "554926262.511096"
+            timestampString = "556886677.921755"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "385"
-            endingLineNumber = "385"
+            startingLineNumber = "417"
+            endingLineNumber = "417"
             landmarkName = "btnRef_send_onClick(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -265,12 +233,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MumbaiPressApp/ViewControllers/CategoriesNewsDataVc.swift"
-            timestampString = "556556862.435043"
+            filePath = "MumbaiPressApp/ViewControllers/SearchNewsVc.swift"
+            timestampString = "557317377.061759"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -281,13 +249,61 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MumbaiPressApp/ViewControllers/SearchNewsVc.swift"
-            timestampString = "555794214.222059"
+            filePath = "MumbaiPressApp/ViewControllers/TestSearchVC.swift"
+            timestampString = "557317377.061834"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
-            landmarkName = "tableView(_:didSelectRowAt:)"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
+            landmarkName = "hideKeyboard()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MumbaiPressApp/AppDelegate.swift"
+            timestampString = "557317377.061898"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
+            landmarkName = "userNotificationCenter(_:didReceive:withCompletionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MumbaiPressApp/ViewControllers/VideoListNewsVc.swift"
+            timestampString = "557154873.571409"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MumbaiPressApp/ViewControllers/VideoListNewsVc.swift"
+            timestampString = "557154873.57147"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

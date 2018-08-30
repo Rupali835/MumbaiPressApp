@@ -36,7 +36,7 @@ class CategoriesNewsDataVc: UIViewController, TableViewDelegateDataSource {
         tblNEWS.dataSource = self
         
         self.tblNEWS.separatorStyle = .none
-        self.tblNEWS.estimatedRowHeight = 80
+        self.tblNEWS.estimatedRowHeight = 140
         self.tblNEWS.rowHeight = UITableViewAutomaticDimension
     
 
@@ -115,16 +115,11 @@ class CategoriesNewsDataVc: UIViewController, TableViewDelegateDataSource {
                 cell.imgNews.kf.setImage(with: url)
             }
             
-//            if sourceImg == "No Data Found"
-//            {
-//                cell.imgNews.isHidden = true
-//            }else{
-//
-//
-//            }
-            
+            let lcFormatStr = changestr(stringTochange: render)
+            cell.lblTitle.text = lcFormatStr.replacingHTMLEntities!
+
             cell.lblDate.text = date.datesetting()
-            cell.lblTitle.text = changestr(stringTochange: render)
+         
             cell.btnYoutube.isHidden = true
             return cell
             
@@ -133,7 +128,10 @@ class CategoriesNewsDataVc: UIViewController, TableViewDelegateDataSource {
             let cell = tblNEWS.dequeueReusableCell(withIdentifier: "SecondNewsCell", for: indexPath) as! SecondNewsCell
             
             cell.lblDATE.text = date.datesetting()
-            cell.lbltitle.text = changestr(stringTochange: render)
+        //    cell.lbltitle.text = changestr(stringTochange: render)
+            
+            let lcFormatStr = changestr(stringTochange: render)
+            cell.lbltitle.text = lcFormatStr.replacingHTMLEntities!
             
             let lcDict = self.NewsArr[indexPath.item]
             
@@ -221,15 +219,15 @@ class CategoriesNewsDataVc: UIViewController, TableViewDelegateDataSource {
     }
 
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
-    {
-        if indexPath.row == 0
-        {
-            return 300
-        }else{
-            return 150
-        }
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+//    {
+//        if indexPath.row == 0
+//        {
+//            return 300
+//        }
+//        
+//
+//    }
    
  
     func sideMenus()

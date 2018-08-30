@@ -28,7 +28,7 @@ extension String
             return  newdate
         }
         if differenceOfDate.day! <= 0 && differenceOfDate.hour! > 0 {
-            let formatednewDate = ("\(String(describing: differenceOfDate.hour!)) Hrs Ago")
+            let formatednewDate = ("\(String(describing: differenceOfDate.hour!)) hours Ago")
             let newdate = formatednewDate
             return  newdate
         }

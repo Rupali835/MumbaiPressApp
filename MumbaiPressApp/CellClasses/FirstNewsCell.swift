@@ -27,11 +27,11 @@ class FirstNewsCell: UITableViewCell {
         super.awakeFromNib()
         
         self.selectionStyle = .none
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapOnView))
-        tapGesture.numberOfTapsRequired = 1
-        tapGesture.numberOfTouchesRequired = 1
-        self.backView.addGestureRecognizer(tapGesture)
+//        
+//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapOnView))
+//        tapGesture.numberOfTapsRequired = 1
+//        tapGesture.numberOfTouchesRequired = 1
+//        self.backView.addGestureRecognizer(tapGesture)
         
     }
 

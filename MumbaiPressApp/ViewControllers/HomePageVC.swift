@@ -13,6 +13,7 @@ import SHSnackBarView
 import Kingfisher
 
 
+
 enum eLanguageType : Int
 {
     case LT_INVALID = 0
@@ -41,22 +42,19 @@ class DetaileNews: NSObject
     }
 }
 
-class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDelegate, FirstNewCellDelegate
+class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDelegate, FirstNewCellDelegate,UIGestureRecognizerDelegate
 {
-   
-    
-    
     @IBOutlet var viewLanguage: UIView!
     @IBOutlet weak var btn_Urdu: UIButton!
     @IBOutlet weak var btn_hindi: UIButton!
     @IBOutlet weak var btnEnglish: UIButton!
     @IBOutlet weak var tblNews: UITableView!
     @IBOutlet weak var ViewBar: UIView!
-   @IBOutlet weak var menuButton: MKButton!
+    @IBOutlet weak var menuButton: MKButton!
     
     
     var popUp : KLCPopup!
-     let snackbarView = snackBar()
+    let snackbarView = snackBar()
     var SectionTitleArr = [String]()
     
     let storyBrd = UIStoryboard(name: "Main", bundle: nil)
@@ -75,10 +73,12 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
     var selectedIndexPath = Int(-1)
     var BreakingNewsArr = [AnyObject]()
     var latestNews = [AnyObject]()
+    var BreakingArr = [AnyObject]()
     
     var bFirstSection = Bool(true)
     var DateStr = Date()
   
+    var ColorArr = [UIColor]()
     
     @IBOutlet weak var viewInfo: UIView!
     
@@ -89,6 +89,9 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
         SelectedIndex = -1
         selectedIndexPath = -1
         bFirstSection = true
+        
+        self.ColorArr = [Color.MKColor.Red.P400, Color.MKColor.Blue.P400, Color.MKColor.Orange.P400, Color.MKColor.Green.P400, Color.MKColor.Indigo.P400, Color.MKColor.Amber.P400, Color.MKColor.LightBlue.P400, Color.MKColor.BlueGrey.P400, Color.MKColor.Brown.P400, Color.MKColor.Cyan.P400, Color.MKColor.Teal.P400, Color.MKColor.Lime.P400, Color.MKColor.Pink.P400, Color.MKColor.Brown.P400, Color.MKColor.Purple.P400]
+        
         if isConnectedToNetwork()
         {
            self.ViewBar.isHidden = false
@@ -102,16 +105,18 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
             
             tblNews.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellReuseIdentifier: "cell")
             
-            tblNews.separatorStyle = .none
-            tblNews.delegate = self
+           
             tblNews.dataSource = self
+             tblNews.delegate   = self
             
             self.tblNews.separatorStyle = .none
             self.tblNews.estimatedRowHeight = 80
             self.tblNews.rowHeight = UITableViewAutomaticDimension
             
             setFirstData()
+            
             let dismissKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+            dismissKeyboardGesture.delegate = self
             self.tblNews.addGestureRecognizer(dismissKeyboardGesture)
             
         }else{
@@ -122,12 +127,21 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
         }
     }
     
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        if (touch.view?.isDescendant(of: self.tblNews))!{
+            return false
+        }
+        
+        return true
+    }
+    
     func getLatestNews(url : String)
     {
         var latestNew = [AnyObject]()
         let newUrl = url + "wp-json/wp/v2/posts/?per_page=12&fields=title,id,date,link,content,better_featured_image"
         
         self.latestNews.removeAll(keepingCapacity: false)
+        self.BreakingArr.removeAll(keepingCapacity: false)
         
         let configuration = URLSessionConfiguration.default
         configuration.requestCachePolicy = . reloadIgnoringLocalAndRemoteCacheData
@@ -139,7 +153,9 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
         req.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
 
         Alamofire.request(req).validate().responseJSON { (response) in
+         
             print(response)
+            
             if let lcBreakingNews = response.result.value
             {
                 self.BreakingNewsArr = lcBreakingNews as! [AnyObject]
@@ -152,6 +168,8 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
                     if index >= 6
                     {
                         self.latestNews.append(value)
+                    }else{
+                        self.BreakingArr.append(value)
                     }
                 }
                 
@@ -160,8 +178,8 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
                 let snackbarBgColor = UIColor(red:0.96, green:0.26, blue:0.21, alpha:1.0)
                 self.snackbarView.showSnackBar(view: self.view, bgColor: snackbarBgColor, text: "No Any news in selected language, Please change the language", textColor: UIColor.white, interval: 2)
             }
-            self.tblNews.reloadData()
-            self.getCategoryList()
+
+            self.getCategoryList(url: url)
         }
     }
 
@@ -236,9 +254,9 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
     }
     
-    func getCategoryList()
+    func getCategoryList(url : String)
     {
-        let CategoryUrl = "https://www.mumbaipress.com/wp-json/wp-api-menus/v2/menus/169"
+        let CategoryUrl = url + "wp-json/wp-api-menus/v2/menus/169"
         let configuration = URLSessionConfiguration.default
         configuration.requestCachePolicy = . reloadIgnoringLocalAndRemoteCacheData
         var req = URLRequest(url: URL(string: CategoryUrl)!)
@@ -273,8 +291,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
                     self.SelectedLanguage(languagePath: "en")
                     
                     let URl = "https://www.mumbaipress.com/wp-json/wp/v2/posts/?categories="
-                    
-                    
+
                     self.getNews(catId: Cat_id, Url: URl,catName: Cat_name)
                     
                     break
@@ -305,18 +322,17 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
                 
             }
             
-            self.tblNews.reloadData()
+            //self.tblNews.reloadData()
         }
       
     }
     
     func getRandomColor() -> UIColor{
-        //Generate between 0 to 1
+     //   Generate between 0 to 1
         let red:CGFloat = CGFloat(drand48())
         let green:CGFloat = CGFloat(drand48())
         let blue:CGFloat = CGFloat(drand48())
-        
-        return UIColor(red:red, green: green, blue: blue, alpha: 0.7)
+        return UIColor(red:red, green: green, blue: blue, alpha: 0.9)
     }
     
     func getNews(catId: Int, Url: String,catName:String)
@@ -337,9 +353,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
         Alamofire.request(req).validate().responseJSON { (response) in
             print(response)
           
-        
-        
-            guard let Response = response.result.value else{
+        guard let Response = response.result.value else{
                 return
             }
             
@@ -348,9 +362,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
                 self.tblNews.isHidden = false
                 self.ViewBar.isHidden = false
                 self.MainDataArr.removeAll(keepingCapacity: false)
-                
-                
-                
+            
                 for (_,lcDict) in self.PoliticsNewArr.enumerated()
                 {
                     self.SelectedIndex += 1
@@ -359,25 +371,25 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
                     DictData["IndexValue"] = self.SelectedIndex as AnyObject
                     print("\(DictData["IndexValue"])")
                     self.MainDataArr.append(DictData as AnyObject)
-                    self.tblNews.reloadData()
+                   
                 }
-                
+            
+            if self.MainDataArr.isEmpty == false
+            {
                 self.AllDataArr.append(self.MainDataArr as AnyObject)
-                
+                self.tblNews.reloadData()
+            }
+            
                 self.SectionTitleArr.append(catName)
             
-                self.tblNews.reloadData()
             }
     }
     
-    @objc func performAction() {
- 
-         self.tblNews.reloadData()
-    }
     
     
     func numberOfSections(in tableView: UITableView) -> Int
     {
+        print("sectionCount= \(SectionTitleArr.count)")
         return SectionTitleArr.count
     }
     
@@ -388,7 +400,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        
+        print(self.PoliticsNewArr.count)
         if section == 0
         {
             return 1
@@ -397,13 +409,15 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
            {
              return self.latestNews.count
            }else{
+            if self.PoliticsNewArr.count > 1
+            {
                 return self.PoliticsNewArr.count
             }
             
-       }
-        
+            }
+        }
+        return 0
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
          var sourceImg : String = ""
@@ -411,7 +425,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
         if indexPath.section == 0
         {
             let cCollectionViewCell = tblNews.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CollectionViewCell
-           cCollectionViewCell.SetData(TopNewsData: latestNews)
+           cCollectionViewCell.SetData(TopNewsData: BreakingArr)
             return cCollectionViewCell
             
         }else if indexPath.section == 1
@@ -423,7 +437,6 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
             
             let titleNews = DictData["title"] as! NSDictionary
             let renNews = titleNews["rendered"] as! String
-            let cDate = DictData["date"] as! String
            
             let imgDict = DictData["better_featured_image"] as! NSDictionary
             cell.delegate = self
@@ -432,6 +445,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
                  sourceImg = imgDict["source_url"] as! String
                 let url = URL(string: sourceImg)
                 cell.imgNewS.kf.setImage(with: url)
+               
                 
             }else{
                 cell.imgNewS.image = UIImage(named: "backimg")
@@ -440,6 +454,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
             
             let url = URL(string: sourceImg)
             cell.imgNewS.kf.setImage(with: url)
+            let cDate = DictData["date"] as! String
             cell.lblDATE.text = cDate.datesetting()
            let lcFormatStr = changestr(stringTochange: renNews)
              cell.lbltitle.text = lcFormatStr.replacingHTMLEntities!
@@ -448,11 +463,12 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
             return cell
             
         }else{
-          if self.AllDataArr.isEmpty == false
+          if indexPath.section >= 2
             {
+
                 
-                var lcDataArr = self.AllDataArr[indexPath.section - 2 ] as! [AnyObject]
-                
+                  var lcDataArr = self.AllDataArr[indexPath.section - 2 ] as! [AnyObject]
+            
                 if indexPath.row == 0
                 {
                     
@@ -464,18 +480,17 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
                     let renNews = titleNews["rendered"] as! String
                     let cDate = DictData["date"] as! String
                     
-                    let imgDict = DictData["better_featured_image"] as! NSDictionary
-                    
-                    if imgDict.count != 0
+                   
+                    if let imgDict = DictData["better_featured_image"] as? NSDictionary
                     {
                         sourceImg = imgDict["source_url"] as! String
                         let url = URL(string: sourceImg)
                         cell.imgNews.kf.setImage(with: url)
                         
                     }else{
-                        cell.imgNews.image = UIImage(named: "backimg")
+                          cell.imgNews.image = UIImage(named: "backimg")
                     }
-
+                    
                     let url = URL(string: sourceImg)
                     cell.imgNews.kf.setImage(with: url)
                 
@@ -505,6 +520,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
                         let url = URL(string: sourceImg)
                         cell.imgNewS.kf.setImage(with: url)
                         
+                        
                     }else{
                         cell.imgNewS.image = UIImage(named: "backimg")
                     }
@@ -521,6 +537,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
                     cell.lbltitle.text = lcFormatStr.replacingHTMLEntities!
                     return cell
                 }
+           // }
             }else
             {
                 self.tblNews.isHidden = true
@@ -534,12 +551,18 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
 
      func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int)
     {
+
+        
         let header = view as! UITableViewHeaderFooterView
-        header.backgroundView?.backgroundColor = getRandomColor()
-        header.textLabel?.textColor = .black
-        header.textLabel?.font = UIFont(name: "Raleway-SemiBold", size: 18)
-        header.textLabel?.textAlignment = .center
+     //   header.backgroundView?.backgroundColor = getRandomColor()
     
+        let randomColor = ColorArr[Int(arc4random_uniform(UInt32(ColorArr.count)))]
+        
+        header.backgroundView?.backgroundColor = randomColor
+        header.textLabel?.textColor = .white
+        header.textLabel?.font = UIFont(name: "Raleway-SemiBold", size: 22)
+        header.textLabel?.textAlignment = .center
+
     }
     
      func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
@@ -549,7 +572,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
-        
+
       if indexPath.section == 0
      {
         return 200.0
@@ -646,22 +669,22 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
         case 1:
             SelectedLanguage(languagePath: "en")
             UserDefaults.standard.set(1, forKey: "ENG")
-            getCategoryList()
+            //getCategoryList(url: "https://www.mumbaipress.com/")
             getLatestNews(url: "https://www.mumbaipress.com/")
             break
             
         case 2:
             SelectedLanguage(languagePath: "hi-IN")
             UserDefaults.standard.set(2, forKey: "ENG")
-            getCategoryList()
-             getLatestNews(url: "https://www.mumbaipress.com/hindi/")
+            //getCategoryList(url: "https://www.mumbaipress.com/hindi/")
+            getLatestNews(url: "https://www.mumbaipress.com/hindi/")
             
             break
             
         case 3:
             SelectedLanguage(languagePath: "ur-IN")
             UserDefaults.standard.set(3, forKey: "ENG")
-            getCategoryList()
+           // getCategoryList(url: "https://www.mumbaipress.com/urdu/")
             getLatestNews(url: "https://www.mumbaipress.com/urdu/")
 
             break
@@ -729,6 +752,12 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
        // print(str1)
         return str
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        print("Selected")
+        sendDataToNext(indexPath: indexPath)
     }
     
     func didSelected(_ sender: SecondNewsCell)

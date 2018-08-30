@@ -63,6 +63,8 @@ class ReporterDataVC: UIViewController {
         self.navigationController?.navigationBar.layer.masksToBounds = false
         let logo = UIImage(named: "mumbaipress")
         let imageView = UIImageView(image:logo)
+        imageView.frame.size.height = 25
+        imageView.frame.size.width = 160
         self.navigationItem.titleView = imageView
         
     }
