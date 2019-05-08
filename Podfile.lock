@@ -14,10 +14,10 @@ PODS:
   - FirebaseAnalytics (4.2.0):
     - FirebaseCore (~> 4.0)
     - FirebaseInstanceID (~> 2.0)
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
     - nanopb (~> 0.3)
   - FirebaseCore (4.0.20):
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
   - FirebaseDatabase (4.1.5):
     - FirebaseAnalytics (~> 4.1)
     - FirebaseCore (~> 4.0)
@@ -30,10 +30,11 @@ PODS:
     - FirebaseInstanceID (~> 2.0)
     - GoogleToolboxForMac/Logger (~> 2.1)
     - Protobuf (~> 3.5)
+  - Google-Mobile-Ads-SDK (7.37.0)
   - GoogleToolboxForMac/Defines (2.1.3)
   - GoogleToolboxForMac/Logger (2.1.3):
     - GoogleToolboxForMac/Defines (= 2.1.3)
-  - GoogleToolboxForMac/NSData+zlib (2.1.3):
+  - "GoogleToolboxForMac/NSData+zlib (2.1.3)":
     - GoogleToolboxForMac/Defines (= 2.1.3)
   - Kingfisher (4.7.0)
   - leveldb-library (1.20)
@@ -54,11 +55,33 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Messaging
+  - Google-Mobile-Ads-SDK
   - Kingfisher (~> 4.0)
   - MBPhotoPicker
   - SHSnackBarView
   - SwiftyJSON
   - youtube-ios-player-helper (~> 0.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseDatabase
+    - FirebaseInstanceID
+    - FirebaseMessaging
+    - Google-Mobile-Ads-SDK
+    - GoogleToolboxForMac
+    - Kingfisher
+    - leveldb-library
+    - MBPhotoPicker
+    - nanopb
+    - Protobuf
+    - SHSnackBarView
+    - SwiftyJSON
+    - youtube-ios-player-helper
 
 SPEC CHECKSUMS:
   Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
@@ -69,6 +92,7 @@ SPEC CHECKSUMS:
   FirebaseDatabase: 5f0bc6134c5c237cf55f9e1249d406770a75eafd
   FirebaseInstanceID: 8d20d890d65c917f9f7d9950b6e10a760ad34321
   FirebaseMessaging: 75cdb862e86c30e0913a2ff307e48d49357c5b73
+  Google-Mobile-Ads-SDK: d028682d7450749a1955679da050eaf70d997b3e
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
@@ -79,6 +103,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: 027dea801520a59be350c0a66e877bc1887a3f98
+PODFILE CHECKSUM: 7eb2c3110790016dd6824eba1ea1c4fbf9c477aa
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

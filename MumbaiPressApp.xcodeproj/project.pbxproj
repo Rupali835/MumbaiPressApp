@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C235D66227B268F000FA40B /* AdvitizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C235D64227B268F000FA40B /* AdvitizeCell.swift */; };
+		1C235D67227B268F000FA40B /* AdvitizeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C235D65227B268F000FA40B /* AdvitizeCell.xib */; };
 		22A5C9FC467EB8D774D010E6 /* Pods_MumbaiPressApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C516975EE7259DFC7377ABB /* Pods_MumbaiPressApp.framework */; };
+		58B473A12161F78B000A61C7 /* DotsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B473A02161F78B000A61C7 /* DotsLoader.swift */; };
+		58DF19FF218B0ED800F5E800 /* containerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DF19FE218B0ED800F5E800 /* containerVC.swift */; };
+		58DF1A01218B100C00F5E800 /* containerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DF1A00218B100C00F5E800 /* containerCell.swift */; };
+		58F48C52227B0FCB00558A2F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58F48C51227B0FCB00558A2F /* GoogleService-Info.plist */; };
 		CE017EBA2109E200001316E9 /* TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE017EB92109E1FF001316E9 /* TimeAgo.swift */; };
 		CE09440920D2E30600CF58E6 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE09440720D2E30500CF58E6 /* SWRevealViewController.m */; };
 		CE09440D20D2F19300CF58E6 /* SideBarMenuesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE09440C20D2F19300CF58E6 /* SideBarMenuesVC.swift */; };
@@ -37,14 +43,12 @@
 		CE0FD6DB20E8C22200E7FFAC /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0FD6DA20E8C22200E7FFAC /* CollectionViewCell.xib */; };
 		CE0FD6DD20E8C58400E7FFAC /* TopScrollableNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0FD6DC20E8C58400E7FFAC /* TopScrollableNewsCell.xib */; };
 		CE0FD6E120E8C6B200E7FFAC /* TopScrollableNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FD6E020E8C6B200E7FFAC /* TopScrollableNewsCell.swift */; };
-		CE12E98C2137E3740006C341 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE12E98B2137E3740006C341 /* GoogleService-Info.plist */; };
 		CE15A35721354BAB0024AACA /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15A35621354BAB0024AACA /* NotificationService.swift */; };
 		CE2735FB2100A15F00D8F826 /* NewsPopUpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2735FA2100A15F00D8F826 /* NewsPopUpCell.swift */; };
 		CE2735FD2100C4C700D8F826 /* UpdatesNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2735FC2100C4C700D8F826 /* UpdatesNewsVC.swift */; };
 		CE2735FF2100C5F300D8F826 /* UpdateNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2735FE2100C5F300D8F826 /* UpdateNewsCell.swift */; };
 		CE2768FA20FC82830073B5C0 /* AkiraTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2768EE20FC82820073B5C0 /* AkiraTextField.swift */; };
 		CE2768FB20FC82830073B5C0 /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2768EF20FC82820073B5C0 /* HoshiTextField.swift */; };
-		CE2768FC20FC82830073B5C0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE2768F020FC82820073B5C0 /* Info.plist */; };
 		CE2768FD20FC82830073B5C0 /* IsaoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2768F120FC82820073B5C0 /* IsaoTextField.swift */; };
 		CE2768FE20FC82830073B5C0 /* JiroTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2768F220FC82820073B5C0 /* JiroTextField.swift */; };
 		CE2768FF20FC82830073B5C0 /* KaedeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2768F320FC82820073B5C0 /* KaedeTextField.swift */; };
@@ -155,10 +159,17 @@
 		CED356BF20CFFF5E00F32372 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED356BD20CFFF5E00F32372 /* LaunchScreen.storyboard */; };
 		CEE61CE3210B8714008643B5 /* ImportantsLinksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE61CE2210B8714008643B5 /* ImportantsLinksVC.swift */; };
 		CEE82C4020E12345008A0349 /* NewsMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE82C3F20E12345008A0349 /* NewsMainCell.swift */; };
+		F24279EE227C5A2B0063558F /* Fajer Noori Nastalique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F24279ED227C59090063558F /* Fajer Noori Nastalique.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C235D64227B268F000FA40B /* AdvitizeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvitizeCell.swift; sourceTree = "<group>"; };
+		1C235D65227B268F000FA40B /* AdvitizeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdvitizeCell.xib; sourceTree = "<group>"; };
 		1C516975EE7259DFC7377ABB /* Pods_MumbaiPressApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MumbaiPressApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58B473A02161F78B000A61C7 /* DotsLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotsLoader.swift; sourceTree = "<group>"; };
+		58DF19FE218B0ED800F5E800 /* containerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = containerVC.swift; sourceTree = "<group>"; };
+		58DF1A00218B100C00F5E800 /* containerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = containerCell.swift; sourceTree = "<group>"; };
+		58F48C51227B0FCB00558A2F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6B6C98EEDB7F6C755AE4377F /* Pods-MumbaiPressApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MumbaiPressApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MumbaiPressApp/Pods-MumbaiPressApp.release.xcconfig"; sourceTree = "<group>"; };
 		B7100A2EDFF7ED067156BF0A /* Pods-MumbaiPressApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MumbaiPressApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MumbaiPressApp/Pods-MumbaiPressApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CE017EB92109E1FF001316E9 /* TimeAgo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeAgo.swift; sourceTree = "<group>"; };
@@ -222,7 +233,6 @@
 		CE0FD6DA20E8C22200E7FFAC /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		CE0FD6DC20E8C58400E7FFAC /* TopScrollableNewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopScrollableNewsCell.xib; sourceTree = "<group>"; };
 		CE0FD6E020E8C6B200E7FFAC /* TopScrollableNewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopScrollableNewsCell.swift; sourceTree = "<group>"; };
-		CE12E98B2137E3740006C341 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE15A35421354BAB0024AACA /* NotificationTarget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationTarget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE15A35621354BAB0024AACA /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		CE15A35821354BAB0024AACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -231,7 +241,6 @@
 		CE2735FE2100C5F300D8F826 /* UpdateNewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNewsCell.swift; sourceTree = "<group>"; };
 		CE2768EE20FC82820073B5C0 /* AkiraTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkiraTextField.swift; sourceTree = "<group>"; };
 		CE2768EF20FC82820073B5C0 /* HoshiTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoshiTextField.swift; sourceTree = "<group>"; };
-		CE2768F020FC82820073B5C0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE2768F120FC82820073B5C0 /* IsaoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsaoTextField.swift; sourceTree = "<group>"; };
 		CE2768F220FC82820073B5C0 /* JiroTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JiroTextField.swift; sourceTree = "<group>"; };
 		CE2768F320FC82820073B5C0 /* KaedeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaedeTextField.swift; sourceTree = "<group>"; };
@@ -352,6 +361,7 @@
 		CEE61CE2210B8714008643B5 /* ImportantsLinksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportantsLinksVC.swift; sourceTree = "<group>"; };
 		CEE82C3F20E12345008A0349 /* NewsMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsMainCell.swift; sourceTree = "<group>"; };
 		CEEF790D20F338F700D6738D /* MumbaiPressApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MumbaiPressApp.entitlements; sourceTree = "<group>"; };
+		F24279ED227C59090063558F /* Fajer Noori Nastalique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fajer Noori Nastalique.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -508,7 +518,6 @@
 			children = (
 				CE2768EE20FC82820073B5C0 /* AkiraTextField.swift */,
 				CE2768EF20FC82820073B5C0 /* HoshiTextField.swift */,
-				CE2768F020FC82820073B5C0 /* Info.plist */,
 				CE2768F120FC82820073B5C0 /* IsaoTextField.swift */,
 				CE2768F220FC82820073B5C0 /* JiroTextField.swift */,
 				CE2768F320FC82820073B5C0 /* KaedeTextField.swift */,
@@ -589,6 +598,7 @@
 				CEC1E3D5210F6DCA00DEB80B /* ReporterDataVC.swift */,
 				CE8F81612118382A006E1B1E /* SearchhereNewsVc.swift */,
 				CE4864D12120B29500DB03FE /* TestSearchVC.swift */,
+				58DF19FE218B0ED800F5E800 /* containerVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -626,6 +636,9 @@
 				CE2735FE2100C5F300D8F826 /* UpdateNewsCell.swift */,
 				CE35E44E2101BEBF007F0628 /* cellVideoCell.swift */,
 				CE338246210AF61600D16A4B /* ImpLinkCell.swift */,
+				58DF1A00218B100C00F5E800 /* containerCell.swift */,
+				1C235D64227B268F000FA40B /* AdvitizeCell.swift */,
+				1C235D65227B268F000FA40B /* AdvitizeCell.xib */,
 			);
 			path = CellClasses;
 			sourceTree = "<group>";
@@ -644,6 +657,7 @@
 		CE392F8520D2969E00E7ABC3 /* Third Library */ = {
 			isa = PBXGroup;
 			children = (
+				58B473A02161F78B000A61C7 /* DotsLoader.swift */,
 				CE2768ED20FC82820073B5C0 /* TextFieldEffects */,
 				CE2CB9BA20F7367E0055481C /* MaterialDesign */,
 				CE0C331720F38B590052268C /* Source */,
@@ -690,6 +704,7 @@
 		CEB8D8B820D7CEB4004EBD22 /* FontFile */ = {
 			isa = PBXGroup;
 			children = (
+				F24279EC227C58760063558F /* FajerNooriFont */,
 				CEB8D8B920D7CEC7004EBD22 /* raleway */,
 			);
 			path = FontFile;
@@ -715,8 +730,8 @@
 				CEB8D8C820D7CEC7004EBD22 /* Raleway-SemiBold.ttf */,
 				CEB8D8C920D7CEC7004EBD22 /* Raleway-SemiBoldItalic.ttf */,
 				CEB8D8CA20D7CEC7004EBD22 /* Raleway-Thin.ttf */,
-				CEB8D8CB20D7CEC7004EBD22 /* Raleway-ThinItalic.ttf */,
 				CEB8D8CC20D7CEC7004EBD22 /* SIL Open Font License.txt */,
+				CEB8D8CB20D7CEC7004EBD22 /* Raleway-ThinItalic.ttf */,
 			);
 			path = raleway;
 			sourceTree = "<group>";
@@ -758,8 +773,8 @@
 				CED356BB20CFFF5E00F32372 /* Assets.xcassets */,
 				CE51275D20E6632F009EE823 /* Main.storyboard */,
 				CED356BD20CFFF5E00F32372 /* LaunchScreen.storyboard */,
+				58F48C51227B0FCB00558A2F /* GoogleService-Info.plist */,
 				CED356C020CFFF5E00F32372 /* Info.plist */,
-				CE12E98B2137E3740006C341 /* GoogleService-Info.plist */,
 				CED356B820CFFF5E00F32372 /* MumbaiPressApp.xcdatamodeld */,
 				CE09440320D2E2B000CF58E6 /* MumbaiPressApp-Bridging-Header.h */,
 				CE0FD6D220E8933700E7FFAC /* Constant.swift */,
@@ -775,6 +790,14 @@
 				1C516975EE7259DFC7377ABB /* Pods_MumbaiPressApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F24279EC227C58760063558F /* FajerNooriFont */ = {
+			isa = PBXGroup;
+			children = (
+				F24279ED227C59090063558F /* Fajer Noori Nastalique.ttf */,
+			);
+			path = FajerNooriFont;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -806,7 +829,6 @@
 				CED356AB20CFFF5E00F32372 /* Frameworks */,
 				CED356AC20CFFF5E00F32372 /* Resources */,
 				1DAE2A579ECB12F1A5E8F2BB /* [CP] Embed Pods Frameworks */,
-				587A3467C57B3FBC53A3C94D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -891,6 +913,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F24279EE227C5A2B0063558F /* Fajer Noori Nastalique.ttf in Resources */,
 				CED356BF20CFFF5E00F32372 /* LaunchScreen.storyboard in Resources */,
 				CE29D3F520FB6FAF009711CC /* UploadMediaCell.xib in Resources */,
 				CE51276820E6644D009EE823 /* FirstNewsCell.xib in Resources */,
@@ -908,17 +931,18 @@
 				CEB8D8CD20D7CECA004EBD22 /* Raleway-Black.ttf in Resources */,
 				CEB8D8DB20D7CECA004EBD22 /* Raleway-SemiBold.ttf in Resources */,
 				CEB8D8D620D7CECA004EBD22 /* Raleway-Light.ttf in Resources */,
+				58F48C52227B0FCB00558A2F /* GoogleService-Info.plist in Resources */,
 				CE71079E20F0C7CF00831300 /* ReferenceNameCell.xib in Resources */,
 				CEB8D8D820D7CECA004EBD22 /* Raleway-Medium.ttf in Resources */,
 				CEB8D8DC20D7CECA004EBD22 /* Raleway-SemiBoldItalic.ttf in Resources */,
 				CE392F7D20D25AE600E7ABC3 /* MenuCell.xib in Resources */,
 				CEB8D8DE20D7CECA004EBD22 /* Raleway-ThinItalic.ttf in Resources */,
-				CE12E98C2137E3740006C341 /* GoogleService-Info.plist in Resources */,
 				CEB8D8D520D7CECA004EBD22 /* Raleway-Italic.ttf in Resources */,
 				CEB8D8D120D7CECA004EBD22 /* Raleway-ExtraBold.ttf in Resources */,
 				CE0C335A20F38B590052268C /* DBAssetGroupsViewController.xib in Resources */,
 				CEB8D8D320D7CECA004EBD22 /* Raleway-ExtraLight.ttf in Resources */,
 				CE0C335520F38B590052268C /* DBAssetGroupCell.xib in Resources */,
+				1C235D67227B268F000FA40B /* AdvitizeCell.xib in Resources */,
 				CE0FD6DB20E8C22200E7FFAC /* CollectionViewCell.xib in Resources */,
 				CE0C336020F38B590052268C /* DBAttachmentPickerController.strings in Resources */,
 				CEB8D8D020D7CECA004EBD22 /* Raleway-BoldItalic.ttf in Resources */,
@@ -931,7 +955,6 @@
 				CE0C335720F38B590052268C /* DBThumbnailPhotoCell.xib in Resources */,
 				CEB8D8DD20D7CECA004EBD22 /* Raleway-Thin.ttf in Resources */,
 				CE0FD6DD20E8C58400E7FFAC /* TopScrollableNewsCell.xib in Resources */,
-				CE2768FC20FC82830073B5C0 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -994,21 +1017,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MumbaiPressApp/Pods-MumbaiPressApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		587A3467C57B3FBC53A3C94D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MumbaiPressApp/Pods-MumbaiPressApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1053,6 +1061,7 @@
 				CE35E4512102005E007F0628 /* JYToast.swift in Sources */,
 				CE0C335820F38B590052268C /* DBAssetImageView.m in Sources */,
 				CE27690220FC82830073B5C0 /* TextFieldEffects.swift in Sources */,
+				58DF1A01218B100C00F5E800 /* containerCell.swift in Sources */,
 				CE2768FB20FC82830073B5C0 /* HoshiTextField.swift in Sources */,
 				CE4F0E4020D3AD8D0021582C /* SPKeyBoardAvoiding.swift in Sources */,
 				CE2CB9D720F7367E0055481C /* MKRefreshControl.swift in Sources */,
@@ -1068,6 +1077,7 @@
 				CE0C336220F38B590052268C /* DBAttachment.m in Sources */,
 				CE4D93A920EE4101008BE21D /* VideoListNewsVc.swift in Sources */,
 				CEA76A7520FF7A330098B8C3 /* cellForVideo.swift in Sources */,
+				58B473A12161F78B000A61C7 /* DotsLoader.swift in Sources */,
 				CE6255FB20ECB91A00B010D0 /* SearchNewsVc.swift in Sources */,
 				CE8F81622118382A006E1B1E /* SearchhereNewsVc.swift in Sources */,
 				CE51276420E663D9009EE823 /* ReachabilityCheck.swift in Sources */,
@@ -1087,6 +1097,7 @@
 				CE2CB9DC20F7367E0055481C /* MKTextField.swift in Sources */,
 				CEE82C4020E12345008A0349 /* NewsMainCell.swift in Sources */,
 				CE0C335920F38B590052268C /* DBAssetGroupsViewController.m in Sources */,
+				1C235D66227B268F000FA40B /* AdvitizeCell.swift in Sources */,
 				CE2CB9CC20F7367E0055481C /* MKActivityIndicator.swift in Sources */,
 				CE51276220E663C4009EE823 /* DetailedNewsVC.swift in Sources */,
 				CE29D3F720FB7110009711CC /* MediaCollectionVC.swift in Sources */,
@@ -1117,6 +1128,7 @@
 				CE7C45ED20E25A1B0013168D /* RecordingCollectionViewCell.swift in Sources */,
 				CE51277220E66485009EE823 /* NewsTopCell.swift in Sources */,
 				CE29971820F8BE0C0019BF08 /* UploadNewsCell.swift in Sources */,
+				58DF19FF218B0ED800F5E800 /* containerVC.swift in Sources */,
 				CE27690320FC82830073B5C0 /* YokoTextField.swift in Sources */,
 				CE2CB9D620F7367E0055481C /* MKNavigationBar.swift in Sources */,
 				CE7C45EB20E25A130013168D /* RecordingsCollectionViewController.swift in Sources */,
@@ -1336,7 +1348,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MumbaiPressApp/MumbaiPressApp.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = TBC2KVJ5K4;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1345,11 +1358,12 @@
 					"$(PROJECT_DIR)/MumbaiPressApp/Third\\ Library/ToastFile",
 				);
 				INFOPLIST_FILE = MumbaiPressApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ksoftpl.mumbaiPressDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d906b3ce-dafd-467c-88cd-b227997367bb";
-				PROVISIONING_PROFILE_SPECIFIER = MumbaiPressDevelopmenyCert;
+				PROVISIONING_PROFILE = "69624fbc-54eb-4e92-b027-e5a1416eb680";
+				PROVISIONING_PROFILE_SPECIFIER = MumbaiPressDistributionCert;
 				SWIFT_OBJC_BRIDGING_HEADER = "MumbaiPressApp/MumbaiPressApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -1364,7 +1378,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MumbaiPressApp/MumbaiPressApp.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = TBC2KVJ5K4;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1373,11 +1388,12 @@
 					"$(PROJECT_DIR)/MumbaiPressApp/Third\\ Library/ToastFile",
 				);
 				INFOPLIST_FILE = MumbaiPressApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ksoftpl.mumbaiPressDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d906b3ce-dafd-467c-88cd-b227997367bb";
-				PROVISIONING_PROFILE_SPECIFIER = MumbaiPressDevelopmenyCert;
+				PROVISIONING_PROFILE = "69624fbc-54eb-4e92-b027-e5a1416eb680";
+				PROVISIONING_PROFILE_SPECIFIER = MumbaiPressDistributionCert;
 				SWIFT_OBJC_BRIDGING_HEADER = "MumbaiPressApp/MumbaiPressApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

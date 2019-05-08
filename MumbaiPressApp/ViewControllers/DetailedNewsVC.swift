@@ -22,7 +22,7 @@ class DetailedNewsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-       
+      
         
 //        var contentRect = CGRect.zero
 //
@@ -64,7 +64,7 @@ class DetailedNewsVC: UIViewController {
     Alamofire.request(detailUrl, method: .get, parameters: nil).responseJSON { (resp) in
         print(resp)
         
-         let json = JSON(resp.result.value)
+        let json = JSON(resp.result.value as Any)
         
         let rendered = json["content"]["rendered"].stringValue
         

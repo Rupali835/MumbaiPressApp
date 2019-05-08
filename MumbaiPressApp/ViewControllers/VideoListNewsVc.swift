@@ -13,10 +13,12 @@ import SwiftyJSON
 import Kingfisher
 import AVKit
 import SHSnackBarView
+import GoogleMobileAds
 
 
 class VideoListNewsVc: UIViewController, YTPlayerViewDelegate, TableViewDelegateDataSource {
     
+    @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var Playerview: YTPlayerView!
     @IBOutlet weak var ViewBar: UIView!
     @IBOutlet weak var menuBtn: UIButton!
@@ -51,6 +53,10 @@ class VideoListNewsVc: UIViewController, YTPlayerViewDelegate, TableViewDelegate
         NotificationCenter.default.addObserver(self, selector: #selector(orientationDidChange), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(closeplayer), name: NSNotification.Name.UIWindowDidBecomeVisible, object: nil)
        
+        bannerView.adUnitID = "ca-app-pub-5349935640076581/1498791760"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+
       
     }
 
@@ -143,7 +149,6 @@ class VideoListNewsVc: UIViewController, YTPlayerViewDelegate, TableViewDelegate
         print("EXACT_DATE : \(dateString)")
         
     }
-    
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)

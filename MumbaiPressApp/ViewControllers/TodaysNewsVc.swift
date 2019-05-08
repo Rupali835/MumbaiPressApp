@@ -10,10 +10,12 @@ import UIKit
 import Alamofire
 import Kingfisher
 import SHSnackBarView
+import GoogleMobileAds
 
 class TodaysNewsVc: UIViewController,CollectionViewDelegateDataSourceFlowLayout
 {
    
+    @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var ViewBar: UIView!
     @IBOutlet weak var menuBtn: UIButton!
     @IBOutlet weak var collView: UICollectionView!
@@ -27,6 +29,10 @@ class TodaysNewsVc: UIViewController,CollectionViewDelegateDataSourceFlowLayout
         collView.delegate = self
         collView.dataSource = self
         designCell(cView: ViewBar)
+        
+        bannerView.adUnitID = "ca-app-pub-5349935640076581/1498791760"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
     }
 
     func designCell(cView : UIView)

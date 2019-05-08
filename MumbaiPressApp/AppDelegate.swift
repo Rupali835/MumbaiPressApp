@@ -1,16 +1,11 @@
-//
-//  AppDelegate.swift
-//  MumbaiPressApp
-//
-//  Created by user on 12/06/18.
-//  Copyright © 2018 user. All rights reserved.
-//
+
 
 import UIKit
 import CoreData
 import UserNotifications
 import Firebase
 import FirebaseMessaging
+import GoogleMobileAds
 
 
 @UIApplicationMain
@@ -42,6 +37,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         FirebaseApp.configure()
         NotificationCnt = 0
+       // GADMobileAds.sharedInstance().start(completionHandler: nil)
+    
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-5349935640076581~9403054717")
+        
         return true
     }
 
@@ -80,6 +79,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 if Messaging.messaging().fcmToken != nil
                 {
                     Messaging.messaging().subscribe(toTopic: "english_newsios")
+                    
+                    Messaging.messaging().unsubscribe(fromTopic: "english_news")
+                    
                 }
           
         }
@@ -108,9 +110,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let userInfo = response.notification.request.content.userInfo
         
         print(userInfo)
-        print("Notification Count", userInfo.count)
-        
-        
+     
         var newsArr = [DetaileNews]()
         
         guard
@@ -156,7 +156,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         print(remoteMessage.appData)
         
     }
-    
+
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any],
                      fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         
@@ -175,7 +175,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     
-   func applicationWillResignActive(_ application: UIApplication)
+    func applicationWillResignActive(_ application: UIApplication)
     {
        
     }
@@ -199,8 +199,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     func applicationWillTerminate(_ application: UIApplication)
     {
-      
-        self.saveContext()
+      self.saveContext()
     }
 
 // MARK: - Core Data stack

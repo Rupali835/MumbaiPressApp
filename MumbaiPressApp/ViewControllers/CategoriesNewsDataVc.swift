@@ -9,24 +9,30 @@
 import UIKit
 import Alamofire
 import AlamofireImage
+import GoogleMobileAds
 
 class CategoriesNewsDataVc: UIViewController, TableViewDelegateDataSource {
    
-    
-
+    @IBOutlet weak var loaderView: DotsLoader!
     @IBOutlet weak var tblNEWS: UITableView!
     @IBOutlet weak var ViewBar: UIView!
     @IBOutlet weak var menuBtn: UIButton!
+    
     var NewsArr = [AnyObject]()
     var catname : String = ""
     var cat_id : Int = 0
-     let storyBrd = UIStoryboard(name: "Main", bundle: nil)
-      var DetaileNewsArr = [DetaileNews]()
+    let storyBrd = UIStoryboard(name: "Main", bundle: nil)
+    var DetaileNewsArr = [DetaileNews]()
+    private var toast : JYToast!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         sideMenus()
-       designCell(cView: ViewBar)
+        designCell(cView: ViewBar)
+        
+        self.loaderView.isHidden = false
+        
+       tblNEWS.register(UINib(nibName: "AdvitizeCell", bundle: nil), forCellReuseIdentifier: "AdvitizeCell")
         
         tblNEWS.register(UINib(nibName: "FirstNewsCell", bundle: nil), forCellReuseIdentifier: "FirstNewsCell")
         
@@ -39,31 +45,67 @@ class CategoriesNewsDataVc: UIViewController, TableViewDelegateDataSource {
         self.tblNEWS.estimatedRowHeight = 140
         self.tblNEWS.rowHeight = UITableViewAutomaticDimension
     
-
-        getCategoriedData()
+        toast = JYToast()
+    //    getCategoriedData()
 
     }
 
+    
     func setId(CatId : Int, CatName : String)
     {
         //getCategoriedData(Id : CatId)
         
         self.cat_id = CatId
         self.catname = CatName
-        
     }
     
-    func getCategoriedData()
+    func setlang()
     {
-        let url = "https://www.mumbaipress.com/wp-json/wp/v2/posts/?categories=\(self.cat_id)&per_page=20&fields=id,date,title,content,better_featured_image,link"
+         let setLanguage = UserDefaults.standard.integer(forKey: "ENG")
+        
+        switch setLanguage
+        {
+        case 1:
+            
+            let latestEnUrl = "https://www.mumbaipress.com/"
+            self.getCategoriedData(url: latestEnUrl)
+            break
+        case 2:
+            let latestHnUrl = "https://www.mumbaipress.com/hindi"
+            self.getCategoriedData(url: latestHnUrl)
+            break
+        case 3 :
+            let latestUrduUrl = "https://www.mumbaipress.com/urdu"
+            self.getCategoriedData(url: latestUrduUrl)
+            break
+        default:
+            let latestEnUrl = "https://www.mumbaipress.com/"
+            self.getCategoriedData(url: latestEnUrl)
+        }
+    }
+    
+    func getCategoriedData(url : String)
+    {
+        let url = url + "/wp-json/wp/v2/posts/?categories=\(self.cat_id)&per_page=20&fields=id,date,title,content,better_featured_image,link"
        
         print(url)
         Alamofire.request(url, method: .get, parameters: nil).responseJSON { (resp) in
             print(resp)
-            
-            self.NewsArr = resp.result.value as! [AnyObject]
-            
-             self.tblNEWS.reloadData()
+            self.loaderView.isHidden = true
+
+            switch resp.result
+            {
+            case .success(let json):
+                self.NewsArr = resp.result.value as! [AnyObject]
+                self.tblNEWS.reloadData()
+                break
+                
+            case .failure(let err):
+                self.toast.isShow("failed")
+                break
+                
+            }
+         
         }
        
     }
@@ -123,7 +165,21 @@ class CategoriesNewsDataVc: UIViewController, TableViewDelegateDataSource {
             cell.btnYoutube.isHidden = true
             return cell
             
-        }else{
+        }
+       else if indexPath.row % 5 == 0{
+            print(indexPath.row)
+            
+            let cell = tblNEWS.dequeueReusableCell(withIdentifier: "AdvitizeCell", for: indexPath) as! AdvitizeCell
+            
+            cell.bannerView.adUnitID = "ca-app-pub-5349935640076581/1498791760"
+            cell.bannerView.rootViewController = self
+            cell.bannerView.load(GADRequest())
+            
+            return cell
+            
+        }
+        
+        else{
             
             let cell = tblNEWS.dequeueReusableCell(withIdentifier: "SecondNewsCell", for: indexPath) as! SecondNewsCell
             
@@ -207,6 +263,7 @@ class CategoriesNewsDataVc: UIViewController, TableViewDelegateDataSource {
         navigationController?.navigationBar.isHidden = true
         sideMenus()
         customizeNavBar()
+        setlang()
         
     }
     

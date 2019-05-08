@@ -14,8 +14,11 @@ class AboutUsVc: UIViewController {
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var viewLbl: UIView!
     @IBOutlet weak var lblAboutUs: UILabel!
-    override func viewDidLoad() {
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+        
         self.sideMenus()
         let newlayer = CAGradientLayer()
         newlayer.colors = [ UIColor.cyan.cgColor, UIColor.blue.cgColor ]

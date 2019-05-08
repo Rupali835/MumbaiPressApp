@@ -340,7 +340,7 @@ class AllUploadNewsVc: UIViewController, UITextViewDelegate, MediaDelegate {
                    "count_image": arrIMG!,
                    "count_audio": arrAUD!,
                    "count_video": arrVID!
-            ]
+                ]
             
             print(param)
             

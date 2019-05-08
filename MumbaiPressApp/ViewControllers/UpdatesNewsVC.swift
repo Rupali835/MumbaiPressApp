@@ -20,6 +20,7 @@ class UpdatesNewsVC: UIViewController, TableViewDelegateDataSource
     var newsData = [AnyObject]()
     let snackbarView = snackBar()
     var StrUpdate : String = ""
+    var toast : JYToast!
     
     override func viewDidLoad()
     {
@@ -32,7 +33,7 @@ class UpdatesNewsVC: UIViewController, TableViewDelegateDataSource
         self.tblNews.estimatedRowHeight = 80
         self.tblNews.rowHeight = UITableViewAutomaticDimension
         getNews()
-        
+        toast = JYToast()
         designCell(cView: ViewBar)
     }
     
@@ -42,18 +43,29 @@ class UpdatesNewsVC: UIViewController, TableViewDelegateDataSource
         Alamofire.request(url, method: .get, parameters: nil).responseJSON { (resp) in
             print(resp)
             
-            let JSON = resp.result.value as! NSDictionary
-            let Msg = JSON["msg"] as! String
-            if Msg == "SUCCESS"
+            switch resp.result
             {
-                self.newsData = JSON["data"] as! [AnyObject]
+            case .success(let json):
+                let JSON = resp.result.value as! NSDictionary
+                let Msg = JSON["msg"] as! String
+                if Msg == "SUCCESS"
+                {
+                    self.newsData = JSON["data"] as! [AnyObject]
+                }
+                if Msg == "FAIL"
+                {
+                    let snackbarBgColor = UIColor(red:0.96, green:0.26, blue:0.21, alpha:1.0)
+                    self.snackbarView.showSnackBar(view: self.view, bgColor: snackbarBgColor, text: "No any updates", textColor: UIColor.white, interval: 2)
+                }
+                self.tblNews.reloadData()
+                break
+                
+            case .failure(let err):
+                self.toast.isShow("failed")
+                break
             }
-            if Msg == "FAIL"
-            {
-                let snackbarBgColor = UIColor(red:0.96, green:0.26, blue:0.21, alpha:1.0)
-                self.snackbarView.showSnackBar(view: self.view, bgColor: snackbarBgColor, text: "No any updates", textColor: UIColor.white, interval: 2)
-            }
-            self.tblNews.reloadData()
+            
+          
         }
     }
     
@@ -66,7 +78,8 @@ class UpdatesNewsVC: UIViewController, TableViewDelegateDataSource
     {
         let cell = tblNews.dequeueReusableCell(withIdentifier: "UpdateNewsCell", for: indexPath) as! UpdateNewsCell
         let lcDict = self.newsData[indexPath.row]
-        self.StrUpdate = (lcDict["u_headline"] as! String)
+        let Str = (lcDict["u_headline"] as! String)
+        self.StrUpdate = Str
         cell.lblNews.text = self.StrUpdate
         let date = lcDict["u_date_time"] as! String
         cell.lblDateTime.text = date.datesetting()

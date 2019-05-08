@@ -11,8 +11,7 @@ import Alamofire
 import AlamofireImage
 import SHSnackBarView
 import Kingfisher
-
-
+import GoogleMobileAds
 
 enum eLanguageType : Int
 {
@@ -52,8 +51,11 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
     @IBOutlet weak var ViewBar: UIView!
     @IBOutlet weak var menuButton: MKButton!
     
+    @IBOutlet weak var bannerView: GADBannerView!
     
-    var popUp : KLCPopup!
+    @IBOutlet weak var loaderView: DotsLoader!
+    
+    var popUp = KLCPopup()
     let snackbarView = snackBar()
     var SectionTitleArr = [String]()
     
@@ -79,6 +81,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
     var DateStr = Date()
   
     var ColorArr = [UIColor]()
+  //  let dotView : DotsLoader! = nil
     
     @IBOutlet weak var viewInfo: UIView!
     
@@ -89,6 +92,8 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
         SelectedIndex = -1
         selectedIndexPath = -1
         bFirstSection = true
+        self.loaderView.isHidden = false
+
         
         self.ColorArr = [Color.MKColor.Red.P400, Color.MKColor.Blue.P400, Color.MKColor.Orange.P400, Color.MKColor.Green.P400, Color.MKColor.Indigo.P400, Color.MKColor.Amber.P400, Color.MKColor.LightBlue.P400, Color.MKColor.BlueGrey.P400, Color.MKColor.Brown.P400, Color.MKColor.Cyan.P400, Color.MKColor.Teal.P400, Color.MKColor.Lime.P400, Color.MKColor.Pink.P400, Color.MKColor.Brown.P400, Color.MKColor.Purple.P400]
         
@@ -96,7 +101,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
         {
            self.ViewBar.isHidden = false
             
-           popUp = KLCPopup()
+         //  popUp = KLCPopup()
            self.designView(cView: self.ViewBar)
             
             tblNews.register(UINib(nibName: "FirstNewsCell", bundle: nil), forCellReuseIdentifier: "FirstNewsCell")
@@ -125,6 +130,14 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
             let snackbarBgColor = UIColor(red:0.96, green:0.26, blue:0.21, alpha:1.0)
             self.snackbarView.showSnackBar(view: self.view, bgColor: snackbarBgColor, text: "No internet connection", textColor: UIColor.white, interval: 2)
         }
+    
+// Show ads
+        
+        bannerView.adUnitID = "ca-app-pub-5349935640076581/1498791760"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+      
+        
     }
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
@@ -137,7 +150,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
     
     func getLatestNews(url : String)
     {
-        var latestNew = [AnyObject]()
+       // var latestNew = [AnyObject]()
         let newUrl = url + "wp-json/wp/v2/posts/?per_page=12&fields=title,id,date,link,content,better_featured_image"
         
         self.latestNews.removeAll(keepingCapacity: false)
@@ -155,6 +168,8 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
         Alamofire.request(req).validate().responseJSON { (response) in
          
             print(response)
+            
+           // self.loaderView.stopAnimating()
             
             if let lcBreakingNews = response.result.value
             {
@@ -180,6 +195,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
             }
 
             self.getCategoryList(url: url)
+
         }
     }
 
@@ -200,6 +216,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
     override func viewWillAppear(_ animated: Bool)
     {
         navigationController?.navigationBar.isHidden = true
+
         sideMenus()
         customizeNavBar()
      }
@@ -267,7 +284,10 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
         
         Alamofire.request(req).validate().responseJSON { (response) in
             print(response)
-            let data = response.result.value as! NSDictionary
+            
+
+          guard let data = response.result.value as? NSDictionary else { return }
+            //let data = response.result.value as! NSDictionary
             let TitleArr = data["items"] as! [AnyObject]
             
             self.SectionTitleArr.removeAll(keepingCapacity: false)
@@ -340,6 +360,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
 
            let finalUrl = Url + "\(catId)&per_page=5&fields=id,date,title,content,better_featured_image,link"
      
+        print(finalUrl)
         
         let configuration = URLSessionConfiguration.default
         configuration.requestCachePolicy = . reloadIgnoringLocalAndRemoteCacheData
@@ -353,6 +374,10 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
         Alamofire.request(req).validate().responseJSON { (response) in
             print(response)
           
+            self.loaderView.stopAnimating()
+
+            self.loaderView.isHidden = true
+
         guard let Response = response.result.value else{
                 return
             }
@@ -362,7 +387,10 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
                 self.tblNews.isHidden = false
                 self.ViewBar.isHidden = false
                 self.MainDataArr.removeAll(keepingCapacity: false)
-            
+            if !self.PoliticsNewArr.isEmpty
+            {
+                self.SectionTitleArr.append(catName)
+            }
                 for (_,lcDict) in self.PoliticsNewArr.enumerated()
                 {
                     self.SelectedIndex += 1
@@ -379,8 +407,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
                 self.AllDataArr.append(self.MainDataArr as AnyObject)
                 self.tblNews.reloadData()
             }
-            
-                self.SectionTitleArr.append(catName)
+             
             
             }
     }
@@ -422,13 +449,13 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
     {
          var sourceImg : String = ""
         
-        if indexPath.section == 0
+        if indexPath.section == 0     // show breaking news
         {
             let cCollectionViewCell = tblNews.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CollectionViewCell
            cCollectionViewCell.SetData(TopNewsData: BreakingArr)
             return cCollectionViewCell
             
-        }else if indexPath.section == 1
+        }else if indexPath.section == 1   // show latest news
         {
            
             let DictData = self.latestNews[indexPath.row]
@@ -438,16 +465,19 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
             let titleNews = DictData["title"] as! NSDictionary
             let renNews = titleNews["rendered"] as! String
            
-            let imgDict = DictData["better_featured_image"] as! NSDictionary
+             
+           if let imgDict = DictData["better_featured_image"] as? NSDictionary
+           {
             cell.delegate = self
             if imgDict.count != 0
             {
-                 sourceImg = imgDict["source_url"] as! String
+                sourceImg = imgDict["source_url"] as! String
                 let url = URL(string: sourceImg)
                 cell.imgNewS.kf.setImage(with: url)
-               
                 
-            }else{
+            }
+           }
+            else{
                 cell.imgNewS.image = UIImage(named: "backimg")
             }
             
@@ -465,9 +495,11 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
         }else{
           if indexPath.section >= 2
             {
-
-                
-                  var lcDataArr = self.AllDataArr[indexPath.section - 2 ] as! [AnyObject]
+                print("indexPath.section =\(indexPath.section)")
+                print("indexPath.section - 2 =\(indexPath.section - 2)")
+                if indexPath.section - 2 < self.AllDataArr.count
+                {
+                    var lcDataArr = self.AllDataArr[indexPath.section - 2] as! [AnyObject]
             
                 if indexPath.row == 0
                 {
@@ -537,7 +569,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
                     cell.lbltitle.text = lcFormatStr.replacingHTMLEntities!
                     return cell
                 }
-           // }
+              }
             }else
             {
                 self.tblNews.isHidden = true
@@ -587,7 +619,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
             return 150
            }
         }
-  }
+    }
    
     func SetData(lcDict: NSDictionary, index: Int)
     {
@@ -615,7 +647,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
             SetData(lcDict: lcDict as! NSDictionary, index: index)
          }
        }
-  }
+   }
     
     func PassData(lcAllData: [AnyObject])
     {
@@ -625,8 +657,6 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
         }
     }
     
-    
-    
     @IBAction func btnLanguage_click(_ sender: Any)
     {
         popUp.contentView = viewLanguage
@@ -635,8 +665,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
         popUp.shouldDismissOnContentTouch = false
         popUp.showType = .slideInFromRight
         popUp.dismissType = .slideOutToLeft
-        popUp.show(atCenter:CGPoint(x:self.view.frame.size.width/2,y:self.view.frame.size.height/2), in: self.view)
-
+    popUp.show(atCenter:CGPoint(x:self.view.frame.size.width/2,y:self.view.frame.size.height/2), in: self.view)
     }
     
     func SelectedLanguage(languagePath: String)
@@ -663,7 +692,10 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
     
     @IBAction func btnOK_languageClick(_ sender: Any)
     {
-         popUp.dismiss(true)
+        popUp.dismiss(true)
+        self.loaderView.isHidden = false
+        self.loaderView.startAnimating()
+
         switch m_eLanguageType.rawValue
         {
         case 1:
@@ -686,7 +718,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
             UserDefaults.standard.set(3, forKey: "ENG")
            // getCategoryList(url: "https://www.mumbaipress.com/urdu/")
             getLatestNews(url: "https://www.mumbaipress.com/urdu/")
-
+        //   setupGlobalAppearance()
             break
             
         default:
@@ -698,6 +730,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
     @IBAction func btnSearch_OnClick(_ sender: Any)
     {
         let searchVc = storyBrd.instantiateViewController(withIdentifier: "TestSearchVC") as! TestSearchVC
+        
         self.navigationController?.pushViewController(searchVc, animated: true)
     }
     
@@ -722,6 +755,7 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
     
     @IBAction func btnUrdu_click(_ sender: Any)
     {
+      //  setupGlobalAppearance()
         m_eLanguageType = eLanguageType.LT_URDU
         
         btn_Urdu.backgroundColor = UIColor(red:1.00, green:0.92, blue:0.23, alpha:1.0)
@@ -729,6 +763,37 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
         btn_hindi.backgroundColor = UIColor.clear
     }
     
+    func setupGlobalAppearance(){
+        
+        //global Appearance settings
+//        let customFont = UIFont.appRegularFontWith(size: 17)
+//        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: customFont], for: .normal)
+//        UITextField.appearance().substituteFontName = .App.regularFont
+//        UILabel.appearance().substituteFontName = Constants.App.regularFont
+//        UILabel.appearance().substituteFontNameBold = Constants.App.boldFont
+        
+        
+//        let customFont = UIFont.init(name: "Fajer Noori Nastalique", size: 18)
+//
+//
+//        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: customFont!], for: .normal)
+        
+       
+        UILabel.appearance().font = UIFont(name: "Fajer Noori Nastalique", size: 18)
+        
+        UITextField.appearance().font = UIFont(name: "Fajer Noori Nastalique", size: 18)
+        
+        UITextView.appearance().font = UIFont(name: "Fajer Noori Nastalique", size: 18)
+        
+//        UILabel.appearance().font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle(rawValue: "Fajer Noori Nastalique"))
+//
+//        UITextView.appearance().font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle(rawValue: "Fajer Noori Nastalique"))
+//
+//         UITextField.appearance().font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle(rawValue: "Fajer Noori Nastalique"))
+        
+        
+        
+    }
     
     
     

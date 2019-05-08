@@ -110,7 +110,9 @@ class SideBarMenusVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         Alamofire.request(CategoryUrl, method: .get, parameters: nil).responseJSON { (resp) in
             
-            let data = resp.result.value as! [String : AnyObject]
+            guard let data = resp.result.value as? [String : AnyObject] else{
+                return
+            }
             let TitleArr = data["items"] as! [AnyObject]
             
             self.m_cMenuItemArr.removeAll(keepingCapacity: false)
@@ -128,8 +130,6 @@ class SideBarMenusVC: UIViewController, UITableViewDelegate, UITableViewDataSour
             let lcTodaysNews = MenuItem(cMenuname: TodaysNewsKey, nLevel: 0, cParrentMenu: nil, eFTMenuItemType: eMenuItemType.MD_TODAYSNEWS, nCategoryId: 0)
              self.m_cMenuItemArr.append(lcTodaysNews)
             
-           
-
             for DictItem in TitleArr
             {
                 let lcMenuItem = MenuItem(cMenuname: DictItem["title"] as! String, nLevel: 0, cParrentMenu: nil, eFTMenuItemType: eMenuItemType.MDT_ALLAPIMENU, nCategoryId : DictItem["categories_id"] as! Int)

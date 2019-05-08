@@ -10,12 +10,14 @@ import UIKit
 import AlamofireImage
 import Alamofire
 import SwiftyJSON
+import GoogleMobileAds
 
 class DetailNewsScrollVC: UIViewController,CollectionViewDelegateDataSourceFlowLayout
 {
   
     @IBOutlet weak var lblPageCount: UILabel!
     
+    @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var viewImg: UIView!
     @IBOutlet weak var CollectionView: UICollectionView!
     
@@ -26,7 +28,7 @@ class DetailNewsScrollVC: UIViewController,CollectionViewDelegateDataSourceFlowL
     var DetailText : String = ""
     var SelectedIndex = Int(0)
     var indexPath = Int(0)
-
+    var interstitial: GADInterstitial?
     
     override func viewDidLoad()
     {
@@ -37,7 +39,28 @@ class DetailNewsScrollVC: UIViewController,CollectionViewDelegateDataSourceFlowL
         CollectionView.delegate    = self
         
        self.SetLabelData(nSelectedIndex: SelectedIndex)
-       
+        
+        bannerView.adUnitID = "ca-app-pub-5349935640076581/1498791760"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+
+       interstitial = createAndLoadInterstitial()
+    }
+    
+    private func createAndLoadInterstitial() -> GADInterstitial? {
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-5349935640076581/5984831682")
+        
+        guard let interstitial = interstitial else {
+            return nil
+        }
+        
+        let request = GADRequest()
+        // Remove the following line before you upload the app
+        request.testDevices = [ kGADSimulatorID ]
+        interstitial.load(request)
+        interstitial.delegate = self
+        
+        return interstitial
     }
     
    override func viewDidAppear(_ animated: Bool)
@@ -177,4 +200,14 @@ class DetailNewsScrollVC: UIViewController,CollectionViewDelegateDataSourceFlowL
    
     
 }
-
+extension DetailNewsScrollVC : GADInterstitialDelegate
+{
+    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+        print("Interstitial loaded successfully")
+        ad.present(fromRootViewController: self)
+    }
+    
+    func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
+        print("Fail to receive interstitial")
+    }
+}

@@ -14,6 +14,8 @@ pod 'SwiftyJSON'
 pod 'Firebase/Core'
 pod 'Firebase/Messaging'
 pod 'Firebase/Database'
+pod 'Google-Mobile-Ads-SDK'
+
 
 
   # Pods for MumbaiPressApp
@@ -27,5 +29,6 @@ pod 'SwiftyJSON'
 pod 'Firebase/Core'
 pod 'Firebase/Messaging'
 pod 'Firebase/Database'
+pod 'Google-Mobile-Ads-SDK'
 
 end

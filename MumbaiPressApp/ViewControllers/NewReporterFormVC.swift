@@ -1,10 +1,4 @@
-//
-//  NewReporterFormVC.swift
-//  MumbaiPressApp
-//
-//  Created by user on 25/07/18.
-//  Copyright © 2018 user. All rights reserved.
-//
+
 
 import UIKit
 import Alamofire
@@ -111,7 +105,7 @@ class NewReporterFormVC: UIViewController, UITextFieldDelegate, TableViewDelegat
     var DocumentImageFileName: String!
     var DocumentFileURL: URL!
     var DocumentFileName: String?
-     var refArr = [ReferencsData]()
+    var refArr = [ReferencsData]()
     
     var NewRefArr = [[String:String]]()
     
@@ -257,9 +251,7 @@ class NewReporterFormVC: UIViewController, UITextFieldDelegate, TableViewDelegat
     
 //********************     BUTTONS - ACTIONS      *******************//
   
-    
-    
-    
+   
     @IBAction func btnEng_OnClick(_ sender: Any)
     {
         self.view.endEditing(true)
@@ -485,7 +477,7 @@ class NewReporterFormVC: UIViewController, UITextFieldDelegate, TableViewDelegat
             }
             
             cell.btnDelete.tag = indexPath.row
-              cell.btnDelete.addTarget(self, action: #selector(Delete_Click(sender:)), for: .touchUpInside)
+            cell.btnDelete.addTarget(self, action: #selector(Delete_Click(sender:)), for: .touchUpInside)
             
             return cell
             
@@ -510,7 +502,6 @@ class NewReporterFormVC: UIViewController, UITextFieldDelegate, TableViewDelegat
         }else{
             return 70.0
         }
-       
     }
 
     
@@ -520,7 +511,6 @@ class NewReporterFormVC: UIViewController, UITextFieldDelegate, TableViewDelegat
     func setTableViewHeight(ArrCount: Int)
     {
         
-        
         if self.SelectedRow == 1
         {
             tblHeightOfRef = CGFloat(100 * ArrCount)
@@ -529,7 +519,6 @@ class NewReporterFormVC: UIViewController, UITextFieldDelegate, TableViewDelegat
         }else{
             tblHeightOfDoc = CGFloat(80 * ArrCount)
             self.HgtOfDocTbl.constant = tblHeightOfDoc!
-            
         }
         
         if let tblHeightOfRef = self.tblHeightOfRef
@@ -625,9 +614,9 @@ class NewReporterFormVC: UIViewController, UITextFieldDelegate, TableViewDelegat
                 
                 lcAttachment.loadOriginalImage(completion: {image in
                     
-                    self.btnProfile.setImage(image, for: .normal)
+                 self.btnProfile.setImage(image, for: .normal)
                  self.btnProfile.layer.cornerRadius = self.btnProfile.frame.size.height / 2
-                    self.selectedImage = image
+                self.selectedImage = image
                 })
                 
             }
@@ -668,8 +657,7 @@ class NewReporterFormVC: UIViewController, UITextFieldDelegate, TableViewDelegat
             
             self.refArr.remove(at: nIndex!)
             
-            
-           self.tblReferenceInfo.reloadData()
+            self.tblReferenceInfo.reloadData()
             self.setTableViewHeight(ArrCount: self.refArr.count)
           
         }
@@ -753,8 +741,6 @@ class NewReporterFormVC: UIViewController, UITextFieldDelegate, TableViewDelegat
             return
         }
         
-
-        
         if txtQualification.text == ""
         {
 
@@ -834,7 +820,7 @@ class NewReporterFormVC: UIViewController, UITextFieldDelegate, TableViewDelegat
  
         let Reporturl = "https://mumbaipress.com/wp-content/themes/mumbai_press/API/insertRepoter.php"
         
-        var param : [String: String] =
+        let param : [String: String] =
             [  "name": repoter.name,
                //   "profile_count": repoter.profile_count,
                 "profile_count": repoter.profile_count,
@@ -846,7 +832,7 @@ class NewReporterFormVC: UIViewController, UITextFieldDelegate, TableViewDelegat
                 "about_reporter":  repoter.about_repoter,
                 "reference": repoter.reference,
                 "count": repoter.count
-        ]
+             ]
         
         print(param)
         
@@ -871,7 +857,6 @@ class NewReporterFormVC: UIViewController, UITextFieldDelegate, TableViewDelegat
                     }
                     
                 }
-                
                 
                 for (key, val) in param {
                     multipartFormData.append((val as AnyObject).data(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue).rawValue)!, withName: key)

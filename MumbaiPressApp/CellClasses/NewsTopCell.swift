@@ -143,7 +143,7 @@ class NewsTopCell: UITableViewCell, CollectionViewDelegateDataSourceFlowLayout
     
     func startTimer()
     {
-        let timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(NewsTopCell.scrollToNextCell), userInfo: nil, repeats: true);
+        _ = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(NewsTopCell.scrollToNextCell), userInfo: nil, repeats: true);
     }
 
 
