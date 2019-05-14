@@ -5037,7 +5037,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vx4-bh-Oen" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="403" y="-1721"/>
+            <point key="canvasLocation" x="454" y="-1721"/>
         </scene>
         <!--Detail News ScrollVC-->
         <scene sceneID="6cM-Ni-I6t">
