@@ -623,16 +623,25 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
    
     func SetData(lcDict: NSDictionary, index: Int)
     {
+        var sourceImg = String()
             let Link = lcDict["link"] as! String
             let titleNews = lcDict["title"] as! NSDictionary
             let renNews = titleNews["rendered"] as! String
             let cDate = lcDict["date"] as! String
             let contentNew = lcDict["content"] as! NSDictionary
             let renDetailDesc = contentNew["rendered"] as! String
-            let imgDict = lcDict["better_featured_image"] as! NSDictionary
-            let sourceImg = imgDict["source_url"] as! String
-            
-            self.DetaileNewsArr.append(DetaileNews(date: cDate.datesetting(), title: renNews, url: sourceImg, DetailsDesc: renDetailDesc, nIndex: index, link: Link))
+        
+        
+        let imgDict = lcDict["better_featured_image"] as! NSDictionary
+        
+        if imgDict.count != 0
+        {
+            sourceImg = imgDict["source_url"] as! String
+        }else{
+            sourceImg = ""
+        }
+        
+        self.DetaileNewsArr.append(DetaileNews(date: cDate.datesetting(), title: renNews, url: sourceImg, DetailsDesc: renDetailDesc, nIndex: index, link: Link))
         
     }
     
@@ -688,7 +697,6 @@ class HomePageVC: UIViewController,TableViewDelegateDataSource, SecondNewsCellDe
          UpdateNews = (bundal?.localizedString(forKey: "UpdateNews", value: nil, table: nil))!
 
     }
-    
     
     @IBAction func btnOK_languageClick(_ sender: Any)
     {

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OGp-JG-xyd">
-    <device id="retina4_0" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OGp-JG-xyd">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -49,8 +47,8 @@
                     <view key="view" contentMode="scaleToFill" id="fS3-Qs-BH5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="749-al-vm2"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZTy-uS-mD1"/>
                     <connections>
@@ -87,6 +85,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="PzD-M8-lEM"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wkn-Ps-fbk" firstAttribute="trailing" secondItem="PzD-M8-lEM" secondAttribute="trailing" id="U08-44-uE4"/>
@@ -94,7 +93,6 @@
                             <constraint firstItem="wkn-Ps-fbk" firstAttribute="top" secondItem="bPF-Ga-fBE" secondAttribute="top" id="hGH-1G-hVC"/>
                             <constraint firstItem="wkn-Ps-fbk" firstAttribute="leading" secondItem="PzD-M8-lEM" secondAttribute="leading" id="oXy-sM-NyK"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="PzD-M8-lEM"/>
                     </view>
                     <navigationItem key="navigationItem" id="hme-Ca-ak9"/>
                     <connections>
@@ -175,6 +173,7 @@ Adaa Production is an Indian based company having a team of senior journalists w
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="9X4-sB-hY7"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ocm-tk-NG4" firstAttribute="leading" secondItem="9X4-sB-hY7" secondAttribute="leading" id="5VC-qF-wEs"/>
@@ -188,7 +187,6 @@ Adaa Production is an Indian based company having a team of senior journalists w
                             <constraint firstItem="9X4-sB-hY7" firstAttribute="trailing" secondItem="KRU-8b-CY2" secondAttribute="trailing" constant="10" id="xWv-V1-LMu"/>
                             <constraint firstItem="KRU-8b-CY2" firstAttribute="leading" secondItem="9X4-sB-hY7" secondAttribute="leading" constant="10" id="zSj-IJ-Q3b"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="9X4-sB-hY7"/>
                     </view>
                     <connections>
                         <outlet property="ViewBar" destination="ocm-tk-NG4" id="5zM-C3-pir"/>
@@ -281,6 +279,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Tx0-VL-zWH"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="BDX-mW-WB0" firstAttribute="leading" secondItem="Tx0-VL-zWH" secondAttribute="leading" constant="8" id="34T-Cp-L1w"/>
@@ -294,7 +293,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <constraint firstAttribute="trailing" secondItem="J7U-o3-DVZ" secondAttribute="trailing" id="uux-e3-6wu"/>
                             <constraint firstItem="J7U-o3-DVZ" firstAttribute="leading" secondItem="Tx0-VL-zWH" secondAttribute="leading" id="yQe-wb-bYZ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Tx0-VL-zWH"/>
                     </view>
                     <connections>
                         <outlet property="menuBtn" destination="dBb-Nb-Bbj" id="oXl-XE-U0F"/>
@@ -394,6 +392,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="FwF-Ec-Qdh"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="FwF-Ec-Qdh" firstAttribute="trailing" secondItem="jnZ-jL-J4p" secondAttribute="trailing" constant="8" id="F70-gZ-fxy"/>
@@ -407,7 +406,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <constraint firstItem="0Ro-rf-7hr" firstAttribute="leading" secondItem="FwF-Ec-Qdh" secondAttribute="leading" constant="10" id="zk3-sN-4Sj"/>
                             <constraint firstItem="0Ro-rf-7hr" firstAttribute="top" secondItem="l30-cQ-68l" secondAttribute="bottom" constant="20" id="zuj-Ku-OPW"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="FwF-Ec-Qdh"/>
                     </view>
                     <connections>
                         <outlet property="ViewBar" destination="l30-cQ-68l" id="CiB-N3-9kW"/>
@@ -492,20 +490,20 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S-557 Heera Complex 3rd floor New Delhi 110092" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evi-tz-rG1">
-                                                        <rect key="frame" x="11" y="133" width="298" height="38"/>
+                                                        <rect key="frame" x="11" y="133" width="298" height="37.5"/>
                                                         <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ADDA" translatesAutoresizingMaskIntoConstraints="NO" id="j41-lh-7LV">
-                                                        <rect key="frame" x="105" y="191" width="110" height="110"/>
+                                                        <rect key="frame" x="105" y="190.5" width="110" height="110"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="110" id="H1y-bn-dbn"/>
                                                             <constraint firstAttribute="height" constant="110" id="Y2a-qi-q57"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email ID " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paf-72-hyO">
-                                                        <rect key="frame" x="11" y="322" width="298" height="25"/>
+                                                        <rect key="frame" x="11" y="321.5" width="298" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="rr0-9I-R0l"/>
                                                         </constraints>
@@ -514,7 +512,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="adaaproduction9@gmail.com, info@mumbaipress.com" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ig-lt-AUa">
-                                                        <rect key="frame" x="11" y="352" width="298" height="38"/>
+                                                        <rect key="frame" x="11" y="351.5" width="298" height="38"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="38" id="9SP-cP-TUb"/>
                                                         </constraints>
@@ -523,7 +521,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ym2-fh-1lj">
-                                                        <rect key="frame" x="15" y="420" width="290" height="60"/>
+                                                        <rect key="frame" x="15" y="419.5" width="290" height="60"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yhO-YL-coH">
                                                                 <rect key="frame" x="10" y="52" width="270" height="1"/>
@@ -537,7 +535,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="40" id="Gzx-nu-HjC"/>
                                                                 </constraints>
-                                                                <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="18"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
@@ -554,7 +551,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                         </constraints>
                                                     </view>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4nt-8C-8OT">
-                                                        <rect key="frame" x="15" y="488" width="290" height="60"/>
+                                                        <rect key="frame" x="15" y="487.5" width="290" height="60"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fsD-ns-86h">
                                                                 <rect key="frame" x="10" y="52" width="270" height="1"/>
@@ -568,7 +565,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="30" id="I1e-PN-ahb"/>
                                                                 </constraints>
-                                                                <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="18"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
@@ -585,7 +581,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                         </constraints>
                                                     </view>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHr-WX-XXq">
-                                                        <rect key="frame" x="15" y="556" width="290" height="60"/>
+                                                        <rect key="frame" x="15" y="555.5" width="290" height="60"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BKt-az-RWb">
                                                                 <rect key="frame" x="10" y="52" width="270" height="1"/>
@@ -599,7 +595,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="30" id="nRT-Yb-wZ9"/>
                                                                 </constraints>
-                                                                <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="18"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
@@ -616,7 +611,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXm-io-bgj">
-                                                        <rect key="frame" x="25" y="630" width="270" height="21"/>
+                                                        <rect key="frame" x="25" y="629.5" width="270" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="xyU-Vh-J3f"/>
                                                         </constraints>
@@ -625,7 +620,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="TAP HERE TO WRITE" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Iso-ky-UiY">
-                                                        <rect key="frame" x="15" y="659" width="290" height="75"/>
+                                                        <rect key="frame" x="15" y="658.5" width="290" height="75"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="75" id="1R9-Qj-b7W"/>
@@ -635,14 +630,14 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="le4-Bs-Jsi">
-                                                        <rect key="frame" x="20" y="742" width="280" height="1"/>
+                                                        <rect key="frame" x="20" y="741.5" width="280" height="1"/>
                                                         <color key="backgroundColor" red="0.59145528078079224" green="0.16446465253829956" blue="0.089196048676967621" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="gcA-5a-9I4"/>
                                                         </constraints>
                                                     </view>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8w9-5d-5yX">
-                                                        <rect key="frame" x="120" y="774" width="80" height="40"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8w9-5d-5yX">
+                                                        <rect key="frame" x="120" y="773.5" width="80" height="40"/>
                                                         <color key="backgroundColor" red="0.59145528078079224" green="0.16446465253829956" blue="0.089196048676967621" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="80" id="aii-xp-OFs"/>
@@ -725,6 +720,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Tq1-Nz-u6E"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ZRK-Oj-BTu" firstAttribute="width" secondItem="qh1-NE-PuY" secondAttribute="width" id="ItS-j8-gSU"/>
@@ -736,7 +732,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <constraint firstAttribute="trailing" secondItem="xMj-dS-QeX" secondAttribute="trailing" id="hoE-Lk-M2P"/>
                             <constraint firstItem="3la-vX-aUJ" firstAttribute="top" secondItem="qh1-NE-PuY" secondAttribute="top" id="ug1-id-q5N"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Tq1-Nz-u6E"/>
                     </view>
                     <connections>
                         <outlet property="ViewBar" destination="3la-vX-aUJ" id="0Ct-lv-5RY"/>
@@ -847,6 +842,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="ggT-XC-7mT"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GlF-Ju-FIe" firstAttribute="top" secondItem="r7Y-Sy-DV3" secondAttribute="bottom" constant="5" id="QZD-oh-FJf"/>
@@ -857,7 +853,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <constraint firstItem="ggT-XC-7mT" firstAttribute="trailing" secondItem="r7Y-Sy-DV3" secondAttribute="trailing" id="q70-1R-usf"/>
                             <constraint firstItem="GlF-Ju-FIe" firstAttribute="bottom" secondItem="ggT-XC-7mT" secondAttribute="bottom" id="yY7-yO-tV7"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="ggT-XC-7mT"/>
                     </view>
                     <connections>
                         <outlet property="ViewBar" destination="r7Y-Sy-DV3" id="RqT-Ri-aRu"/>
@@ -879,10 +874,10 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpk-ca-GB8">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bhQ-Fh-Qtz">
-                                        <rect key="frame" x="5" y="5" width="310" height="494"/>
+                                        <rect key="frame" x="5" y="5" width="310" height="514"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -894,6 +889,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="DQO-4N-9zu"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bpk-ca-GB8" firstAttribute="bottom" secondItem="DQO-4N-9zu" secondAttribute="bottom" id="B94-bQ-QSG"/>
@@ -901,7 +897,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <constraint firstItem="bpk-ca-GB8" firstAttribute="leading" secondItem="DQO-4N-9zu" secondAttribute="leading" id="Omw-6B-LuX"/>
                             <constraint firstItem="bpk-ca-GB8" firstAttribute="top" secondItem="DQO-4N-9zu" secondAttribute="top" id="w5N-Bu-aLx"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="DQO-4N-9zu"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
@@ -954,23 +949,23 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UpdateNewsCell" rowHeight="84" id="BFS-Ul-n5l" customClass="UpdateNewsCell" customModule="MumbaiPressApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="84"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="320" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BFS-Ul-n5l" id="Tam-P9-jTG">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="83.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdR-9K-S2U">
-                                                    <rect key="frame" x="15" y="16" width="290" height="62"/>
+                                                    <rect key="frame" x="16" y="16" width="288" height="62"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFx-aR-BF9">
-                                                            <rect key="frame" x="5" y="10" width="265" height="17"/>
+                                                            <rect key="frame" x="5" y="10" width="263" height="17"/>
                                                             <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ds8-82-LJp">
-                                                            <rect key="frame" x="10" y="37" width="260" height="17"/>
+                                                            <rect key="frame" x="10" y="37" width="258" height="17"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="17" id="iAo-Y1-9kg"/>
                                                             </constraints>
@@ -1012,6 +1007,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 </prototypes>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Azd-7a-ymI"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="lex-4H-zag" firstAttribute="leading" secondItem="Azd-7a-ymI" secondAttribute="leading" id="DLa-Nh-5E1"/>
@@ -1022,7 +1018,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <constraint firstItem="lex-4H-zag" firstAttribute="trailing" secondItem="Azd-7a-ymI" secondAttribute="trailing" id="aPC-0a-Xu4"/>
                             <constraint firstItem="lex-4H-zag" firstAttribute="bottom" secondItem="Azd-7a-ymI" secondAttribute="bottom" id="z1u-zA-VNl"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Azd-7a-ymI"/>
                     </view>
                     <connections>
                         <outlet property="ViewBar" destination="fDB-iK-wKZ" id="f4Q-Je-BB7"/>
@@ -1043,7 +1038,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XKV-YG-dUw">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="dnM-iJ-xGM">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
@@ -1053,7 +1048,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GHM-17-Mhp">
-                                        <rect key="frame" x="0.0" y="56" width="320" height="448"/>
+                                        <rect key="frame" x="0.0" y="56" width="320" height="468"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableView>
                                 </subviews>
@@ -1069,6 +1064,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="VzE-Iv-G6N"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="VzE-Iv-G6N" firstAttribute="trailing" secondItem="XKV-YG-dUw" secondAttribute="trailing" id="09D-d9-RMa"/>
@@ -1076,7 +1072,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <constraint firstItem="XKV-YG-dUw" firstAttribute="leading" secondItem="VzE-Iv-G6N" secondAttribute="leading" id="OZo-Gp-qG3"/>
                             <constraint firstItem="XKV-YG-dUw" firstAttribute="top" secondItem="VzE-Iv-G6N" secondAttribute="top" id="kfz-jW-z6f"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="VzE-Iv-G6N"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
@@ -1098,7 +1093,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AjM-zt-3Y1">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="X63-9a-WoO">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
@@ -1108,7 +1103,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aNc-KL-eby">
-                                        <rect key="frame" x="0.0" y="56" width="320" height="448"/>
+                                        <rect key="frame" x="0.0" y="56" width="320" height="468"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableView>
                                 </subviews>
@@ -1124,6 +1119,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="dd4-NB-weu"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="dd4-NB-weu" firstAttribute="trailing" secondItem="AjM-zt-3Y1" secondAttribute="trailing" id="dEc-k4-h6e"/>
@@ -1131,7 +1127,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <constraint firstItem="AjM-zt-3Y1" firstAttribute="leading" secondItem="dd4-NB-weu" secondAttribute="leading" id="ykd-kp-VdQ"/>
                             <constraint firstItem="AjM-zt-3Y1" firstAttribute="top" secondItem="dd4-NB-weu" secondAttribute="top" id="z7M-Zv-d3p"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="dd4-NB-weu"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
@@ -1152,7 +1147,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BFM-dS-rAC" userLabel="HeaderViewBar">
-                                <rect key="frame" x="0.0" y="64" width="320" height="60"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2S-0b-ogj" userLabel="btnMenu" customClass="MKButton" customModule="MumbaiPressApp" customModuleProvider="target">
                                         <rect key="frame" x="15" y="25" width="40" height="25"/>
@@ -1207,7 +1202,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S8i-SG-3Ax">
-                                <rect key="frame" x="0.0" y="124" width="320" height="444"/>
+                                <rect key="frame" x="0.0" y="104" width="320" height="464"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ty-kJ-o5u" customClass="GADBannerView">
@@ -1228,6 +1223,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="yJa-18-Tcf"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="S8i-SG-3Ax" firstAttribute="bottom" secondItem="yJa-18-Tcf" secondAttribute="bottom" id="0EN-wM-fcF"/>
@@ -1247,7 +1243,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <constraint firstItem="S8i-SG-3Ax" firstAttribute="leading" secondItem="yJa-18-Tcf" secondAttribute="leading" id="zbn-i6-326"/>
                             <constraint firstItem="S8i-SG-3Ax" firstAttribute="top" secondItem="BFM-dS-rAC" secondAttribute="bottom" id="zhO-yb-3Df"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="yJa-18-Tcf"/>
                     </view>
                     <navigationItem key="navigationItem" id="FUA-ep-fpA"/>
                     <connections>
@@ -1267,7 +1262,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                     <rect key="frame" x="0.0" y="0.0" width="318" height="250"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3Z-ZG-ez3">
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3Z-ZG-ez3">
                             <rect key="frame" x="0.0" y="0.0" width="318" height="62.5"/>
                             <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="17"/>
                             <state key="normal" title="English">
@@ -1294,7 +1289,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 <constraint firstAttribute="height" constant="1.5" id="Fsn-7v-U3v"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9G-g4-lVN">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9G-g4-lVN">
                             <rect key="frame" x="0.0" y="187.5" width="318" height="62.5"/>
                             <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="20"/>
                             <state key="normal" title="OK">
@@ -1315,6 +1310,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             </connections>
                         </button>
                     </subviews>
+                    <viewLayoutGuide key="safeArea" id="gLg-yt-l3A"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="gLg-yt-l3A" firstAttribute="trailing" secondItem="6yF-yB-Kwp" secondAttribute="trailing" id="4RP-C5-TpM"/>
@@ -1337,7 +1333,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                         <constraint firstItem="6yF-yB-Kwp" firstAttribute="top" secondItem="WAa-yv-XjF" secondAttribute="bottom" constant="1" id="t0c-Dc-5mQ"/>
                         <constraint firstItem="K9G-g4-lVN" firstAttribute="leading" secondItem="WAa-yv-XjF" secondAttribute="leading" id="uJn-gc-zfd"/>
                     </constraints>
-                    <viewLayoutGuide key="safeArea" id="gLg-yt-l3A"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="10"/>
@@ -1356,17 +1351,18 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="qHU-C5-XUV">
-                                <rect key="frame" x="0.0" y="64" width="320" height="56"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="rOd-mB-ORN"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GM9-ai-fKk">
-                                <rect key="frame" x="0.0" y="125" width="320" height="443"/>
+                                <rect key="frame" x="0.0" y="105" width="320" height="463"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="AJq-Um-Ugf"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qHU-C5-XUV" firstAttribute="leading" secondItem="AJq-Um-Ugf" secondAttribute="leading" id="6dM-uv-qfS"/>
@@ -1377,7 +1373,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <constraint firstItem="qHU-C5-XUV" firstAttribute="trailing" secondItem="AJq-Um-Ugf" secondAttribute="trailing" id="kzw-AX-v4y"/>
                             <constraint firstItem="qHU-C5-XUV" firstAttribute="top" secondItem="AJq-Um-Ugf" secondAttribute="top" id="lzE-L1-DpY"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="AJq-Um-Ugf"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
@@ -1398,10 +1393,10 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4Y-8W-b9s">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WVB-aT-KZj">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zMV-MC-5NK">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="1500"/>
@@ -1472,12 +1467,13 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mumbaipress" translatesAutoresizingMaskIntoConstraints="NO" id="8aF-to-ujT">
-                                <rect key="frame" x="16" y="14" width="288" height="40"/>
+                                <rect key="frame" x="16" y="-6" width="288" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="UCM-bV-5eN"/>
                                 </constraints>
                             </imageView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="eXJ-r7-VHo"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="o4Y-8W-b9s" firstAttribute="bottom" secondItem="eXJ-r7-VHo" secondAttribute="bottom" id="R4E-5r-B6b"/>
@@ -1488,7 +1484,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <constraint firstItem="o4Y-8W-b9s" firstAttribute="top" secondItem="eXJ-r7-VHo" secondAttribute="top" id="j7O-Cj-LKw"/>
                             <constraint firstItem="8aF-to-ujT" firstAttribute="centerX" secondItem="vNX-if-Ge6" secondAttribute="centerX" id="jko-YS-L0p"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="eXJ-r7-VHo"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
@@ -1512,7 +1507,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MeO-Ej-txG" customClass="SPKeyBoardAvoiding" customModule="MumbaiPressApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="95" width="320" height="473"/>
+                                <rect key="frame" x="0.0" y="75" width="320" height="493"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H0z-MP-pjh" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="1350"/>
@@ -1534,7 +1529,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0DB-Mk-Ps6">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0DB-Mk-Ps6">
                                                         <rect key="frame" x="160" y="54.5" width="112" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="Ymo-yf-SHt"/>
@@ -1603,7 +1598,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="AdH-HC-yFp"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
                                                     </textField>
@@ -1621,7 +1615,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="Kms-sU-ySl"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                     </textField>
@@ -1639,7 +1632,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="9CE-DJ-YAG"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
@@ -1657,7 +1649,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="yfP-G5-FXL"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -1697,7 +1688,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="5EC-eL-eiv"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -1710,7 +1700,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                         <color key="textColor" red="0.53297269344329834" green="0.034557059407234192" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUB-CP-CXa" customClass="CheckboxButton" customModule="MumbaiPressApp" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUB-CP-CXa" customClass="CheckboxButton" customModule="MumbaiPressApp" customModuleProvider="target">
                                                         <rect key="frame" x="40" y="553" width="134" height="22"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="22" id="NLM-3z-WPO"/>
@@ -1731,7 +1721,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                             <action selector="btnENG_OnClick:" destination="jl0-x5-SB2" eventType="touchUpInside" id="8Oy-Ul-E0B"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQQ-XQ-wJA" customClass="CheckboxButton" customModule="MumbaiPressApp" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQQ-XQ-wJA" customClass="CheckboxButton" customModule="MumbaiPressApp" customModuleProvider="target">
                                                         <rect key="frame" x="40" y="580" width="134" height="22"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="22" id="2OZ-IP-Lgg"/>
@@ -1752,7 +1742,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                             <action selector="btnHINDI_OnClick:" destination="jl0-x5-SB2" eventType="touchUpInside" id="diC-D0-yvl"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfZ-3h-q2S" customClass="CheckboxButton" customModule="MumbaiPressApp" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfZ-3h-q2S" customClass="CheckboxButton" customModule="MumbaiPressApp" customModuleProvider="target">
                                                         <rect key="frame" x="40" y="607" width="134" height="22"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="22" id="VbY-Vc-0yX"/>
@@ -1779,7 +1769,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                             <constraint firstAttribute="height" constant="21" id="YPT-Do-Fdh"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="textColor" systemColor="darkTextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="1.  Reference any known Personality Name Number" translatesAutoresizingMaskIntoConstraints="NO" id="6Lf-gy-Sc1">
@@ -1791,7 +1781,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                         <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w21-ze-4rp">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w21-ze-4rp">
                                                         <rect key="frame" x="8" y="945" width="135" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="y7I-cd-eQL"/>
@@ -1810,7 +1800,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                             <constraint firstAttribute="height" constant="2" id="N3S-jQ-18p"/>
                                                         </constraints>
                                                     </view>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEh-ay-Xqy">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEh-ay-Xqy">
                                                         <rect key="frame" x="158" y="945" width="135" height="30"/>
                                                         <state key="normal" title="See References">
                                                             <color key="titleColor" red="0.53297269344329834" green="0.034557059407234192" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1819,7 +1809,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                             <action selector="btnSeeReferences_click:" destination="jl0-x5-SB2" eventType="touchUpInside" id="qUO-I9-uOQ"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGZ-ei-Jd0">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGZ-ei-Jd0">
                                                         <rect key="frame" x="158" y="993" width="135" height="30"/>
                                                         <state key="normal" title="See Attachment">
                                                             <color key="titleColor" red="0.53297269344329834" green="0.034557059407234192" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1865,7 +1855,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                             <constraint firstAttribute="height" constant="1" id="waP-42-HuI"/>
                                                         </constraints>
                                                     </view>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKH-KV-WRO">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKH-KV-WRO">
                                                         <rect key="frame" x="8" y="993" width="135" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="0st-gW-v7j"/>
@@ -2033,6 +2023,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="pal-K5-vSp"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jcv-3V-uhD" firstAttribute="top" secondItem="0di-FW-TFq" secondAttribute="top" id="427-Sl-FpX"/>
@@ -2044,7 +2035,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <constraint firstItem="MeO-Ej-txG" firstAttribute="top" secondItem="pal-K5-vSp" secondAttribute="top" constant="75" id="rTf-Ar-WlQ"/>
                             <constraint firstItem="H0z-MP-pjh" firstAttribute="width" secondItem="0di-FW-TFq" secondAttribute="width" id="zGV-vs-B5M"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="pal-K5-vSp"/>
                     </view>
                     <connections>
                         <outlet property="ViewBar" destination="jcv-3V-uhD" id="aUJ-Yt-Anz"/>
@@ -2095,6 +2085,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             </constraints>
                         </view>
                     </subviews>
+                    <viewLayoutGuide key="safeArea" id="guk-yc-IzM"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="guk-yc-IzM" firstAttribute="trailing" secondItem="zWl-8u-uIk" secondAttribute="trailing" constant="5" id="Wik-C5-iAZ"/>
@@ -2102,7 +2093,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                         <constraint firstItem="guk-yc-IzM" firstAttribute="bottom" secondItem="zWl-8u-uIk" secondAttribute="bottom" constant="5" id="ww0-hV-rvk"/>
                         <constraint firstItem="zWl-8u-uIk" firstAttribute="leading" secondItem="guk-yc-IzM" secondAttribute="leading" constant="5" id="xsG-nn-wkY"/>
                     </constraints>
-                    <viewLayoutGuide key="safeArea" id="guk-yc-IzM"/>
                 </view>
                 <view contentMode="scaleToFill" id="3lQ-V0-N0E">
                     <rect key="frame" x="0.0" y="0.0" width="277" height="248"/>
@@ -2137,7 +2127,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                 <constraint firstAttribute="height" constant="1" id="riE-uI-4XZ"/>
                                             </constraints>
                                         </view>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5l-Hy-JMF">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5l-Hy-JMF">
                                             <rect key="frame" x="83.5" y="194" width="90" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="Kaa-mA-ov6"/>
@@ -2175,7 +2165,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="Tdm-ht-Ngb"/>
                                             </constraints>
-                                            <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
@@ -2184,7 +2173,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="Gxn-E3-8pJ"/>
                                             </constraints>
-                                            <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
@@ -2228,6 +2216,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             </constraints>
                         </scrollView>
                     </subviews>
+                    <viewLayoutGuide key="safeArea" id="vCe-z4-imY"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="aDk-dY-Mpq" firstAttribute="top" secondItem="3lQ-V0-N0E" secondAttribute="top" id="LWb-Zz-C7d"/>
@@ -2235,7 +2224,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                         <constraint firstAttribute="bottom" secondItem="aDk-dY-Mpq" secondAttribute="bottom" id="eHQ-jU-nKN"/>
                         <constraint firstAttribute="trailing" secondItem="aDk-dY-Mpq" secondAttribute="trailing" id="jDB-SJ-UUV"/>
                     </constraints>
-                    <viewLayoutGuide key="safeArea" id="vCe-z4-imY"/>
                 </view>
             </objects>
             <point key="canvasLocation" x="847.5" y="-2951.4084507042253"/>
@@ -2564,7 +2552,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="19"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCy-U6-HNe" customClass="CheckboxButton" customModule="MumbaiPressApp" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCy-U6-HNe" customClass="CheckboxButton" customModule="MumbaiPressApp" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="67" width="134" height="22"/>
                                                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
                                                                 <state key="normal" title="Hindi">
@@ -2582,7 +2570,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                                     <action selector="btnHindi_OnClick:" destination="T47-zc-ipH" eventType="touchUpInside" id="s3a-qi-B3N"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6f-DZ-elJ" customClass="CheckboxButton" customModule="MumbaiPressApp" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6f-DZ-elJ" customClass="CheckboxButton" customModule="MumbaiPressApp" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="97" width="134" height="22"/>
                                                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
                                                                 <state key="normal" title="Urdu">
@@ -2600,7 +2588,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                                     <action selector="btnUrdu_OnClick:" destination="T47-zc-ipH" eventType="touchUpInside" id="Fos-p0-zCu"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5R1-AT-WkJ" customClass="CheckboxButton" customModule="MumbaiPressApp" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5R1-AT-WkJ" customClass="CheckboxButton" customModule="MumbaiPressApp" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="34" width="134" height="22"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="22" id="axt-kP-2Tk"/>
@@ -2789,7 +2777,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8YV-OK-EPT">
                                                         <rect key="frame" x="8" y="1086" width="304" height="40"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Dh-ym-fhy" customClass="CheckboxButton" customModule="MumbaiPressApp" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Dh-ym-fhy" customClass="CheckboxButton" customModule="MumbaiPressApp" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="10" width="90" height="26"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="90" id="SQc-w7-TUu"/>
@@ -2808,7 +2796,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4H-yA-quX">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4H-yA-quX">
                                                                 <rect key="frame" x="110" y="10" width="163" height="26"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="163" id="3iM-Gp-tMX"/>
@@ -2849,7 +2837,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                             <constraint firstItem="0Dh-ym-fhy" firstAttribute="top" secondItem="8YV-OK-EPT" secondAttribute="top" constant="10" id="rAF-AH-80f"/>
                                                         </constraints>
                                                     </view>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMB-A4-gvS">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMB-A4-gvS">
                                                         <rect key="frame" x="90" y="1146" width="140" height="40"/>
                                                         <color key="backgroundColor" red="0.6137281060218811" green="0.066258609294891357" blue="0.083482302725315094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -2934,6 +2922,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="QYK-31-CCq"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hZh-bR-yMC" firstAttribute="trailing" secondItem="QYK-31-CCq" secondAttribute="trailing" id="B1I-oO-Qvx"/>
@@ -2944,7 +2933,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <constraint firstItem="QYK-31-CCq" firstAttribute="trailing" secondItem="9cm-tX-mNw" secondAttribute="trailing" id="oRa-lT-HZ9"/>
                             <constraint firstItem="hZh-bR-yMC" firstAttribute="leading" secondItem="QYK-31-CCq" secondAttribute="leading" id="y9V-Zm-CuW"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="QYK-31-CCq"/>
                     </view>
                     <connections>
                         <outlet property="ContentView" destination="lUN-96-tWf" id="Qvl-jk-v99"/>
@@ -3036,7 +3024,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="35" id="XxA-0M-RkE"/>
                                             </constraints>
-                                            <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <userDefinedRuntimeAttributes>
@@ -3053,7 +3040,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="35" id="0aX-ex-lYa"/>
                                             </constraints>
-                                            <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             <userDefinedRuntimeAttributes>
@@ -3105,6 +3091,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             </constraints>
                         </scrollView>
                     </subviews>
+                    <viewLayoutGuide key="safeArea" id="htb-ep-Xev"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="3nV-0B-zqA" firstAttribute="leading" secondItem="htb-ep-Xev" secondAttribute="leading" id="5cm-CL-ih4"/>
@@ -3114,14 +3101,13 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                         <constraint firstItem="htb-ep-Xev" firstAttribute="bottom" secondItem="3nV-0B-zqA" secondAttribute="bottom" id="hFu-oa-Qfp"/>
                         <constraint firstItem="htb-ep-Xev" firstAttribute="trailing" secondItem="3nV-0B-zqA" secondAttribute="trailing" id="sxd-PV-E3g"/>
                     </constraints>
-                    <viewLayoutGuide key="safeArea" id="htb-ep-Xev"/>
                 </view>
                 <view contentMode="scaleToFill" id="3zR-sf-AD0">
                     <rect key="frame" x="0.0" y="0.0" width="310" height="500"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms and Condition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afK-Ee-OpQ">
-                            <rect key="frame" x="8" y="30" width="294" height="30"/>
+                            <rect key="frame" x="8" y="10" width="294" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="sX3-Tl-6wi"/>
                             </constraints>
@@ -3130,14 +3116,14 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vNs-eA-4l4">
-                            <rect key="frame" x="0.0" y="61" width="310" height="1"/>
+                            <rect key="frame" x="0.0" y="41" width="310" height="1"/>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="hCz-Y5-Bwu"/>
                             </constraints>
                         </view>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sd9-q3-ZqA">
-                            <rect key="frame" x="5" y="67" width="300" height="395"/>
+                            <rect key="frame" x="5" y="47" width="300" height="415"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <string key="text">1. Mumbai Press and Adaa Production reserve absolute right to either accept or reject your application.
 2. Mumbai Press and Adaa Production will have the prerogative to terminate the services of the reporter, even after selection.
@@ -3167,7 +3153,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 <constraint firstAttribute="height" constant="1" id="42d-Ab-Jc7"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LtP-ic-aUu">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LtP-ic-aUu">
                             <rect key="frame" x="0.0" y="465" width="294" height="35"/>
                             <fontDescription key="fontDescription" name="Raleway-MediumItalic" family="Raleway" pointSize="19"/>
                             <state key="normal" title="OK">
@@ -3178,6 +3164,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             </connections>
                         </button>
                     </subviews>
+                    <viewLayoutGuide key="safeArea" id="keR-7G-qsl"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="keR-7G-qsl" firstAttribute="trailing" secondItem="sMl-cB-Y3h" secondAttribute="trailing" id="6jI-FB-I1i"/>
@@ -3197,7 +3184,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                         <constraint firstItem="LtP-ic-aUu" firstAttribute="top" secondItem="sMl-cB-Y3h" secondAttribute="bottom" id="tba-Sd-LRs"/>
                         <constraint firstItem="keR-7G-qsl" firstAttribute="trailing" secondItem="vNs-eA-4l4" secondAttribute="trailing" id="w0D-ng-zpU"/>
                     </constraints>
-                    <viewLayoutGuide key="safeArea" id="keR-7G-qsl"/>
                 </view>
             </objects>
             <point key="canvasLocation" x="1830" y="-3218.6619718309857"/>
@@ -3224,7 +3210,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="NON-05-kbE"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -3253,7 +3238,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="9qX-TJ-rtD"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 <userDefinedRuntimeAttributes>
@@ -3273,7 +3257,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                             <constraint firstItem="RBR-DM-STb" firstAttribute="top" secondItem="rVK-42-K3K" secondAttribute="top" constant="8" id="yWg-6q-gDM"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4XQ-3Y-z2D" customClass="MKButton" customModule="MumbaiPressApp" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4XQ-3Y-z2D" customClass="MKButton" customModule="MumbaiPressApp" customModuleProvider="target">
                                         <rect key="frame" x="90" y="175" width="100" height="40"/>
                                         <color key="backgroundColor" red="0.61568627450980395" green="0.066666666666666666" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -3339,6 +3323,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="WkP-fF-OWN"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WRN-H5-7nk" firstAttribute="centerX" secondItem="kBG-oN-KuI" secondAttribute="centerX" id="9gO-d9-xSt"/>
@@ -3353,7 +3338,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <constraint firstItem="WkP-fF-OWN" firstAttribute="trailing" secondItem="WRN-H5-7nk" secondAttribute="trailing" constant="20" id="rpQ-bQ-f9A"/>
                             <constraint firstItem="NE3-8D-9ah" firstAttribute="top" secondItem="kBG-oN-KuI" secondAttribute="top" constant="75" id="u3h-xm-70M"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="WkP-fF-OWN"/>
                     </view>
                     <connections>
                         <outlet property="ViewBar" destination="P4W-u6-0Ra" id="PkE-Bu-wpA"/>
@@ -3374,7 +3358,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yqT-8b-NGs" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Js-eD-Pzy">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.020850472152233124" green="0.23753061890602112" blue="0.98458880186080933" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
@@ -3393,7 +3377,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OGp-JG-xyd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fHr-C7-yKy">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
@@ -3419,12 +3403,12 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Seh-Kw-rYv">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JUQ-tQ-h4r">
-                                        <rect key="frame" x="25" y="104" width="270" height="340"/>
+                                        <rect key="frame" x="25" y="114" width="270" height="340"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWm-xd-oEa">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWm-xd-oEa">
                                                 <rect key="frame" x="176" y="221" width="60" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="8b8-9S-YXU"/>
@@ -3439,7 +3423,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                     <action selector="play:" destination="6kJ-QU-75L" eventType="touchUpInside" id="dJS-Re-Bqo"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k34-pZ-p2I">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k34-pZ-p2I">
                                                 <rect key="frame" x="20" y="288" width="230" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="VXz-fs-mdo"/>
@@ -3470,7 +3454,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                     <constraint firstAttribute="height" constant="80" id="7dK-2R-ADh"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOm-RA-Fgf">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOm-RA-Fgf">
                                                 <rect key="frame" x="34" y="221" width="60" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="N09-Uf-Ms6"/>
@@ -3539,6 +3523,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="aBX-rZ-x6m"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="5mF-ng-jG0" firstAttribute="top" secondItem="Seh-Kw-rYv" secondAttribute="bottom" id="7cC-er-hYE"/>
@@ -3546,7 +3531,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <constraint firstItem="Seh-Kw-rYv" firstAttribute="top" secondItem="wYz-x6-gZh" secondAttribute="bottom" id="bQf-VC-a5U"/>
                             <constraint firstItem="Seh-Kw-rYv" firstAttribute="leading" secondItem="aBX-rZ-x6m" secondAttribute="leading" id="mUI-ev-pMz"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="aBX-rZ-x6m"/>
                     </view>
                     <navigationItem key="navigationItem" id="2PP-a5-u4t"/>
                     <connections>
@@ -3584,9 +3568,9 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFJ-J5-q2W">
-                                            <rect key="frame" x="8" y="28" width="285" height="35"/>
+                                            <rect key="frame" x="8" y="8" width="285" height="55"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" systemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -3684,14 +3668,14 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShowReturnDataCell" rowHeight="127" id="kDb-0y-2EA" customClass="ShowReturnDataCell" customModule="MumbaiPressApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="320" height="127"/>
+                                                <rect key="frame" x="0.0" y="24.5" width="320" height="127"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kDb-0y-2EA" id="kyQ-f2-3CR">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="126.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="127"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ggm-ch-dQy">
-                                                            <rect key="frame" x="5" y="5" width="310" height="116.5"/>
+                                                            <rect key="frame" x="5" y="5" width="310" height="117"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HeadLine:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YS5-ld-fFb">
                                                                     <rect key="frame" x="5" y="5" width="300" height="20"/>
@@ -3811,6 +3795,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="fQO-R0-a9k"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="TQO-uh-UGt" firstAttribute="leading" secondItem="fQO-R0-a9k" secondAttribute="leading" id="3Rg-Nw-klW"/>
@@ -3821,7 +3806,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <constraint firstItem="8bW-8f-98Z" firstAttribute="trailing" secondItem="fQO-R0-a9k" secondAttribute="trailing" id="f7Q-qb-i1U"/>
                             <constraint firstItem="8bW-8f-98Z" firstAttribute="top" secondItem="TQO-uh-UGt" secondAttribute="bottom" constant="24" id="saO-ry-M9g"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="fQO-R0-a9k"/>
                     </view>
                     <connections>
                         <outlet property="ViewBar" destination="TQO-uh-UGt" id="9Bh-iC-4wH"/>
@@ -3945,7 +3929,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                         </collectionViewCell>
                                     </cells>
                                 </collectionView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiK-3a-LFF" customClass="MKButton" customModule="MumbaiPressApp" customModuleProvider="target">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiK-3a-LFF" customClass="MKButton" customModule="MumbaiPressApp" customModuleProvider="target">
                                     <rect key="frame" x="221" y="393" width="70" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="70" id="9T0-5V-8pi"/>
@@ -3998,6 +3982,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             </constraints>
                         </view>
                     </subviews>
+                    <viewLayoutGuide key="safeArea" id="3By-ew-VxM"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="ytb-Nl-4Tr" firstAttribute="top" secondItem="3By-ew-VxM" secondAttribute="top" id="9LS-35-CJ1"/>
@@ -4005,7 +3990,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                         <constraint firstItem="ytb-Nl-4Tr" firstAttribute="leading" secondItem="3By-ew-VxM" secondAttribute="leading" id="kPI-d2-K83"/>
                         <constraint firstItem="ytb-Nl-4Tr" firstAttribute="trailing" secondItem="3By-ew-VxM" secondAttribute="trailing" id="uo2-VQ-aLR"/>
                     </constraints>
-                    <viewLayoutGuide key="safeArea" id="3By-ew-VxM"/>
                 </view>
             </objects>
             <point key="canvasLocation" x="4811.25" y="-2483.4507042253522"/>
@@ -4019,10 +4003,10 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zm8-2M-62n">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nge-oP-t44">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8k-JK-Nsg">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="496"/>
@@ -4085,7 +4069,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lpQ-gG-FnY">
                                                                 <rect key="frame" x="5" y="5" width="91" height="55"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCG-7u-HSa" customClass="MKButton" customModule="MumbaiPressApp" customModuleProvider="target">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCG-7u-HSa" customClass="MKButton" customModule="MumbaiPressApp" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="91" height="55"/>
                                                                         <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="14"/>
                                                                         <state key="normal" title="Record Audio">
@@ -4107,7 +4091,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uKc-uO-Ja0">
                                                                 <rect key="frame" x="104" y="5" width="91.5" height="55"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGh-ie-c3O" customClass="MKButton" customModule="MumbaiPressApp" customModuleProvider="target">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGh-ie-c3O" customClass="MKButton" customModule="MumbaiPressApp" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="91.5" height="55"/>
                                                                         <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="14"/>
                                                                         <state key="normal" title="Record Video">
@@ -4129,7 +4113,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F01-qP-ISs">
                                                                 <rect key="frame" x="203.5" y="5" width="91" height="55"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttU-3p-kbk" customClass="MKButton" customModule="MumbaiPressApp" customModuleProvider="target">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttU-3p-kbk" customClass="MKButton" customModule="MumbaiPressApp" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="91" height="55"/>
                                                                         <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="14"/>
                                                                         <state key="normal" title="Click Image">
@@ -4169,7 +4153,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBr-zW-Re3">
                                                         <rect key="frame" x="8" y="344" width="304" height="40"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28J-pV-uyk" customClass="MKButton" customModule="MumbaiPressApp" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28J-pV-uyk" customClass="MKButton" customModule="MumbaiPressApp" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="0.0" width="264" height="40"/>
                                                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="15"/>
                                                                 <state key="normal" title="Select files from File Manager">
@@ -4189,7 +4173,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6i6-Q3-Ayr">
                                                         <rect key="frame" x="8" y="394" width="304" height="40"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DR0-1q-q4N" customClass="MKButton" customModule="MumbaiPressApp" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DR0-1q-q4N" customClass="MKButton" customModule="MumbaiPressApp" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="0.0" width="264" height="40"/>
                                                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="15"/>
                                                                 <state key="normal" title="See Your Attachments">
@@ -4242,7 +4226,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                                     <constraint firstItem="6i6-Q3-Ayr" firstAttribute="top" secondItem="nBr-zW-Re3" secondAttribute="bottom" constant="10" id="zsc-8f-qv8"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wy-bc-VzK" customClass="MKButton" customModule="MumbaiPressApp" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wy-bc-VzK" customClass="MKButton" customModule="MumbaiPressApp" customModuleProvider="target">
                                                 <rect key="frame" x="120" y="445" width="80" height="30"/>
                                                 <color key="backgroundColor" red="0.59145528078079224" green="0.16446465253829956" blue="0.089196048676967621" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -4283,6 +4267,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="WvK-aa-Cos"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="zm8-2M-62n" firstAttribute="trailing" secondItem="WvK-aa-Cos" secondAttribute="trailing" id="Ema-kV-fgH"/>
@@ -4290,7 +4275,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <constraint firstItem="zm8-2M-62n" firstAttribute="bottom" secondItem="WvK-aa-Cos" secondAttribute="bottom" id="f6H-jE-FcV"/>
                             <constraint firstItem="zm8-2M-62n" firstAttribute="top" secondItem="WvK-aa-Cos" secondAttribute="top" id="gNN-fq-lPD"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="WvK-aa-Cos"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
@@ -4346,6 +4330,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
+                    <viewLayoutGuide key="safeArea" id="5D4-k4-sWN"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="XGd-mB-Btc" firstAttribute="top" secondItem="5D4-k4-sWN" secondAttribute="top" constant="15" id="EHA-p9-rD4"/>
@@ -4358,7 +4343,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                         <constraint firstItem="QUj-5i-kqD" firstAttribute="leading" secondItem="5D4-k4-sWN" secondAttribute="leading" constant="55" id="fML-ip-Pnw"/>
                         <constraint firstItem="V3W-qp-M0b" firstAttribute="centerY" secondItem="JTT-5q-tdI" secondAttribute="centerY" id="iz9-zU-0k1"/>
                     </constraints>
-                    <viewLayoutGuide key="safeArea" id="5D4-k4-sWN"/>
                 </view>
             </objects>
             <point key="canvasLocation" x="5450.625" y="-2484.5070422535214"/>
@@ -4372,7 +4356,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="InU-AF-dyn">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="r22-pH-Zx1">
                                         <rect key="frame" x="0.0" y="10" width="320" height="36"/>
@@ -4391,7 +4375,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                         </connections>
                                     </segmentedControl>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fhk-de-yOx">
-                                        <rect key="frame" x="0.0" y="50" width="320" height="454"/>
+                                        <rect key="frame" x="0.0" y="50" width="320" height="474"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableView>
                                 </subviews>
@@ -4407,6 +4391,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="zNa-tQ-Xap"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="InU-AF-dyn" firstAttribute="trailing" secondItem="zNa-tQ-Xap" secondAttribute="trailing" id="DRt-sa-PXt"/>
@@ -4414,7 +4399,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <constraint firstItem="InU-AF-dyn" firstAttribute="leading" secondItem="zNa-tQ-Xap" secondAttribute="leading" id="od1-1z-IqP"/>
                             <constraint firstItem="InU-AF-dyn" firstAttribute="bottom" secondItem="zNa-tQ-Xap" secondAttribute="bottom" id="qwn-Ec-e0q"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="zNa-tQ-Xap"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
@@ -4478,10 +4462,10 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImpLinkCell" rowHeight="60" id="cje-gz-3eC" customClass="ImpLinkCell" customModule="MumbaiPressApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="320" height="60"/>
+                                                <rect key="frame" x="0.0" y="24.5" width="320" height="60"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cje-gz-3eC" id="h7Y-U9-LBK">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5xB-YK-ddI">
@@ -4525,6 +4509,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="enK-4O-0JW"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="k8r-h3-IYQ" firstAttribute="leading" secondItem="enK-4O-0JW" secondAttribute="leading" id="A8q-fN-uiJ"/>
@@ -4535,7 +4520,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <constraint firstItem="k8r-h3-IYQ" firstAttribute="trailing" secondItem="enK-4O-0JW" secondAttribute="trailing" id="kdg-nc-UXh"/>
                             <constraint firstItem="wWf-Pb-flC" firstAttribute="top" secondItem="EG7-dA-AVQ" secondAttribute="top" id="xPM-4u-9JY"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="enK-4O-0JW"/>
                     </view>
                     <connections>
                         <outlet property="ViewBar" destination="wWf-Pb-flC" id="rjc-0S-ySg"/>
@@ -4594,17 +4578,17 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImpLinkCell" rowHeight="60" id="fEh-wH-wpc" customClass="ImpLinkCell" customModule="MumbaiPressApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="60"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fEh-wH-wpc" id="0kg-s4-HUk">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SMA-R6-Owv">
-                                                    <rect key="frame" x="5" y="5" width="310" height="49.5"/>
+                                                    <rect key="frame" x="5" y="5" width="310" height="50"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zP-re-fJF">
-                                                            <rect key="frame" x="65" y="10" width="195" height="29.5"/>
+                                                            <rect key="frame" x="65" y="10" width="195" height="30"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -4653,6 +4637,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 </prototypes>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="j22-OQ-qWJ"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ORo-OR-pcN" firstAttribute="top" secondItem="e1f-JE-feK" secondAttribute="bottom" constant="10" id="4Rd-4G-yE9"/>
@@ -4670,7 +4655,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <constraint firstItem="vPS-eE-rNO" firstAttribute="bottom" secondItem="j22-OQ-qWJ" secondAttribute="bottom" id="wSS-7D-MIW"/>
                             <constraint firstItem="3Fj-Yv-4wL" firstAttribute="leading" secondItem="j22-OQ-qWJ" secondAttribute="leading" id="xxb-3d-qCv"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="j22-OQ-qWJ"/>
                     </view>
                     <connections>
                         <outlet property="Viewbar" destination="3Fj-Yv-4wL" id="UAT-My-R7G"/>
@@ -4747,6 +4731,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="CfP-Xb-Ako"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="CfP-Xb-Ako" firstAttribute="trailing" secondItem="hpC-Tj-6po" secondAttribute="trailing" id="Ddh-S3-Jc9"/>
@@ -4761,7 +4746,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <constraint firstItem="hpC-Tj-6po" firstAttribute="leading" secondItem="CfP-Xb-Ako" secondAttribute="leading" id="yqn-lF-BXq"/>
                             <constraint firstItem="xY7-4D-OJC" firstAttribute="leading" secondItem="CfP-Xb-Ako" secondAttribute="leading" id="zMc-eo-Yv3"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="CfP-Xb-Ako"/>
                     </view>
                     <connections>
                         <outlet property="ViewBar" destination="mFt-vy-Jmf" id="jkg-8y-0bD"/>
@@ -4839,6 +4823,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="eAY-m5-Abz"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="HOG-Gy-Kqw" firstAttribute="leading" secondItem="eAY-m5-Abz" secondAttribute="leading" id="4vs-4U-FGa"/>
@@ -4856,7 +4841,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <constraint firstItem="eAY-m5-Abz" firstAttribute="bottom" secondItem="meM-l3-3Fr" secondAttribute="bottom" id="sm7-EI-Kv5"/>
                             <constraint firstItem="WOl-VO-kg6" firstAttribute="top" secondItem="lod-mb-REz" secondAttribute="top" id="wnA-1i-dX9"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="eAY-m5-Abz"/>
                     </view>
                     <connections>
                         <outlet property="Playerview" destination="meM-l3-3Fr" id="fsp-3U-VsR"/>
@@ -4915,14 +4899,14 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellVideoCell" rowHeight="170" id="y3I-fy-MvP">
-                                                <rect key="frame" x="0.0" y="28" width="320" height="170"/>
+                                                <rect key="frame" x="0.0" y="24.5" width="320" height="170"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y3I-fy-MvP" id="GjM-NX-CVW">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="169.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lnS-fa-s9d">
-                                                            <rect key="frame" x="8" y="8" width="304" height="116"/>
+                                                            <rect key="frame" x="8" y="8" width="304" height="116.5"/>
                                                             <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </webView>
                                                     </subviews>
@@ -4953,6 +4937,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="L9J-9a-HPW"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="voD-JK-Ryg" firstAttribute="trailing" secondItem="L9J-9a-HPW" secondAttribute="trailing" id="6Mx-qZ-HZ9"/>
@@ -4966,7 +4951,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <constraint firstItem="L9J-9a-HPW" firstAttribute="bottom" secondItem="YgX-7c-8Ze" secondAttribute="bottom" id="lav-8v-P0b"/>
                             <constraint firstItem="lWO-eo-VIO" firstAttribute="leading" secondItem="L9J-9a-HPW" secondAttribute="leading" id="nSK-kS-mzG"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="L9J-9a-HPW"/>
                     </view>
                     <connections>
                         <outlet property="ViewBar" destination="voD-JK-Ryg" id="aee-mx-Ks9"/>
@@ -4987,10 +4971,10 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bVy-qH-dIZ">
-                                <rect key="frame" x="0.0" y="69" width="320" height="499"/>
+                                <rect key="frame" x="0.0" y="49" width="320" height="519"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E9Q-uy-sUZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="499"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </imageView>
                                 </subviews>
@@ -5003,6 +4987,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="DFY-Fr-Ywo"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="DFY-Fr-Ywo" firstAttribute="trailing" secondItem="bVy-qH-dIZ" secondAttribute="trailing" id="7Bl-9c-Hik"/>
@@ -5010,7 +4995,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <constraint firstItem="bVy-qH-dIZ" firstAttribute="leading" secondItem="DFY-Fr-Ywo" secondAttribute="leading" id="RYf-sV-Alo"/>
                             <constraint firstItem="DFY-Fr-Ywo" firstAttribute="bottom" secondItem="bVy-qH-dIZ" secondAttribute="bottom" id="z5R-qC-I6x"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="DFY-Fr-Ywo"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
@@ -5027,7 +5011,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8hd-nG-aSn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D1h-2L-iKo">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -5048,7 +5032,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PIf-XY-1ff" userLabel="Header View">
-                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 / 30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCv-ze-8q1">
                                         <rect key="frame" x="221" y="0.0" width="100" height="44"/>
@@ -5070,7 +5054,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zs2-fU-2fC">
-                                <rect key="frame" x="0.0" y="108" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="88" width="320" height="480"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="YO7-S7-AdA">
                                     <size key="itemSize" width="320" height="441"/>
@@ -5080,7 +5064,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DetaileNewsCell" id="nnU-xo-QMJ" customClass="DetaileNewsCell" customModule="MumbaiPressApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="9.5" width="320" height="441"/>
+                                        <rect key="frame" x="0.0" y="19.5" width="320" height="441"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="441"/>
@@ -5189,6 +5173,7 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="dv7-Yc-B2y"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="dv7-Yc-B2y" firstAttribute="bottom" secondItem="m2y-uc-t81" secondAttribute="bottom" id="GXB-ay-w4T"/>
@@ -5202,7 +5187,6 @@ Users of this Site agree that any disputes arising from the use of the Site shal
                             <constraint firstItem="Zs2-fU-2fC" firstAttribute="top" secondItem="PIf-XY-1ff" secondAttribute="bottom" id="xAN-jQ-pw9"/>
                             <constraint firstItem="PIf-XY-1ff" firstAttribute="trailing" secondItem="dv7-Yc-B2y" secondAttribute="trailing" id="zJt-9z-ona"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="dv7-Yc-B2y"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
@@ -5216,6 +5200,104 @@ Users of this Site agree that any disputes arising from the use of the Site shal
             <point key="canvasLocation" x="4728.75" y="-1723.943661971831"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="0Dh-ym-fhy">
+            <size key="intrinsicContentSize" width="82" height="32"/>
+        </designable>
+        <designable name="28J-pV-uyk">
+            <size key="intrinsicContentSize" width="207" height="30"/>
+        </designable>
+        <designable name="4XQ-3Y-z2D">
+            <size key="intrinsicContentSize" width="56" height="33"/>
+        </designable>
+        <designable name="5R1-AT-WkJ">
+            <size key="intrinsicContentSize" width="56" height="32"/>
+        </designable>
+        <designable name="5Wy-bc-VzK">
+            <size key="intrinsicContentSize" width="65" height="32"/>
+        </designable>
+        <designable name="AiK-3a-LFF">
+            <size key="intrinsicContentSize" width="30" height="35"/>
+        </designable>
+        <designable name="CwN-Ky-MVx">
+            <size key="intrinsicContentSize" width="55.5" height="18.5"/>
+        </designable>
+        <designable name="DR0-1q-q4N">
+            <size key="intrinsicContentSize" width="154" height="30"/>
+        </designable>
+        <designable name="FUB-CP-CXa">
+            <size key="intrinsicContentSize" width="56" height="32"/>
+        </designable>
+        <designable name="JlJ-30-rDO">
+            <size key="intrinsicContentSize" width="109.5" height="24"/>
+        </designable>
+        <designable name="NBk-R0-AIU">
+            <size key="intrinsicContentSize" width="75" height="24"/>
+        </designable>
+        <designable name="NE3-8D-9ah">
+            <size key="intrinsicContentSize" width="666" height="431"/>
+        </designable>
+        <designable name="NIm-YO-di9">
+            <size key="intrinsicContentSize" width="133" height="22"/>
+        </designable>
+        <designable name="OUV-sf-jfi">
+            <size key="intrinsicContentSize" width="21" height="22"/>
+        </designable>
+        <designable name="PQQ-XQ-wJA">
+            <size key="intrinsicContentSize" width="40" height="32"/>
+        </designable>
+        <designable name="Qst-ZS-eyR">
+            <size key="intrinsicContentSize" width="164.5" height="22.5"/>
+        </designable>
+        <designable name="RBR-DM-STb">
+            <size key="intrinsicContentSize" width="95.5" height="20"/>
+        </designable>
+        <designable name="V2S-0b-ogj">
+            <size key="intrinsicContentSize" width="21" height="22"/>
+        </designable>
+        <designable name="X6f-DZ-elJ">
+            <size key="intrinsicContentSize" width="38" height="32"/>
+        </designable>
+        <designable name="awo-0i-ZeS">
+            <size key="intrinsicContentSize" width="42" height="18.5"/>
+        </designable>
+        <designable name="ejp-8u-DAV">
+            <size key="intrinsicContentSize" width="87" height="22"/>
+        </designable>
+        <designable name="ewZ-Mh-o7D">
+            <size key="intrinsicContentSize" width="160.5" height="22.5"/>
+        </designable>
+        <designable name="fJf-li-lao">
+            <size key="intrinsicContentSize" width="61.5" height="22.5"/>
+        </designable>
+        <designable name="j7V-Zz-rqv">
+            <size key="intrinsicContentSize" width="112.5" height="24"/>
+        </designable>
+        <designable name="jNT-Lt-8Tv">
+            <size key="intrinsicContentSize" width="42" height="42"/>
+        </designable>
+        <designable name="kIC-j6-iSh">
+            <size key="intrinsicContentSize" width="50.5" height="24"/>
+        </designable>
+        <designable name="lfZ-3h-q2S">
+            <size key="intrinsicContentSize" width="38" height="32"/>
+        </designable>
+        <designable name="lv0-H9-im8">
+            <size key="intrinsicContentSize" width="99.5" height="22.5"/>
+        </designable>
+        <designable name="oCy-U6-HNe">
+            <size key="intrinsicContentSize" width="40" height="32"/>
+        </designable>
+        <designable name="ttU-3p-kbk">
+            <size key="intrinsicContentSize" width="76" height="29"/>
+        </designable>
+        <designable name="xGh-ie-c3O">
+            <size key="intrinsicContentSize" width="88" height="29"/>
+        </designable>
+        <designable name="yCG-7u-HSa">
+            <size key="intrinsicContentSize" width="88" height="29"/>
+        </designable>
+    </designables>
     <resources>
         <image name="ADDA" width="150" height="150"/>
         <image name="AttachFileIcon" width="24" height="24"/>
@@ -5242,5 +5324,8 @@ Users of this Site agree that any disputes arising from the use of the Site shal
         <image name="t3" width="310" height="163"/>
         <image name="upload" width="21" height="21"/>
         <image name="user-shape" width="21" height="21"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
